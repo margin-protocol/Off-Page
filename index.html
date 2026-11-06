@@ -1389,7 +1389,7 @@ main{min-height:60vh}
     <section class="wrap sec order" aria-labelledby="h-order">
       <div class="sec-head">
         <span class="label">PAGE 003-B / ORDER</span>
-        <div><h2 id="h-order">委託需求單<em>Request Form</em></h2><p>想要一個住在主畫面的角色？照下面填好，按「複製需求單」，私訊貼給我。我看完會跟你確認細節。</p></div>
+        <div><h2 id="h-order">委託需求單<em>Request Form</em></h2><p>想要一個住在主畫面的角色？照下面填好，按「複製需求單」，到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊貼給我。我看完會跟你確認細節。</p></div>
       </div>
 
       <form class="of" id="of" autocomplete="off" novalidate>
@@ -1468,7 +1468,8 @@ main{min-height:60vh}
             <button class="btn" type="submit">複製需求單</button>
             <button class="btn quiet" type="button" id="o-reset">清空重填</button>
           </div>
-          <p class="fine">填到一半離開也沒關係，會留在這台裝置的瀏覽器裡。複製後私訊給我，我看完會回你。</p>
+          <a class="btn ghost" id="o-dm" href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">打開 Threads 私訊我 ↗</a>
+          <p class="fine">複製好之後，到 Threads <b>@xiaxia_7575</b> 私訊貼給我。填到一半離開也沒關係，會留在這台裝置的瀏覽器裡。</p>
         </div>
       </form>
     </section>
@@ -1486,6 +1487,7 @@ main{min-height:60vh}
         <p>這裡是我的創作收藏室。歡迎隨意翻閱。</p>
         <p class="sign">— Xia mumu</p>
         <ul class="links">
+          <li><span>THREADS</span><a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">@xiaxia_7575 ↗</a></li>
           <li><span>GITHUB</span><a href="https://github.com/xia-mumu" target="_blank" rel="noopener">github.com/xia-mumu ↗</a></li>
           <li><span>NULL</span><a href="https://xia-mumu.github.io/null/" target="_blank" rel="noopener">xia-mumu.github.io/null ↗</a></li>
           <li><span>棲川市</span><a href="https://qichuan-city.neocities.org/" target="_blank" rel="noopener">qichuan-city.neocities.org ↗</a></li>
@@ -1800,7 +1802,7 @@ main{min-height:60vh}
       if (!document.getElementById('o-rights').checked) miss.push('圖片使用權確認');
       if (miss.length){ err.textContent = '還差：' + miss.join('、') + '。'; err.hidden=false; return; }
       err.hidden = true;
-      copyText(build(), '已複製需求單 ♡ 私訊貼給我就好');
+      copyText(build(), '已複製需求單 ♡ 到 Threads 私訊貼給我');
     });
     document.getElementById('o-reset').addEventListener('click', ()=>{
       f.reset(); try{ localStorage.removeItem(KEY); }catch(e){}
