@@ -315,6 +315,41 @@ main{min-height:60vh}
 .alt-card li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--berry)}
 .alt-card li b{color:var(--berry)}
 .alt-card .prompt pre{background:var(--cream);font-size:13.5px}
+
+/* 需求單 */
+.order-cta{margin-top:32px;display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:18px 22px}
+.order-cta b{display:block;font-family:var(--serif-tc);font-size:20px}
+.order-cta span{color:#4d4952;font-size:15px}
+.of{display:flex;flex-direction:column;gap:28px;max-width:860px}
+.of fieldset{border:0;border-top:1.5px solid var(--ink);margin:0;padding:16px 0 0;min-width:0}
+.of legend{display:flex;align-items:baseline;gap:12px;padding:0;margin-bottom:14px;font-family:var(--serif-tc);font-size:21px;font-weight:700}
+.of legend span{font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry);font-weight:500}
+.fg{display:grid;gap:14px 22px}
+.fg.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fg+.fg{margin-top:14px}
+.of label{display:flex;flex-direction:column;gap:6px;font-size:15px;color:#4d4952;min-width:0}
+.of label>span>b,.of label>b{color:var(--berry);font-weight:500;margin-left:2px}
+.of input:not([type=checkbox]),.of textarea,.of select{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:10px 12px;width:100%;min-width:0}
+.of input:focus,.of textarea:focus,.of select:focus{outline:none;border-color:var(--berry);box-shadow:0 0 0 3px color-mix(in srgb,var(--berry) 14%,transparent)}
+.of textarea{resize:vertical;line-height:1.7}
+.of .ck{flex-direction:row;align-items:flex-start;gap:10px;color:var(--ink);cursor:pointer}
+.of .ck input{margin-top:6px;width:17px;height:17px;accent-color:var(--berry);flex:none}
+.of .ck>b{color:var(--berry)}
+.feats-ck{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin-bottom:16px}
+.feats-ck .ck{background:var(--paper);border:1px solid var(--rule);padding:12px 14px}
+.feats-ck .ck span{display:flex;flex-direction:column;font-size:14px;color:#57525d;line-height:1.6}
+.feats-ck .ck span b{font-size:16px;color:var(--ink);font-weight:700}
+.feats-ck .ck:has(input:checked){border-color:var(--berry)}
+.cond label[hidden]{display:none}
+.hint{margin:12px 0 0;font-size:14px;color:var(--violet)}
+.of-out{background:var(--paper);border:1px solid var(--rule);padding:22px 24px;display:flex;flex-direction:column;gap:14px;position:relative}
+.of-head{display:flex;align-items:baseline;gap:12px}
+.of-head b{font-family:var(--serif-tc);font-size:20px}
+.of-out pre{margin:0;background:var(--cream);border-left:3px solid var(--berry);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.8;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto}
+.of-btns{display:flex;gap:10px;flex-wrap:wrap}
+.of-err{margin:0;color:var(--berry);font-size:15px}
+.of-out .fine{margin:0}
+@media (max-width:700px){.fg.two,.feats-ck{grid-template-columns:1fr}.of-out{padding:18px 16px}}
 /* 安裝步驟 */
 .steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .steps li{counter-increment:st;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
@@ -938,6 +973,7 @@ main{min-height:60vh}
 
 <script type="application/json" id="data-updates">
 [
+  {"date":"2026-11-06","kind":"小工具","title":"委託需求單開放","note":"想要自己的角色小工具？填需求單給我。功能介紹也更新了：天氣、電量、紀念日、互動記憶、角色日記。","link":"#order"},
   {"date":"2026-11-06","kind":"小工具","title":"自己做一個角色小工具","note":"一步一步教你用 Claude 做聊天頁和主畫面小工具，附可以直接複製的咒語。","link":"#tools"},
   {"date":"2026-11-06","kind":"小工具","title":"角色主畫面小工具","note":"iPhone 主畫面小工具介紹，範例角色聞止水。","link":"#tools"},
   {"date":"2026-11-06","kind":"站務","title":"岔頁開張","note":"作品入口與小咒語收藏室上線。","link":"#home"},
@@ -1106,6 +1142,7 @@ main{min-height:60vh}
         <h1 id="h-tools">讓角色住進<em>主畫面</em></h1>
         <p class="lede">換上你的角色，她就一直在那裡。抬頭就看得到，不用打開任何 app。</p>
         <div class="meta"><span>iPhone 主畫面小工具</span><span>Scriptable</span><span>範例角色・<b>聞止水</b></span></div>
+        <p style="margin:18px 0 0"><a class="btn ghost" href="#order">想要自己的角色？填需求單</a></p>
       </div>
       <div class="wen">
         <div class="film">
@@ -1140,30 +1177,64 @@ main{min-height:60vh}
           <h3>主畫面上的她</h3>
           <ul>
             <li>小的、中的兩種尺寸都可以放</li>
-            <li>中尺寸會顯示相遇第幾天和現在時間</li>
-            <li>大約每半小時換一句話</li>
+            <li>中尺寸會顯示相遇第幾天、現在時間和氣溫</li>
+            <li>大約每半小時換一句話，不會連續說同一句</li>
           </ul>
         </article>
         <article class="feat">
           <h3>她會看時間說話</h3>
-          <p>照早中晚、星期、季節換台詞。01:30–08:30 是她的睡覺時間，會打哈欠。</p>
+          <p>照早中晚、星期、季節換台詞，也照你的上班日和休假日說不一樣的話。睡覺時間會打哈欠。</p>
           <ul class="times">
             <li><time>08:40</time><q>醒了？</q></li>
             <li><time>12:15</time><q>吃。</q></li>
             <li><time>18:40</time><q>我在樓下。</q></li>
             <li><time>02:10</time><q>……睡了。</q></li>
-            <li><span class="k">週一</span><q>星期一。撐住。</q></li>
-            <li><span class="k">冬天</span><q>很冷。手給我。</q></li>
+            <li><span class="k">上班第一天</span><q>又開始了，撐住。</q></li>
+            <li><span class="k">放假前</span><q>做完今天就放假了。</q></li>
             <li><span class="k">生日</span><q>生日快樂。</q></li>
           </ul>
         </article>
         <article class="feat">
+          <h3>天氣和電量</h3>
+          <p>抓你所在城市的即時天氣，不用開定位；也看得到手機電量。</p>
+          <ul>
+            <li>下雨提醒帶傘、冷了叫你穿外套、太熱叫你喝水</li>
+            <li>電量低於 20% 叫你去充電，快沒電時跳通知</li>
+            <li>沒網路時照樣顯示，用上一次的天氣</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>紀念日</h3>
+          <p>相遇滿 30、50、100、200、365、500、1000 天，還有之後每一年，她會說特別的話。</p>
+          <ul>
+            <li>主畫面會出現「✦ 相遇 100 天」</li>
+            <li>生日當天的祝福照舊</li>
+          </ul>
+        </article>
+        <article class="feat">
           <h3>點進去摸摸她</h3>
-          <p>摸頭、捏臉、牽手、碰她的耳骨環。每個地方的反應都不一樣。</p>
+          <p>摸頭、捏臉、牽手、碰她的耳骨環、相機、出門、抱抱，每個地方的反應都不一樣。</p>
           <ul>
             <li>捏臉會臉紅，按相機她會拍你</li>
             <li>連續戳太多下，她會說「妳到底要戳幾下。」</li>
             <li>不用網路、不花額度</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她記得你碰過她幾次</h3>
+          <p>每天的互動次數都會存起來，「今日互動」看得到；換日重新數，舊的留著。</p>
+          <ul>
+            <li>藏著隱藏彩蛋：牽手第三次「……我有數。」</li>
+            <li>先捏臉再抱抱「捏完又抱。妳真的很會。」</li>
+            <li>好幾天沒來「……好幾天沒來了。我還在。」</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她自己的日子</h3>
+          <p>每天一則角色日記，聞止水的是攝影日記：去哪裡拍、用哪卷底片、留了幾張。</p>
+          <ul>
+            <li>同一天固定同一則，保留最近 90 天</li>
+            <li>她當天說的話會跟日記對上：在暗房那天，下午就在洗照片</li>
           </ul>
         </article>
         <article class="feat">
@@ -1172,11 +1243,14 @@ main{min-height:60vh}
           <ul>
             <li>用 Claude 說話，照她的個性回你</li>
             <li>她會換表情回你的訊息</li>
-            <li>可以傳照片給她看</li>
             <li>重要的事她會記進記憶本</li>
             <li>手機、電腦都能接著聊</li>
           </ul>
         </article>
+      </div>
+      <div class="order-cta">
+        <div><b>想要一個你自己的角色？</b><span>填一份需求單給我，我幫你做。</span></div>
+        <a class="btn" href="#order">填委託需求單 →</a>
       </div>
     </section>
 
@@ -1306,6 +1380,97 @@ main{min-height:60vh}
       </div>
 
       <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
+    </section>
+  </div>
+
+
+  <!-- ===== ORDER ===== -->
+  <div class="view" id="v-order" data-view="order" hidden>
+    <section class="wrap sec order" aria-labelledby="h-order">
+      <div class="sec-head">
+        <span class="label">PAGE 003-B / ORDER</span>
+        <div><h2 id="h-order">委託需求單<em>Request Form</em></h2><p>想要一個住在主畫面的角色？照下面填好，按「複製需求單」，私訊貼給我。我看完會跟你確認細節。</p></div>
+      </div>
+
+      <form class="of" id="of" autocomplete="off" novalidate>
+        <fieldset>
+          <legend><span>01</span>怎麼找到你</legend>
+          <div class="fg two">
+            <label><span>怎麼稱呼你<b>*</b></span><input id="o-name" required placeholder="例如：小白"></label>
+            <label><span>聯絡方式<b>*</b></span><input id="o-contact" required placeholder="IG／Threads 帳號或 Email"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>02</span>你的角色</legend>
+          <div class="fg two">
+            <label><span>角色名<b>*</b></span><input id="o-char" required placeholder="例如：聞止水"></label>
+            <label><span>出處</span><input id="o-source" placeholder="原創，或作品名稱"></label>
+            <label><span>性別／年齡／職業</span><input id="o-basic" placeholder="例如：女／31／紀實攝影師"></label>
+            <label><span>她怎麼叫你</span><input id="o-callme" placeholder="例如：寶貝、名字、老師"></label>
+          </div>
+          <div class="fg">
+            <label><span>個性與說話方式<b>*</b></span><textarea id="o-persona" rows="4" required placeholder="例如：冷靜、話少、直接。訊息很短，常說「嗯」「到了」。不撒嬌，但會直接說想你。"></textarea></label>
+            <label><span>你們的關係</span><input id="o-rel" placeholder="例如：交往中、朋友、搭檔、家人"></label>
+            <label><span>常說的話、口頭禪（可不填）</span><textarea id="o-lines" rows="2" placeholder="一行一句"></textarea></label>
+          </div>
+          <p class="hint">有完整角色卡的話，私訊時一起附上就好，這裡寫重點。</p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>03</span>角色圖片</legend>
+          <div class="fg two">
+            <label><span>有幾張圖</span><select id="o-imgs"><option>一張</option><option>2–4 張（不同表情）</option><option>5 張以上</option><option>還沒有，需要建議</option></select></label>
+            <label><span>是去背的 PNG 嗎</span><select id="o-png"><option>是</option><option>不是，需要幫忙去背</option><option>不確定</option></select></label>
+            <label><span>圖片從哪來</span><select id="o-art"><option>自己畫的</option><option>委託繪師</option><option>其他（私訊說明）</option></select></label>
+          </div>
+          <label class="ck"><input type="checkbox" id="o-rights" required> 我確認自己有權使用這些圖片（自己畫的，或委託時有談好可以這樣用）<b>*</b></label>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>04</span>想要的功能</legend>
+          <div class="feats-ck" id="o-feats">
+            <label class="ck"><input type="checkbox" value="主畫面小工具（小／中尺寸）" checked disabled> <span><b>主畫面小工具</b>小、中尺寸，基本款一定有</span></label>
+            <label class="ck"><input type="checkbox" value="看時間說話＋睡覺時間" checked> <span><b>看時間說話</b>早中晚、星期、季節，睡覺時間會打哈欠</span></label>
+            <label class="ck"><input type="checkbox" value="上班日／休假日台詞" data-show="o-work"> <span><b>照你的班表說話</b>上班日和休假日說不一樣的話</span></label>
+            <label class="ck"><input type="checkbox" value="生日祝福" data-show="o-bday"> <span><b>生日祝福</b>你生日那天她會說生日快樂</span></label>
+            <label class="ck"><input type="checkbox" value="相遇天數＋紀念日" data-show="o-met"> <span><b>相遇天數＋紀念日</b>第 100 天、每週年說特別的話</span></label>
+            <label class="ck"><input type="checkbox" value="即時天氣" data-show="o-city"> <span><b>即時天氣</b>下雨帶傘、冷了穿外套</span></label>
+            <label class="ck"><input type="checkbox" value="電量提醒"> <span><b>電量提醒</b>沒電了叫你去充</span></label>
+            <label class="ck"><input type="checkbox" value="點進去摸摸她" checked> <span><b>點進去摸摸她</b>點不同地方有不同反應</span></label>
+            <label class="ck"><input type="checkbox" value="今日互動＋隱藏彩蛋"> <span><b>今日互動＋隱藏彩蛋</b>記得你碰她幾次，觸發特別台詞</span></label>
+            <label class="ck"><input type="checkbox" value="角色日記" data-show="o-diary"> <span><b>角色日記</b>每天一則，依角色的職業和生活</span></label>
+            <label class="ck"><input type="checkbox" value="聊天頁（用你自己的 Claude 帳號）"> <span><b>聊天頁</b>點進去跟她傳訊息，需要你自己的 Claude 帳號</span></label>
+          </div>
+          <div class="fg two cond">
+            <label data-for="o-work"><span>你的休假日</span><input id="o-work" placeholder="例如：週日、週一"></label>
+            <label data-for="o-bday"><span>你的生日</span><input id="o-bday" placeholder="例如：3/2"></label>
+            <label data-for="o-met"><span>相遇日</span><input id="o-met" placeholder="例如：2026/10/27"></label>
+            <label data-for="o-city"><span>天氣要看哪個城市</span><input id="o-city" placeholder="例如：台中"></label>
+            <label data-for="o-diary"><span>日記想寫什麼</span><input id="o-diary" placeholder="例如：她是甜點師，寫今天做了什麼"></label>
+          </div>
+          <p class="hint">生日、相遇日只會寫進你自己的小工具裡。不想給也沒關係，空著就好。</p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>05</span>其他</legend>
+          <div class="fg">
+            <label><span>想要的感覺、配色</span><input id="o-color" placeholder="例如：深酒紅、黑色、暗房感"></label>
+            <label><span>還想要什麼，或想說的話</span><textarea id="o-more" rows="3" placeholder="例如：想要她偶爾吃醋、想加某個互動"></textarea></label>
+          </div>
+        </fieldset>
+
+        <div class="of-out">
+          <div class="of-head"><span class="label">PREVIEW</span><b>你的需求單</b></div>
+          <pre id="o-preview"></pre>
+          <p class="of-err" id="o-err" hidden></p>
+          <div class="of-btns">
+            <button class="btn" type="submit">複製需求單</button>
+            <button class="btn quiet" type="button" id="o-reset">清空重填</button>
+          </div>
+          <p class="fine">填到一半離開也沒關係，會留在這台裝置的瀏覽器裡。複製後私訊給我，我看完會回你。</p>
+        </div>
+      </form>
     </section>
   </div>
 
@@ -1585,6 +1750,65 @@ main{min-height:60vh}
     lastLine[b.dataset.z] = p[0]; setWidget(p[0], p[1]);
   }));
 
+  /* ---------- 委託需求單 ---------- */
+  (function(){
+    const f = document.getElementById('of'); if (!f) return;
+    const KEY = 'offpage-order-draft';
+    const v = id => (document.getElementById(id)||{}).value?.trim() || '';
+    const fields = [...f.querySelectorAll('input:not([type=checkbox]),textarea,select')];
+    const boxes = [...f.querySelectorAll('#o-feats input[type=checkbox]:not([disabled])')];
+    function syncCond(){
+      boxes.forEach(b=>{ if(b.dataset.show){ const l=f.querySelector(`[data-for="${b.dataset.show}"]`); if(l) l.hidden=!b.checked; } });
+    }
+    function build(){
+      const feats = [...f.querySelectorAll('#o-feats input:checked')].map(b=>'☑ '+b.value);
+      const extra = [];
+      const add = (k,id)=>{ const x=v(id); const l=f.querySelector(`[data-for="${id}"]`); if(x && (!l || !l.hidden)) extra.push(`${k}：${x}`); };
+      add('休假日','o-work'); add('生日','o-bday'); add('相遇日','o-met'); add('天氣城市','o-city'); add('日記內容','o-diary');
+      const lines = v('o-lines').split(/\n+/).map(x=>x.trim()).filter(Boolean);
+      const sec = (title, rows) => { rows = rows.filter(Boolean); return rows.length ? '■ ' + title + '\n' + rows.join('\n') : ''; };
+      return ['【角色小工具需求單】',
+        sec('聯絡', [`稱呼：${v('o-name')||'（未填）'}`, `聯絡方式：${v('o-contact')||'（未填）'}`]),
+        sec('角色', [`角色名：${v('o-char')||'（未填）'}`, v('o-source') && `出處：${v('o-source')}`, v('o-basic') && `性別／年齡／職業：${v('o-basic')}`,
+          `個性與說話方式：${v('o-persona')||'（未填）'}`, v('o-rel') && `關係：${v('o-rel')}`, v('o-callme') && `她怎麼叫我：${v('o-callme')}`,
+          lines.length && ('常說的話：\n' + lines.map(x=>'・'+x).join('\n'))]),
+        sec('圖片', [`張數：${v('o-imgs')}`, `去背 PNG：${v('o-png')}`, `來源：${v('o-art')}`, `使用權：${document.getElementById('o-rights').checked ? '已確認' : '（未確認）'}`]),
+        sec('想要的功能', feats),
+        sec('日期與設定', extra),
+        sec('其他', [v('o-color') && `感覺／配色：${v('o-color')}`, v('o-more')]),
+      ].filter(Boolean).join('\n\n');
+    }
+    function save(){
+      const d = {}; fields.forEach(el=>d[el.id]=el.value);
+      boxes.forEach(b=>d['ck:'+b.value]=b.checked); d['o-rights']=document.getElementById('o-rights').checked;
+      try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){}
+    }
+    function load(){
+      let d=null; try{ d=JSON.parse(localStorage.getItem(KEY)||'null'); }catch(e){}
+      if(!d) return;
+      fields.forEach(el=>{ if(d[el.id]!=null) el.value=d[el.id]; });
+      boxes.forEach(b=>{ if(('ck:'+b.value) in d) b.checked=d['ck:'+b.value]; });
+      document.getElementById('o-rights').checked=!!d['o-rights'];
+    }
+    function render(){ syncCond(); document.getElementById('o-preview').textContent = build(); }
+    f.addEventListener('input', ()=>{ render(); save(); });
+    f.addEventListener('change', ()=>{ render(); save(); });
+    f.addEventListener('submit', e=>{
+      e.preventDefault();
+      const err = document.getElementById('o-err');
+      const miss = [['o-name','怎麼稱呼你'],['o-contact','聯絡方式'],['o-char','角色名'],['o-persona','個性與說話方式']].filter(([id])=>!v(id)).map(x=>x[1]);
+      if (!document.getElementById('o-rights').checked) miss.push('圖片使用權確認');
+      if (miss.length){ err.textContent = '還差：' + miss.join('、') + '。'; err.hidden=false; return; }
+      err.hidden = true;
+      copyText(build(), '已複製需求單 ♡ 私訊貼給我就好');
+    });
+    document.getElementById('o-reset').addEventListener('click', ()=>{
+      f.reset(); try{ localStorage.removeItem(KEY); }catch(e){}
+      document.getElementById('o-err').hidden=true; render();
+    });
+    load(); render();
+  })();
+
   /* ---------- router ---------- */
   const views = [...document.querySelectorAll('.view')];
   function route(){
@@ -1594,10 +1818,10 @@ main{min-height:60vh}
     if (name.startsWith('spell-')) {
       const s = SPELLS.find(x=>x.id===name.slice(6));
       if (s) { showDetail(s); name='spell'; } else name='lost';
-    } else if (!['home','worlds','spells','tools','about'].includes(name)) name='lost';
+    } else if (!['home','worlds','spells','tools','about','order'].includes(name)) name='lost';
     if (name !== 'spell') document.title = '岔頁 OFF PAGE';
     views.forEach(v=>{ v.hidden = v.dataset.view !== name; });
-    const navKey = name==='spell' ? 'spells' : name;
+    const navKey = name==='spell' ? 'spells' : name==='order' ? 'tools' : name;
     document.querySelectorAll('[data-nav]').forEach(a=>{
       a.dataset.nav===navKey ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current');
     });
