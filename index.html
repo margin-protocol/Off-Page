@@ -288,6 +288,21 @@ main{min-height:60vh}
 .sheet figcaption{font-size:13px;color:var(--wt2)}
 .sheet-wrap{overflow-x:auto}
 .sheet-note{margin:14px 0 0;font-size:13px;color:var(--ws);text-align:center}
+/* 自己做一個 */
+.prep{background:var(--paper);border:1px solid var(--rule);padding:22px 26px;margin-bottom:36px}
+.prep h3{margin:0 0 10px;font-family:var(--serif-tc);font-size:20px}
+.prep ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px}
+.prep li{font-size:15px;color:#4d4952;display:flex;flex-direction:column}
+.prep li b{color:var(--ink);font-size:16px}
+.make{list-style:none;margin:0;padding:0;counter-reset:mk;display:flex;flex-direction:column;gap:36px}
+.make>li{counter-increment:mk;border-top:1.5px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 36px;align-items:start}
+.make>li:last-child{grid-template-columns:minmax(0,1fr)}
+.mk-text{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mk-text::before{content:counter(mk,decimal-leading-zero);font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry)}
+.mk-text b{font-family:var(--serif-tc);font-size:20px}
+.mk-text span{font-size:15px;color:#4d4952;max-width:34em}
+.prompt{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.prompt pre{margin:0;width:100%;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
 /* 安裝步驟 */
 .steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .steps li{counter-increment:st;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
@@ -299,10 +314,12 @@ main{min-height:60vh}
   .t-hero{grid-template-columns:1fr;gap:32px;padding-block:44px 56px}
   .feats{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
+  .make>li{grid-template-columns:1fr}
   .sheet{grid-template-columns:repeat(7,96px)}
 }
 @media (max-width:600px){
   .steps{grid-template-columns:1fr}
+  .prep ul{grid-template-columns:1fr}
   .nav a{padding:6px 7px;letter-spacing:.08em}
 }
 
@@ -908,6 +925,7 @@ main{min-height:60vh}
 
 <script type="application/json" id="data-updates">
 [
+  {"date":"2026-11-06","kind":"小工具","title":"自己做一個角色小工具","note":"一步一步教你用 Claude 做聊天頁和主畫面小工具，附可以直接複製的咒語。","link":"#tools"},
   {"date":"2026-11-06","kind":"小工具","title":"角色主畫面小工具","note":"iPhone 主畫面小工具介紹，範例角色聞止水。","link":"#tools"},
   {"date":"2026-11-06","kind":"站務","title":"岔頁開張","note":"作品入口與小咒語收藏室上線。","link":"#home"},
   {"date":"2026-11-06","kind":"小咒語","title":"小咒語收藏室開張","note":"第一批 27 則咒語上架，含兩個連載。","link":"#spells"},
@@ -1141,6 +1159,7 @@ main{min-height:60vh}
           <ul>
             <li>用 Claude 說話，照她的個性回你</li>
             <li>她會換表情回你的訊息</li>
+            <li>可以傳照片給她看</li>
             <li>重要的事她會記進記憶本</li>
             <li>手機、電腦都能接著聊</li>
           </ul>
@@ -1165,16 +1184,65 @@ main{min-height:60vh}
 
     <section class="wrap sec" aria-labelledby="h-install">
       <div class="sec-head">
-        <span class="label">HOW TO INSTALL</span>
-        <div><h2 id="h-install">四步驟帶角色回家<em>Install</em></h2><p>不用寫程式，跟著做就好。</p></div>
+        <span class="label">MAKE YOUR OWN</span>
+        <div><h2 id="h-install">做一個你自己的角色<em>Make Your Own</em></h2><p>不用寫程式，也不用申請 API 金鑰。用你自己的 Claude 帳號，請 Claude 幫你做。</p></div>
       </div>
-      <ol class="steps">
-        <li><b>下載 Scriptable</b><span>App Store 免費。</span></li>
-        <li><b>存進檔案</b><span>把小工具檔案存到「iCloud 雲碟 → Scriptable」。</span></li>
-        <li><b>加到主畫面</b><span>長按主畫面 → ＋ → 搜尋 Scriptable。</span></li>
-        <li><b>選你的角色</b><span>長按小工具 → 編輯 → Script 選你的角色小工具。</span></li>
+
+      <div class="prep">
+        <h3>先準備</h3>
+        <ul>
+          <li><b>Claude 帳號</b>聊天會用到你自己帳號的額度</li>
+          <li><b>角色設定</b>個性、說話方式、你們的關係、她怎麼叫你</li>
+          <li><b>角色圖片</b>一張就可以；有不同表情更好，透明背景的 PNG 最好看</li>
+          <li><b>Scriptable</b>App Store 免費下載（iPhone）</li>
+        </ul>
+      </div>
+
+      <ol class="make">
+        <li>
+          <div class="mk-text">
+            <b>請 Claude 做聊天頁</b>
+            <span>到 claude.ai 開新對話，把角色圖片和設定一起傳上去，再貼上右邊這段（〔〕裡改成你的）。做好後打開測試，第一次會問要不要允許頁面使用 Claude，按允許。哪裡不喜歡，直接跟 Claude 說要改什麼。</span>
+          </div>
+          <div class="prompt">
+            <pre id="p-chat">請幫我做一個手機用的角色聊天頁（artifact），讓我可以跟〔角色名〕傳訊息聊天。
+- 用我自己的 Claude 帳號讓她回話，不要用 API 金鑰
+- 聊天紀錄和記憶存在我的帳號裡，換裝置也看得到
+- 有記憶本：她會自己記下重要的事，我也可以手動加、刪
+- 可以傳照片給她看
+- 上方放她的圖，回話時依心情換表情（用我附的圖片）
+- 她的回話要像傳訊息：短、口語、不寫旁白和動作
+- 配色：〔例如：深酒紅、黑色系〕
+- 她叫我〔暱稱〕，我們的關係是〔關係〕
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+            <button class="btn quiet" type="button" data-copy="p-chat">複製這段</button>
+          </div>
+        </li>
+        <li>
+          <div class="mk-text">
+            <b>請 Claude 寫小工具</b>
+            <span>在同一個對話接著貼這段。Claude 會給你一段程式碼，打開 Scriptable 按右上角 ＋，整段貼上、取個名字存起來。</span>
+          </div>
+          <div class="prompt">
+            <pre id="p-widget">請幫我寫一個 Scriptable 主畫面小工具的程式碼：
+- 顯示〔角色名〕的圖片和一句她現在會說的話
+- 她說的話要照早中晚、星期、季節變化，符合她的個性
+- 中尺寸顯示我們相遇第幾天（相遇日：〔日期〕）
+- 點小工具會打開剛剛做好的聊天頁</pre>
+            <button class="btn quiet" type="button" data-copy="p-widget">複製這段</button>
+          </div>
+        </li>
+        <li>
+          <div class="mk-text">
+            <b>放到主畫面</b>
+            <span>長按主畫面空白處 → 左上角 ＋ → 找 Scriptable → 選小或中尺寸加入。再長按小工具 → 編輯小工具 → Script 選你剛剛存的那個。</span>
+          </div>
+        </li>
       </ol>
-      <p class="fine">小工具檔案目前還沒有公開下載。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
+
+      <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
     </section>
   </div>
 
@@ -1400,6 +1468,7 @@ main{min-height:60vh}
     $('#d-dates').innerHTML = `建立　${fmtDate(s.created)}<br>更新　${fmtDate(s.updated)}`;
     document.title = s.title + '｜岔頁 OFF PAGE';
   }
+  document.addEventListener('click', e=>{ const b=e.target.closest('[data-copy]'); if(b){ const el=document.getElementById(b.dataset.copy); if(el) copyText(el.textContent, '已複製 ♡'); } });
   $('#d-copy').addEventListener('click', ()=> detail && copyText(partsOf(detail)[0].text, '已複製 ♡'));
   $('#d-parts').addEventListener('click', e=>{ const b=e.target.closest('[data-part]'); if(b && detail) copyText(partsOf(detail)[+b.dataset.part].text, `已複製第 ${+b.dataset.part+1} 回 ♡`); });
   $('#d-next').addEventListener('click', ()=>{ lastId = detail ? detail.id : lastId; goRandom(); });
