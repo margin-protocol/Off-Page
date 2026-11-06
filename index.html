@@ -352,6 +352,21 @@ main{min-height:60vh}
 @media (max-width:700px){.fg.two,.feats-ck{grid-template-columns:1fr}.of-out{padding:18px 16px}}
 
 /* 戀人入住申請所 */
+.pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;max-width:960px}
+.pay article{background:var(--paper);border:1px solid var(--rule);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.pay h3{margin:0;font-family:var(--serif-tc);font-size:20px}
+.pay ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.pay li{font-size:15px;color:#4d4952;display:flex;flex-direction:column}
+.pay li b{color:var(--ink);font-size:15.5px}
+.pay .fine{margin:0}
+.flow{margin:0;padding:0;list-style:none;counter-reset:fl;display:flex;flex-direction:column;gap:6px}
+.flow li{counter-increment:fl;font-size:15px;color:#4d4952;display:flex;gap:10px;align-items:baseline}
+.flow li::before{content:counter(fl,decimal-leading-zero);font-family:var(--ui);font-size:12px;letter-spacing:.12em;color:var(--berry);flex:none}
+.slots{display:flex;align-items:center;gap:8px}
+.slots b{color:var(--berry)}
+.slot-dot{width:8px;height:8px;border-radius:50%;background:#5a9a6a;box-shadow:0 0 0 3px color-mix(in srgb,#5a9a6a 20%,transparent);flex:none}
+@media (max-width:900px){.pay{grid-template-columns:1fr}}
+
 #rs-lines,#rs-form{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 120px)}
 .tpl{max-width:860px;display:flex;flex-direction:column;gap:14px}
 .tpl-btns{display:flex;gap:10px;flex-wrap:wrap}
@@ -1568,11 +1583,55 @@ main{min-height:60vh}
       </div>
     </section>
 
+    <section class="wrap sec" aria-labelledby="h-pay">
+      <div class="sec-head"><span class="label">PAYMENT &amp; SCHEDULE</span><div><h2 id="h-pay">付款與交期<em>Payment</em></h2>
+        <p class="slots"><span class="slot-dot"></span>每月限 <b>10</b> 位入住・名額滿了會在 Threads 公告，下個月 1 號重新開放</p></div></div>
+      <div class="pay">
+        <article>
+          <h3>付款</h3>
+          <ul>
+            <li><b>收款方式</b>LINE Pay、銀行轉帳（帳號私訊提供）</li>
+            <li><b>全額預付</b>確認需求和報價後付款，收到款項才開始排單</li>
+            <li><b>NT$1,000 以上</b>可以先付五成，交件前付清尾款</li>
+          </ul>
+        </article>
+        <article>
+          <h3>交期</h3>
+          <ul>
+            <li><b>基本方案</b>資料齊全後 7 個工作天</li>
+            <li><b>有加購</b>台詞包、進階包或素材：10–14 個工作天</li>
+            <li><b>急件</b>+50%，基本方案 3 個工作天、有加購 5 個工作天，視檔期承接</li>
+          </ul>
+          <p class="fine">交期從圖片、台詞、設定都給齊那天開始算。</p>
+        </article>
+        <article>
+          <h3>流程</h3>
+          <ol class="flow">
+            <li>填申請單，到 Threads 私訊給我</li>
+            <li>我確認內容、回覆報價</li>
+            <li>付款，開始排單</li>
+            <li>傳預覽截圖給你確認</li>
+            <li>確認後交付 JS 檔、素材與安裝教學</li>
+          </ol>
+        </article>
+        <article>
+          <h3>退款</h3>
+          <ul>
+            <li><b>還沒開工</b>全額退款</li>
+            <li><b>已經開工</b>退一半</li>
+            <li><b>交件之後</b>數位商品不退款；7 天內程式錯誤照樣免費修</li>
+          </ul>
+          <p class="fine">預覽送出後 14 天沒有回覆，視為確認並直接交件。完成品可能匿名放進作品集，不想被放出來請事先說。</p>
+        </article>
+      </div>
+    </section>
+
     <section class="wrap sec" aria-labelledby="h-rules">
       <div class="sec-head"><span class="label">RULES</span><div><h2 id="h-rules">服務規則<em>Rules</em></h2></div></div>
       <dl class="rule-list">
         <div><dt>交付內容</dt><dd>客製化 JS 檔案、角色圖片素材、圖文安裝教學。</dd></div>
         <div><dt>客戶自行安裝</dt><dd>不提供遠端操作、螢幕共享或一對一教學。</dd></div>
+        <div><dt>付款</dt><dd>LINE Pay 或銀行轉帳，全額預付；NT$1,000 以上可先付五成。</dd></div>
         <div><dt>修改範圍</dt><dd>角色設定及圖片含 1 次修改；之後每輪小幅修改 +NT$80。</dd></div>
         <div><dt>售後服務</dt><dd>交付後 7 天內，免費修復可重現的程式錯誤。</dd></div>
         <div><dt>不包含</dt><dd>手機操作教學、Scriptable 基礎教學、第三方平台帳號設定。</dd></div>
@@ -1811,6 +1870,7 @@ main{min-height:60vh}
             <label class="ck"><input type="checkbox" value="完整台詞包（約 100 句）" data-price="400" data-max="600"> <span><b>完整台詞包・+NT$400–600</b>各時段＋七種互動，約 100 句</span></label>
             <label class="ck"><input type="checkbox" value="補充台詞 20 句" data-price="100"> <span><b>補充台詞 20 句・+NT$100</b>指定情境或互動</span></label>
             <label class="ck"><input type="checkbox" value="進階互動功能包" data-price="300" data-show="o-city"> <span><b>進階互動功能包・+NT$300</b>天氣、紀念日、互動記憶、彩蛋、角色日記、低電量通知</span></label>
+            <label class="ck"><input type="checkbox" value="急件（+50%）" data-rush="1"> <span><b>急件・+50%</b>基本 3 個工作天、有加購 5 個工作天，視檔期承接</span></label>
             <label class="ck"><input type="checkbox" value="額外 Q 版表情" data-price="60" data-show="o-extra"> <span><b>額外 Q 版表情・+NT$60／張</b>AI 生成，跟既有素材對齊</span></label>
           </div>
           <div class="fg two cond">
@@ -2147,11 +2207,12 @@ main{min-height:60vh}
     }
     function price(){
       let lo = 300, hi = 300;
-      addons.forEach(b=>{ if(!b.checked) return; let p=+b.dataset.price, m=+(b.dataset.max||b.dataset.price);
+      addons.forEach(b=>{ if(!b.checked || b.dataset.rush) return; let p=+b.dataset.price, m=+(b.dataset.max||b.dataset.price);
         if (b.value==='額外 Q 版表情'){ const n=Math.max(1,Math.min(20,parseInt(v('o-extra'))||1)); p*=n; m*=n; }
         lo+=p; hi+=m; });
       if (v('o-imgs').includes('6 張')){ lo+=300; hi+=300; }
       if (v('o-imgs').includes('12 張')){ lo+=500; hi+=500; }
+      if (f.querySelector('[data-rush]').checked){ lo=Math.round(lo*1.5); hi=Math.round(hi*1.5); }
       return lo===hi ? `NT$${lo}` : `NT$${lo}–${hi}`;
     }
     function build(){
