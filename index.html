@@ -352,6 +352,13 @@ main{min-height:60vh}
 @media (max-width:700px){.fg.two,.feats-ck{grid-template-columns:1fr}.of-out{padding:18px 16px}}
 
 /* 戀人入住申請所 */
+.artist{margin-top:14px;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--violet);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.artist>b{font-family:var(--serif-tc);font-size:17px}
+.artist p{margin:0;font-size:14.5px;color:#4d4952}
+.artist ul{margin:2px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+.artist li{padding-left:16px;position:relative;font-size:14.5px;color:#4d4952}
+.artist li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--violet)}
+
 .pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;max-width:960px}
 .pay article{background:var(--paper);border:1px solid var(--rule);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
 .pay h3{margin:0;font-family:var(--serif-tc);font-size:20px}
@@ -1515,7 +1522,17 @@ main{min-height:60vh}
               <tr><td><b>額外一輪小幅修改</b><small>改文字、日期、配色或換 1–2 張圖；大改另外報價</small></td><td>+NT$80</td></tr>
             </tbody>
           </table>
-          <p class="fine">Q 版素材為 AI 生成，再由我整理去背、統一大小與位置。想要手繪請另找繪師，素材可以直接拿來用。</p>
+          <p class="fine">Q 版素材為 AI 生成，再由我整理去背、統一大小與位置。</p>
+          <div class="artist">
+            <b>想用繪師畫的圖？</b>
+            <p>歡迎！委託繪師前，請先跟繪師說清楚用途，並確認對方同意：</p>
+            <ul>
+              <li>圖會放進手機主畫面小工具，會被<b>裁切、去背、縮放</b>，也會依台詞切換表情</li>
+              <li>會交給我（第三方）處理製作，檔案會留在你的小工具裡</li>
+              <li>僅限你個人使用，不會轉賣或公開散布</li>
+            </ul>
+            <p>建議請繪師提供<b>去背 PNG</b>，不同表情維持同樣的大小和位置，我就能直接用。若繪師的委託規範不允許上述用途，請不要把圖給我。</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1621,7 +1638,7 @@ main{min-height:60vh}
             <li><b>已經開工</b>退一半</li>
             <li><b>交件之後</b>數位商品不退款；7 天內程式錯誤照樣免費修</li>
           </ul>
-          <p class="fine">預覽送出後 14 天沒有回覆，視為確認並直接交件。完成品可能匿名放進作品集，不想被放出來請事先說。</p>
+          <p class="fine">預覽送出後 14 天沒有回覆，視為確認並直接交件。完成品只有在你同意後，才會放進作品集。</p>
         </article>
       </div>
     </section>
@@ -1637,7 +1654,8 @@ main{min-height:60vh}
         <div><dt>不包含</dt><dd>手機操作教學、Scriptable 基礎教學、第三方平台帳號設定。</dd></div>
         <div><dt>額外功能</dt><dd>超出原本模板的功能另外報價。</dd></div>
         <div><dt>只接角色</dt><dd>原創或二創角色皆可；不接真人，包含真人照片與以真人為原型的改畫。</dd></div>
-        <div><dt>圖片</dt><dd>自備圖片請確認你有權使用（自己畫的，或委託時有談好）。</dd></div>
+        <div><dt>圖片</dt><dd>自備圖片請確認你有權使用。繪師畫的圖，請先跟繪師確認可以交給第三方裁切、去背、放進小工具。</dd></div>
+        <div><dt>作品集</dt><dd>完成品只有在你同意後，才會放進作品集。</dd></div>
       </dl>
     </section>
 
@@ -1860,7 +1878,8 @@ main{min-height:60vh}
             <label data-for="o-own"><span>自備的是去背 PNG 嗎</span><select id="o-own"><option>是</option><option>不是</option><option>不確定</option></select></label>
           </div>
           <label class="ck"><input type="checkbox" id="o-real"> <span>這是<b>角色</b>，不是真人，也不是以真人照片為原型<b>*</b></span></label>
-          <label class="ck" data-for2="o-rights"><input type="checkbox" id="o-rights"> <span>自備的圖片我有權使用（自己畫的，或委託時有談好可以這樣用）<b>*</b></span></label>
+          <label class="ck" data-for2="o-rights"><input type="checkbox" id="o-rights"> <span>自備的圖片我有權使用：是我自己畫的，或<b>已經跟繪師確認</b>可以交給第三方裁切、去背，放進小工具個人使用<b>*</b></span></label>
+          <label class="ck"><input type="checkbox" id="o-folio"> <span>完成後可以放進作品集（不勾就不會放）</span></label>
         </fieldset>
 
         <fieldset>
@@ -2228,7 +2247,7 @@ main{min-height:60vh}
         sec('方案', ['☑ 基本入住費 NT$300', ...picked]),
         sec('設定', [shown($id('o-city'))&&v('o-city')&&`天氣城市：${v('o-city')}`, shown($id('o-diary'))&&v('o-diary')&&`角色日記：${v('o-diary')}`,
           v('o-bday')&&`我的生日：${v('o-bday')}`, v('o-met')&&`相遇日：${v('o-met')}`, `配色：${v('o-pal')}`, `聊天入口：${v('o-chat')}`]),
-        sec('其他', [v('o-more')]),
+        sec('其他', [`可放作品集：${$id('o-folio').checked?'可以':'不要'}`, v('o-more')]),
         `預估金額：${price()}（以確認後報價為準）`,
       ].filter(Boolean).join('\n\n');
     }
