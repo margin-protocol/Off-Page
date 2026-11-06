@@ -303,6 +303,18 @@ main{min-height:60vh}
 .mk-text span{font-size:15px;color:#4d4952;max-width:34em}
 .prompt{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .prompt pre{margin:0;width:100%;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+.alt{margin-top:48px;padding-top:28px;border-top:1px dashed var(--rule)}
+.alt h3{margin:0 0 6px;font-family:var(--serif-tc);font-size:24px}
+.alt-lede{margin:0 0 20px;color:#4d4952;font-size:15px}
+.alt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.alt-card{background:var(--paper);border:1px solid var(--rule);padding:22px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.alt-card>b{font-family:var(--serif-tc);font-size:20px}
+.alt-card p{margin:0;font-size:15px;color:#4d4952}
+.alt-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+.alt-card li{padding-left:16px;position:relative;font-size:14.5px;color:#4d4952}
+.alt-card li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--berry)}
+.alt-card li b{color:var(--berry)}
+.alt-card .prompt pre{background:var(--cream);font-size:13.5px}
 /* 安裝步驟 */
 .steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .steps li{counter-increment:st;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
@@ -315,6 +327,7 @@ main{min-height:60vh}
   .feats{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .make>li{grid-template-columns:1fr}
+  .alt-grid{grid-template-columns:1fr}
   .sheet{grid-template-columns:repeat(7,96px)}
 }
 @media (max-width:600px){
@@ -1241,6 +1254,56 @@ main{min-height:60vh}
           </div>
         </li>
       </ol>
+
+      <div class="alt" aria-labelledby="h-alt">
+        <h3 id="h-alt">沒有 Claude 帳號也可以</h3>
+        <p class="alt-lede">下面兩段咒語也能丟給 ChatGPT、Gemini 這類 AI，請它幫你寫。選一種就好：</p>
+        <div class="alt-grid">
+          <article class="alt-card">
+            <span class="label">OPTION A</span>
+            <b>自己接 API</b>
+            <p>到 Google AI Studio（Gemini，有免費額度）或 OpenAI 申請一組 API 金鑰，讓聊天頁用你的金鑰回話。超過免費額度會依用量收費。</p>
+            <ul>
+              <li>金鑰只在聊天頁的設定裡輸入、存在自己手機上</li>
+              <li><b>不要</b>把金鑰寫進程式碼，也不要傳給別人看</li>
+              <li>做好的網頁可以免費放在 GitHub Pages 或 Neocities，小工具再連過去</li>
+            </ul>
+            <div class="prompt">
+              <pre id="p-api">請幫我做一個手機用的角色聊天網頁（單一 HTML 檔），讓我可以跟〔角色名〕傳訊息聊天。
+- 用〔Gemini／OpenAI〕的 API 讓她回話
+- 頁面上有設定欄讓我輸入 API 金鑰，只存在這支手機的瀏覽器裡，不要寫進程式碼
+- 聊天紀錄和記憶本也存在手機裡
+- 上方放她的圖，回話時依心情換表情
+- 她的回話要像傳訊息：短、口語、不寫旁白和動作
+- 她叫我〔暱稱〕，我們的關係是〔關係〕
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+              <button class="btn quiet" type="button" data-copy="p-api">複製這段</button>
+            </div>
+          </article>
+          <article class="alt-card">
+            <span class="label">OPTION B</span>
+            <b>只要小工具，不聊天</b>
+            <p>她不會回你訊息，但主畫面上的她照樣會看時間說話、點進去也能摸摸她。不用任何帳號和金鑰，完全免費。</p>
+            <ul>
+              <li>台詞是事先寫好的，所以不花額度、不用網路</li>
+              <li>想讓她多說一點，請 AI 幫你多寫幾句台詞就好</li>
+            </ul>
+            <div class="prompt">
+              <pre id="p-noai">請幫我寫一個 Scriptable 主畫面小工具的程式碼，不需要連網、不需要 API：
+- 顯示〔角色名〕的圖片和一句她現在會說的話
+- 依早中晚、星期、季節、我的生日（〔日期〕）換台詞，每個情境寫 5 句以上，符合她的個性
+- 中尺寸顯示我們相遇第幾天（相遇日：〔日期〕）
+- 點小工具會打開一個頁面，可以點她的頭、臉、手，每個地方有不同的小反應
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+              <button class="btn quiet" type="button" data-copy="p-noai">複製這段</button>
+            </div>
+          </article>
+        </div>
+      </div>
 
       <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
     </section>
