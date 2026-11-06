@@ -238,6 +238,71 @@ main{min-height:60vh}
 .egg{grid-column:1/-1;font-size:12px;color:var(--rule);margin-top:20px;cursor:default;user-select:none;transition:color .4s;font-family:var(--serif-tc)}
 .egg:hover{color:var(--violet)}
 
+
+/* ---------- TOOLS：角色主畫面小工具（借用聞止水的暗房酒紅，只在示範區） ---------- */
+.wen{--w0:#100B0D;--w1:#171012;--w2:#1D1316;--wd:#542B35;--w:#793D4B;--wl:#A65C6D;--wt:#E4D9DC;--wt2:#C7B5BA;--ws:#AAAEB2}
+.t-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center;padding-block:64px 72px;border-bottom:1px solid var(--rule)}
+.t-hero h1{margin:14px 0 14px;font-family:var(--serif-tc);font-weight:700;font-size:clamp(34px,5vw,54px);line-height:1.3;text-wrap:balance}
+.t-hero h1 em{font-style:normal;color:var(--berry)}
+.t-hero .lede{margin:0 0 22px;font-size:18px;color:#4a4650;max-width:26em}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-size:13px;border:1px solid var(--rule);background:var(--paper);padding:3px 12px;border-radius:20px;color:var(--violet)}
+.meta span b{color:var(--berry);font-weight:700}
+/* 底片框 */
+.film{background:var(--w0);padding:22px 18px;position:relative;border-radius:4px}
+.film::before,.film::after{content:"";position:absolute;left:10px;right:10px;height:8px;background:repeating-linear-gradient(90deg,rgba(170,174,178,.28) 0 12px,transparent 12px 22px);border-radius:2px}
+.film::before{top:7px}.film::after{bottom:7px}
+.demo{background:radial-gradient(ellipse 90% 70% at 30% 10%,#3a2028,var(--w1) 60%);padding:26px 20px 20px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.widget{width:100%;max-width:360px;aspect-ratio:2.1/1;border-radius:24px;background:linear-gradient(180deg,rgba(84,43,53,.65),var(--w1) 48%,var(--w0));border:1px solid rgba(170,174,178,.14);box-shadow:0 14px 30px rgba(0,0,0,.45);display:flex;align-items:center;gap:6px;padding:8px 16px 8px 4px;color:var(--wt)}
+.widget img{height:100%;width:auto;max-width:45%;object-fit:contain;flex:none;transition:opacity .15s}
+.widget .nm{font-size:12px;letter-spacing:.3em;color:var(--ws);font-weight:700}
+.widget .ln{font-size:clamp(17px,2.4vw,21px);line-height:1.4;margin-top:6px;font-weight:700;min-height:1.4em}
+.widget .mt{font-size:12px;color:var(--wl);margin-top:8px;font-variant-numeric:tabular-nums}
+.touches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.touches button{cursor:pointer;border:1px solid var(--wd);background:var(--w2);color:var(--wt2);border-radius:18px;padding:5px 14px;font-size:14px;transition:background .15s,color .15s}
+.touches button:hover{border-color:var(--wl);color:var(--wt)}
+.touches button:active{background:var(--w);color:#F3E9EC}
+.touches button:focus-visible{outline-color:var(--wl)}
+.demo-cap{font-size:12px;color:var(--ws);letter-spacing:.06em;text-align:center}
+/* 功能 */
+.feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
+.feat{background:var(--paper);border:1px solid var(--rule);padding:26px 26px 24px;display:flex;flex-direction:column;gap:10px}
+.feat h3{margin:0;font-family:var(--serif-tc);font-size:22px;font-weight:700}
+.feat p{margin:0;color:#4d4952}
+.feat ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.feat li{padding-left:16px;position:relative;font-size:15px}
+.feat li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1px;background:var(--berry)}
+.times{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--rule)}
+.times li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);padding-left:0}
+.times li::before{display:none}
+.times time,.times .k{font-family:var(--ui);font-size:14px;color:var(--violet);font-variant-numeric:tabular-nums}
+.times q{quotes:"「" "」";font-family:var(--serif-tc)}
+/* 七種樣子：印樣條 */
+.sheet{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.sheet figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.sheet .fr{width:100%;aspect-ratio:1/1;background:linear-gradient(180deg,rgba(84,43,53,.55),var(--w2));border:1px solid rgba(170,174,178,.16);display:grid;place-items:end center;overflow:hidden;border-radius:3px}
+.sheet img{width:92%;height:auto;max-width:100%}
+.sheet figcaption{font-size:13px;color:var(--wt2)}
+.sheet-wrap{overflow-x:auto}
+.sheet-note{margin:14px 0 0;font-size:13px;color:var(--ws);text-align:center}
+/* 安裝步驟 */
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.steps li{counter-increment:st;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry)}
+.steps b{font-family:var(--serif-tc);font-size:19px}
+.steps span{font-size:15px;color:#4d4952}
+.fine{margin:28px 0 0;font-size:14px;color:var(--violet);max-width:44em}
+@media (max-width:900px){
+  .t-hero{grid-template-columns:1fr;gap:32px;padding-block:44px 56px}
+  .feats{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .sheet{grid-template-columns:repeat(7,96px)}
+}
+@media (max-width:600px){
+  .steps{grid-template-columns:1fr}
+  .nav a{padding:6px 7px;letter-spacing:.08em}
+}
+
 /* toast */
 .toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:10px 20px;font-size:14px;letter-spacing:.06em;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;border-radius:2px}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -838,6 +903,7 @@ main{min-height:60vh}
 
 <script type="application/json" id="data-updates">
 [
+  {"date":"2026-11-06","kind":"小工具","title":"角色主畫面小工具","note":"iPhone 主畫面小工具介紹，範例角色聞止水。","link":"#tools"},
   {"date":"2026-11-06","kind":"站務","title":"岔頁開張","note":"作品入口與小咒語收藏室上線。","link":"#home"},
   {"date":"2026-11-06","kind":"小咒語","title":"小咒語收藏室開張","note":"第一批 27 則咒語上架，含兩個連載。","link":"#spells"},
   {"date":"2026-11-06","kind":"世界觀","title":"第七婚籍管理處","note":"冥府總署公開檔案上線。","link":"https://xia-mumu.github.io/seventh-marriage-registry/"},
@@ -854,6 +920,7 @@ main{min-height:60vh}
       <a href="#home" data-nav="home">HOME <small>首頁</small></a>
       <a href="#worlds" data-nav="worlds">WORLDS <small>世界觀</small></a>
       <a href="#spells" data-nav="spells">SPELLS <small>小咒語</small></a>
+      <a href="#tools" data-nav="tools">TOOLS <small>小工具</small></a>
       <a href="#about" data-nav="about">ABOUT <small>關於</small></a>
     </nav>
   </div>
@@ -994,10 +1061,122 @@ main{min-height:60vh}
     </div>
   </div>
 
+
+  <!-- ===== TOOLS ===== -->
+  <div class="view" id="v-tools" data-view="tools" hidden>
+    <section class="wrap t-hero" aria-labelledby="h-tools">
+      <div>
+        <span class="label">PAGE 003 / TOOLS</span>
+        <h1 id="h-tools">讓角色住進<em>主畫面</em></h1>
+        <p class="lede">換上你的角色，她就一直在那裡。抬頭就看得到，不用打開任何 app。</p>
+        <div class="meta"><span>iPhone 主畫面小工具</span><span>Scriptable</span><span>範例角色・<b>聞止水</b></span></div>
+      </div>
+      <div class="wen">
+        <div class="film">
+          <div class="demo">
+            <div class="widget" aria-live="polite">
+              <img id="w-img" src="assets/wen/normal.webp" alt="聞止水">
+              <div>
+                <div class="nm">聞止水</div>
+                <div class="ln" id="w-line">嗯。</div>
+                <div class="mt" id="w-meta">現在 --:--</div>
+              </div>
+            </div>
+            <div class="touches" role="group" aria-label="碰碰她">
+              <button type="button" data-z="ear">耳骨環</button>
+              <button type="button" data-z="hand">牽手</button>
+              <button type="button" data-z="cam">相機</button>
+              <button type="button" data-z="body">抱抱</button>
+            </div>
+            <div class="demo-cap">這是試玩：她會照你現在的時間說話，按按鈕碰碰她。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-feats">
+      <div class="sec-head">
+        <span class="label">WHAT SHE DOES</span>
+        <div><h2 id="h-feats">她會做的事<em>Features</em></h2></div>
+      </div>
+      <div class="feats">
+        <article class="feat">
+          <h3>主畫面上的她</h3>
+          <ul>
+            <li>小的、中的兩種尺寸都可以放</li>
+            <li>中尺寸會顯示相遇第幾天和現在時間</li>
+            <li>大約每半小時換一句話</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她會看時間說話</h3>
+          <p>照早中晚、星期、季節換台詞。01:30–08:30 是她的睡覺時間，會打哈欠。</p>
+          <ul class="times">
+            <li><time>08:40</time><q>醒了？</q></li>
+            <li><time>12:15</time><q>吃。</q></li>
+            <li><time>18:40</time><q>我在樓下。</q></li>
+            <li><time>02:10</time><q>……睡了。</q></li>
+            <li><span class="k">週一</span><q>星期一。撐住。</q></li>
+            <li><span class="k">冬天</span><q>很冷。手給我。</q></li>
+            <li><span class="k">生日</span><q>生日快樂。</q></li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>點進去摸摸她</h3>
+          <p>摸頭、捏臉、牽手、碰她的耳骨環。每個地方的反應都不一樣。</p>
+          <ul>
+            <li>捏臉會臉紅，按相機她會拍你</li>
+            <li>連續戳太多下，她會說「妳到底要戳幾下。」</li>
+            <li>不用網路、不花額度</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>跟她聊天</h3>
+          <p>點她說的那句話，直接打開聊天頁。</p>
+          <ul>
+            <li>用 Claude 說話，照她的個性回你</li>
+            <li>她會換表情回你的訊息</li>
+            <li>重要的事她會記進記憶本</li>
+            <li>手機、電腦都能接著聊</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-looks">
+      <div class="sec-head">
+        <span class="label">CONTACT SHEET</span>
+        <div><h2 id="h-looks">七種樣子<em>Seven Looks</em></h2><p>跟著她說的話換表情。聊到拍照會舉起相機，說要出門會站起來。</p></div>
+      </div>
+      <div class="wen">
+        <div class="film">
+          <div class="sheet-wrap">
+            <div class="sheet" id="sheet"></div>
+          </div>
+          <p class="sheet-note">立繪和台詞都能換成你自己的角色。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-install">
+      <div class="sec-head">
+        <span class="label">HOW TO INSTALL</span>
+        <div><h2 id="h-install">四步驟帶角色回家<em>Install</em></h2><p>不用寫程式，跟著做就好。</p></div>
+      </div>
+      <ol class="steps">
+        <li><b>下載 Scriptable</b><span>App Store 免費。</span></li>
+        <li><b>存進檔案</b><span>把小工具檔案存到「iCloud 雲碟 → Scriptable」。</span></li>
+        <li><b>加到主畫面</b><span>長按主畫面 → ＋ → 搜尋 Scriptable。</span></li>
+        <li><b>選你的角色</b><span>長按小工具 → 編輯 → Script 選你的角色小工具。</span></li>
+      </ol>
+      <p class="fine">小工具檔案目前還沒有公開下載。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
+    </section>
+  </div>
+
   <!-- ===== ABOUT ===== -->
   <div class="view" id="v-about" data-view="about" hidden>
     <section class="wrap about" aria-labelledby="h-about">
-      <span class="label">PAGE 003 / ABOUT</span>
+      <span class="label">PAGE 004 / ABOUT</span>
       <div class="body">
         <h1 id="h-about"><i>Hello,</i> I'm Xia mumu.</h1>
         <p>喜歡創造不存在的人，也喜歡思考真實世界裡那些沒有標準答案的問題。</p>
@@ -1036,6 +1215,7 @@ main{min-height:60vh}
     <nav aria-label="頁尾連結">
       <a href="#worlds">WORLDS</a>
       <a href="#spells">SPELLS</a>
+      <a href="#tools">TOOLS</a>
       <a href="#about">ABOUT</a>
       <a href="https://github.com/xia-mumu" target="_blank" rel="noopener">GITHUB ↗</a>
     </nav>
@@ -1223,6 +1403,51 @@ main{min-height:60vh}
     copyText(url, '分享連結已複製 ♡');
   });
 
+
+  /* ---------- tools：小工具試玩 ---------- */
+  const WIMG = {normal:'normal',smile:'smile',blush:'blush',closed:'closed',sleepy:'sleepy',photo:'photo',stand:'stand'};
+  const LOOKS = [['normal','平常'],['smile','微笑'],['blush','臉紅'],['closed','閉眼'],['sleepy','打哈欠'],['photo','舉相機'],['stand','站著']];
+  $('#sheet').innerHTML = LOOKS.map(([k,n])=>`<figure><div class="fr"><img src="assets/wen/${k}.webp" alt="聞止水・${n}" loading="lazy"></div><figcaption>${n}</figcaption></figure>`).join('');
+  const TOUCH = {
+    ear:[['戴很多年了。','normal'],['那個不能拔。','closed'],['……耳朵不要。','blush']],
+    hand:[['嗯。','smile'],['手怎麼這麼冰。','normal'],['走吧。','stand'],['……沒要放。','blush'],['握著就好，不用講話。','closed']],
+    cam:[['要拍嗎。站好。','photo'],['別動。……好了。','photo'],['光很好。','photo'],['妳剛剛笑了。拍到了。','photo'],['等洗出來再給妳。','photo']],
+    body:[['怎麼了。','normal'],['我在。','normal'],['……要。','blush'],['妳今天很黏。','smile'],['沒有要走。','closed']]
+  };
+  const pad = n => String(n).padStart(2,'0');
+  function timeLine(d){
+    const m = d.getHours()*60 + d.getMinutes(), mon = d.getMonth()+1;
+    if (m >= 90 && m < 510) return ['……睡了。','sleepy'];
+    if (m < 90) return ['嗯。','closed'];
+    if (m < 660) return d.getDay()===1 ? ['星期一。撐住。','normal'] : ['醒了？','normal'];
+    if (m < 840) return ['吃。','normal'];
+    if (m >= 1020 && m < 1230) return ['我在樓下。','stand'];
+    if (mon===12 || mon<=2) return ['很冷。手給我。','normal'];
+    return ['嗯。','normal'];
+  }
+  let holdUntil = 0, lastLine = {};
+  function setWidget(line, look){
+    const img = $('#w-img');
+    if (!img) return;
+    img.src = 'assets/wen/' + (WIMG[look]||'normal') + '.webp';
+    $('#w-line').textContent = line;
+  }
+  function tick(){
+    const d = new Date();
+    $('#w-meta').textContent = `現在 ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    if (Date.now() > holdUntil) { const [l,f] = timeLine(d); setWidget(l,f); }
+  }
+  tick(); setInterval(tick, 20000);
+  let pokes = [];
+  document.querySelectorAll('.touches [data-z]').forEach(b=>b.addEventListener('click', ()=>{
+    const n = Date.now(); pokes = pokes.filter(t=>n-t<4000); pokes.push(n);
+    holdUntil = n + 3200; setTimeout(tick, 3300);
+    if (pokes.length >= 7) { pokes = []; setWidget(Math.random()<.5 ? '妳到底要戳幾下。' : '……講完了？','normal'); return; }
+    const arr = TOUCH[b.dataset.z]; let p;
+    do { p = arr[Math.floor(Math.random()*arr.length)]; } while (arr.length>1 && p[0]===lastLine[b.dataset.z]);
+    lastLine[b.dataset.z] = p[0]; setWidget(p[0], p[1]);
+  }));
+
   /* ---------- router ---------- */
   const views = [...document.querySelectorAll('.view')];
   function route(){
@@ -1232,7 +1457,7 @@ main{min-height:60vh}
     if (name.startsWith('spell-')) {
       const s = SPELLS.find(x=>x.id===name.slice(6));
       if (s) { showDetail(s); name='spell'; } else name='lost';
-    } else if (!['home','worlds','spells','about'].includes(name)) name='lost';
+    } else if (!['home','worlds','spells','tools','about'].includes(name)) name='lost';
     if (name !== 'spell') document.title = '岔頁 OFF PAGE';
     views.forEach(v=>{ v.hidden = v.dataset.view !== name; });
     const navKey = name==='spell' ? 'spells' : name;
