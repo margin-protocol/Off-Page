@@ -1487,7 +1487,7 @@ main{min-height:60vh}
         <p>本服務提供 <b>iPhone Scriptable 角色小工具</b>客製化，包含完整程式檔案及圖文安裝教學。</p>
         <p>委託者需自行下載 Scriptable 並依照教學完成安裝。本服務不提供遠端操作、一對一安裝指導或手機設定協助。</p>
         <p>若交付的程式本身出現可重現的錯誤，我會協助修正；但不包含個人裝置操作及第三方 App 使用問題。</p>
-        <p class="nb">※ 僅支援 iPhone（Scriptable 沒有 Android 版）。※ 只接<b>角色</b>，不接真人（包含真人照片、以真人為原型改畫）。</p>
+        <p class="nb">※ 僅支援 iPhone（Scriptable 沒有 Android 版）。※ 只接<b>角色</b>，不接真人（包含真人照片、以真人為原型改畫）。※ 如果是<b>別人家的角色</b>，請先取得親媽同意，並確認對方能接受的二創範圍。</p>
         <p>請確認能接受以上服務方式後再進行委託，謝謝理解！♡</p>
       </div>
     </section>
@@ -1654,6 +1654,7 @@ main{min-height:60vh}
         <div><dt>不包含</dt><dd>手機操作教學、Scriptable 基礎教學、第三方平台帳號設定。</dd></div>
         <div><dt>額外功能</dt><dd>超出原本模板的功能另外報價。</dd></div>
         <div><dt>只接角色</dt><dd>原創或二創角色皆可；不接真人，包含真人照片與以真人為原型的改畫。</dd></div>
+        <div><dt>別人家的角色</dt><dd>請先取得親媽同意，並確認對方可以接受的二創範圍，再來委託喔。</dd></div>
         <div><dt>圖片</dt><dd>自備圖片請確認你有權使用。繪師畫的圖，請先跟繪師確認可以交給第三方裁切、去背、放進小工具。</dd></div>
         <div><dt>作品集</dt><dd>完成品只有在你同意後，才會放進作品集。</dd></div>
       </dl>
@@ -1878,6 +1879,7 @@ main{min-height:60vh}
             <label data-for="o-own"><span>自備的是去背 PNG 嗎</span><select id="o-own"><option>是</option><option>不是</option><option>不確定</option></select></label>
           </div>
           <label class="ck"><input type="checkbox" id="o-real"> <span>這是<b>角色</b>，不是真人，也不是以真人照片為原型<b>*</b></span></label>
+          <label class="ck"><input type="checkbox" id="o-oc"> <span>如果是<b>別人家的角色</b>，我已經取得親媽同意（自己的角色不用勾）</span></label>
           <label class="ck" data-for2="o-rights"><input type="checkbox" id="o-rights"> <span>自備的圖片我有權使用：是我自己畫的，或<b>已經跟繪師確認</b>可以交給第三方裁切、去背，放進小工具個人使用<b>*</b></span></label>
           <label class="ck"><input type="checkbox" id="o-folio"> <span>完成後可以放進作品集（不勾就不會放）</span></label>
         </fieldset>
@@ -2242,7 +2244,7 @@ main{min-height:60vh}
         sec('聯絡', [`稱呼：${v('o-name')||'（未填）'}`, `聯絡方式：${v('o-contact')||'（未填）'}`]),
         sec('角色', [`角色名：${v('o-char')||'（未填）'}`, v('o-source')&&`出處：${v('o-source')}`, v('o-basic')&&`性別／年齡／職業：${v('o-basic')}`,
           `個性與說話方式：${v('o-persona')||'（未填）'}`, v('o-rel')&&`關係：${v('o-rel')}`, v('o-callme')&&`她怎麼叫我：${v('o-callme')}`,
-          `確認是角色、不是真人：${$id('o-real').checked?'是':'（未確認）'}`]),
+          `確認是角色、不是真人：${$id('o-real').checked?'是':'（未確認）'}`, $id('o-oc').checked&&'別人家的角色：已取得親媽同意']),
         sec('圖片', [`準備方式：${v('o-imgs')}`, own&&`去背 PNG：${v('o-own')}`, own&&`使用權：${$id('o-rights').checked?'已確認':'（未確認）'}`]),
         sec('方案', ['☑ 基本入住費 NT$300', ...picked]),
         sec('設定', [shown($id('o-city'))&&v('o-city')&&`天氣城市：${v('o-city')}`, shown($id('o-diary'))&&v('o-diary')&&`角色日記：${v('o-diary')}`,
