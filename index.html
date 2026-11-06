@@ -135,6 +135,9 @@ main{min-height:60vh}
 .enter{font-family:var(--sans-tc);font-weight:500;font-size:14px;color:var(--berry);text-decoration:none;background-image:linear-gradient(var(--berry),var(--berry));background-size:0 1px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .3s;padding-bottom:2px}
 .enter:hover,.enter:focus-visible{background-size:100% 1px}
 .enter.off{color:var(--violet)}
+.links-w{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:flex-end}
+.play{font-family:var(--sans-tc);font-weight:700;font-size:14px;text-decoration:none;color:var(--paper);background:var(--berry);padding:5px 14px;border-radius:2px;transition:background .2s}
+.play:hover{background:var(--berry-deep)}
 .ext-note{font-size:12px;color:var(--violet);margin:18px 0 0}
 
 /* spell machine */
@@ -349,7 +352,8 @@ main{min-height:60vh}
    "genres":["心理科幻","制度懸疑","互動敘事"],
    "line":"當所有人都能被預測，只有你無法被分類。",
    "status":"持續更新","cta":"進入 NULL",
-   "url":"https://xia-mumu.github.io/null/"},
+   "url":"https://xia-mumu.github.io/null/",
+   "play":"https://www.cheliz.ai/zh-hant/gallery?utm_source=web_share&utm_medium=share_play&phandle=750s7iv0eh8qu8s1&enter_from=poster&invite_code=55RWFA"},
   {"id":"qichuan","no":"02","title":"棲川市","en":"Qichuan City","cover":"qichuan",
    "genres":["現代都市","角色互動","開放敘事"],
    "line":"一座不存在的城市，住著一些有自己生活的人。",
@@ -359,7 +363,8 @@ main{min-height:60vh}
    "genres":["冥府奇幻","婚籍調查","跨世敘事"],
    "line":"系統顯示已婚，但原始婚契查無紀錄。",
    "status":"持續更新","cta":"進入第七婚籍管理處",
-   "url":"https://xia-mumu.github.io/seventh-marriage-registry/"}
+   "url":"https://xia-mumu.github.io/seventh-marriage-registry/",
+   "play":"https://www.cheliz.ai/zh-hant/gallery?utm_source=web_share&utm_medium=share_play&phandle=u3sqzdoomb0pj924&enter_from=poster&invite_code=55RWFA"}
 ]
 </script>
 
@@ -1270,7 +1275,7 @@ main{min-height:60vh}
         <h3>${esc(w.title)}<small>${esc(w.en)}</small></h3>
         <div class="genres">${w.genres.map(g=>`<span>${esc(g)}</span>`).join('')}</div>
         <p class="line">「${esc(w.line)}」</p>
-        <div class="wfoot"><span class="status${live?'':' soon'}">${esc(w.status)}</span>${link}</div>
+        <div class="wfoot"><span class="status${live?'':' soon'}">${esc(w.status)}</span><span class="links-w">${link}${w.play?`<a class="play" href="${esc(w.play)}" target="_blank" rel="noopener">點此遊玩 ↗<span style="position:absolute;left:-9999px">（另開新分頁，前往 cheliz 遊玩）</span></a>`:''}</span></div>
       </div>
     </article>`;
   }
