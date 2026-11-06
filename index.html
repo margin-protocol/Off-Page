@@ -352,6 +352,14 @@ main{min-height:60vh}
 @media (max-width:700px){.fg.two,.feats-ck{grid-template-columns:1fr}.of-out{padding:18px 16px}}
 
 /* 戀人入住申請所 */
+#rs-lines,#rs-form{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 120px)}
+.tpl{max-width:860px;display:flex;flex-direction:column;gap:14px}
+.tpl-btns{display:flex;gap:10px;flex-wrap:wrap}
+.tpl details{background:var(--paper);border:1px solid var(--rule)}
+.tpl summary{cursor:pointer;padding:12px 16px;font-family:var(--serif-tc);font-size:16px;color:var(--berry)}
+.tpl pre{margin:0;border-top:1px solid var(--rule);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.8;white-space:pre-wrap;word-break:break-word;max-height:520px;overflow:auto;background:var(--cream)}
+.base li a,.hint a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
 .rs-hero{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
 .rs-hero h1{margin:12px 0 10px;font-family:var(--serif-tc);font-size:clamp(30px,4.6vw,48px);line-height:1.3;text-wrap:balance}
 .rs-hero h1 em{font-style:normal;color:var(--berry)}
@@ -1470,7 +1478,7 @@ main{min-height:60vh}
           <div class="amt">NT$<b>300</b></div>
           <ul>
             <li>角色名稱、角色對你的稱呼、重要日期（生日、相遇日）設定</li>
-            <li>客人自備角色圖片與互動台詞（提供台詞填空範本）</li>
+            <li>客人自備角色圖片與互動台詞（提供<a href="#order" data-jump="rs-lines">台詞填空範本</a>）</li>
             <li>原有七種互動按鈕與基本動畫</li>
             <li>自訂主色、輔色、背景色、文字色（可選配色目錄）</li>
             <li>早中晚問候、聊天入口連結、低電量時換台詞</li>
@@ -1574,6 +1582,191 @@ main{min-height:60vh}
       </dl>
     </section>
 
+    <section class="wrap sec" id="rs-lines" aria-labelledby="h-lines">
+      <div class="sec-head"><span class="label">LINES TEMPLATE</span><div><h2 id="h-lines">台詞填空範本<em>Template</em></h2><p>基本方案由你自己準備台詞。照這份範本填，我就能直接放進小工具。建議約 65 句，最少 40 句；寫不滿可以加購「完整台詞包」。</p></div></div>
+      <div class="tpl">
+        <div class="tpl-btns">
+          <button class="btn" type="button" data-copy="lines-tpl">複製範本</button>
+          <a class="btn ghost" href="assets/lines-template.txt" download="戀人入住_台詞填空範本.txt">下載 .txt</a>
+        </div>
+        <details>
+          <summary>展開看完整範本</summary>
+          <pre id="lines-tpl">【戀人入住｜台詞填空範本】
+
+填寫說明
+・每句寫在「・」後面，一行一句。
+・句子後面可以用（ ）標表情，例如：嗯。（微笑）
+　表情請用你圖片有的名字，例如：平常／微笑／臉紅／閉眼／想睡。沒標就用「平常」。
+・用角色平常傳訊息的口氣寫，越短越像真的。
+・角色叫你的方式，直接寫進句子裡就好。
+・括號裡的「建議」是讓小工具不容易重複的句數；基本方案全部加起來至少 40 句。
+・不會寫或寫不滿？可以加購「完整台詞包」，我照角色個性幫你寫。
+
+範例角色：聞止水（冷靜、話少的攝影師）
+　早上：醒了？（平常）
+　捏臉：沒有臉紅。是光的問題。（臉紅）
+
+
+━━━━━━━━━━━━━━
+一、主畫面：她現在會說的話
+━━━━━━━━━━━━━━
+
+■ 早上（05:00–11:00）建議 5 句
+・
+・
+・
+・
+・
+
+■ 中午（11:00–14:00）建議 4 句
+・
+・
+・
+・
+
+■ 下午（14:00–18:00）建議 4 句
+・
+・
+・
+・
+
+■ 晚上（18:00–23:00）建議 5 句
+・
+・
+・
+・
+・
+
+■ 深夜（23:00 之後、還沒睡）建議 4 句
+・
+・
+・
+・
+
+■ 睡覺時間（她在睡）建議 3 句
+睡覺時間：　　點～　　點
+・
+・
+・
+
+■ 隨時都可能說的話 建議 5 句
+（想你、叫你名字、沒來由的一句話）
+・
+・
+・
+・
+・
+
+
+━━━━━━━━━━━━━━
+二、點進去：七種互動
+━━━━━━━━━━━━━━
+每種建議 4 句。互動名稱可以改成適合你角色的，例如「耳骨環」改成「髮夾」、「相機」改成「書」。
+
+■ 摸頭
+・
+・
+・
+・
+
+■ 捏臉
+・
+・
+・
+・
+
+■ 牽手
+・
+・
+・
+・
+
+■ 第四種互動（原本是「耳骨環」，可以改）：
+・
+・
+・
+・
+
+■ 第五種互動（原本是「相機」，可以改）：
+・
+・
+・
+・
+
+■ 出門
+・
+・
+・
+・
+
+■ 抱抱
+・
+・
+・
+・
+
+■ 連續戳太多下 建議 2 句
+・
+・
+
+
+━━━━━━━━━━━━━━
+三、特別的日子
+━━━━━━━━━━━━━━
+
+■ 你的生日（寫 1–2 句）
+・
+・
+
+■ 手機快沒電了 建議 2 句
+・
+・
+
+■ 正在充電 建議 1 句
+・
+
+
+━━━━━━━━━━━━━━
+四、進階互動功能包（有加購才需要填）
+━━━━━━━━━━━━━━
+沒寫的部分我會照角色個性補上。
+
+■ 相遇紀念日（滿 100 天、週年）
+・
+・
+
+■ 下雨了
+・
+・
+
+■ 天氣很冷
+・
+
+■ 天氣很熱
+・
+
+■ 你上班的第一天／放假前一天／休假日
+・
+・
+・
+
+■ 隱藏彩蛋（例如「牽手第三次」「先捏臉再抱抱」，寫條件和台詞）
+條件：
+台詞：
+條件：
+台詞：
+
+■ 角色日記：她平常的生活、工作、常去的地方
+（例如：甜點師，常在店裡試新口味、週末去市場）
+
+
+
+填好後，連同申請單一起私訊給我 ♡
+</pre>
+        </details>
+      </div>
+    </section>
+
     <section class="wrap sec order" id="rs-form" aria-labelledby="h-form">
       <div class="sec-head"><span class="label">APPLY</span><div><h2 id="h-form">入住申請單<em>Apply</em></h2><p>照下面填好，按「複製申請單」，到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊貼給我。我看完會跟你確認細節和報價。</p></div></div>
 
@@ -1598,7 +1791,7 @@ main{min-height:60vh}
             <label><span>個性與說話方式<b>*</b></span><textarea id="o-persona" rows="4" required placeholder="例如：冷靜、話少、直接。訊息很短，常說「嗯」「到了」。不撒嬌，但會直接說想你。"></textarea></label>
             <label><span>你們的關係</span><input id="o-rel" placeholder="例如：交往中、朋友、搭檔、家人"></label>
           </div>
-          <p class="hint">有完整角色卡的話，私訊時一起附上就好，這裡寫重點。</p>
+          <p class="hint">有完整角色卡的話，私訊時一起附上就好，這裡寫重點。基本方案的台詞請用<a href="#order" data-jump="rs-lines">台詞填空範本</a>寫好一起傳給我。</p>
         </fieldset>
 
         <fieldset>
