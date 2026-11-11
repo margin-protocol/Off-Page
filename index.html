@@ -488,6 +488,35 @@ main{min-height:60vh}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .scard.turning{animation:fade .01ms both}
 }
+
+/* ---------- 公告橫幅＋小鈴鐺 ---------- */
+/* 公告內容自動取「data-updates」最上面那一則；新增更新紀錄就等於發新公告。 */
+.annc{margin:18px auto 0;display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:9px 8px 9px 14px;animation:pagein .45s ease both}
+.annc[hidden]{display:none}
+.annc a{flex:1;min-width:0;display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+.annc .nt-tag{font-family:var(--ui);font-size:12px;letter-spacing:.14em;color:var(--berry);white-space:nowrap}
+.annc .nt-ttl{font-size:15px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.annc .nt-go{font-size:13px;color:var(--berry);white-space:nowrap}
+.annc a:hover .nt-ttl{color:var(--berry)}
+.annc button{flex:none;width:32px;height:32px;border:0;background:transparent;color:var(--violet);font-size:20px;line-height:1;cursor:pointer;border-radius:50%}
+.annc button:hover{background:var(--cream);color:var(--berry)}
+.bell{position:relative;border:0;background:transparent;cursor:pointer;padding:6px 8px;color:var(--ink);display:flex;align-items:center}
+.site-head .wrap{justify-content:flex-start}.site-head .nav{margin-left:auto}
+@media (max-width:820px){.site-head .bell{order:2;margin-left:auto}.site-head .nav{order:3;width:100%;margin-left:0}}
+.bell svg{width:18px;height:18px}
+.bell:hover,.bell[aria-expanded="true"]{color:var(--berry)}
+.bell .dot{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--berry);border:1.5px solid var(--cream)}
+.bell .dot[hidden]{display:none}
+.bell-panel{position:fixed;z-index:20;width:min(340px,calc(100vw - 24px));background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--berry);box-shadow:0 10px 30px rgba(41,39,43,.12);padding:6px 0}
+.bell-panel[hidden]{display:none}
+.bell-panel .label{display:block;padding:8px 16px 6px}
+.bell-panel ol{list-style:none;margin:0;padding:0}
+.bell-panel li a{display:block;padding:9px 16px;text-decoration:none;color:var(--ink);border-top:1px solid var(--rule)}
+.bell-panel li a:hover{background:var(--cream)}
+.bell-panel time{font-size:12px;color:var(--violet);font-variant-numeric:tabular-nums;margin-right:8px}
+.bell-panel .k{font-size:12px;color:var(--berry)}
+.bell-panel .t{display:block;font-size:15px;line-height:1.5;margin-top:2px}
+@media (max-width:560px){.annc .nt-tag time{display:none}.annc .nt-go{display:none}}
 </style>
 </head>
 <body>
@@ -1196,7 +1225,7 @@ main{min-height:60vh}
 
 <script type="application/json" id="data-updates">
 [
-  {"date":"2026-11-10","kind":"小咒語","title":"新咒語：聽不懂的情話🌐","note":"成人向。他偏偏挑你聽不懂的語言說。","link":"#spells"},
+  {"date":"2026-11-10","kind":"小咒語","title":"新咒語：聽不懂的情話🌐","note":"成人向。他偏偏挑你聽不懂的語言說。","link":"#spell-untranslated-whispers"},
   {"date":"2026-11-09","kind":"小咒語","title":"新咒語：請勿餵食戀人🍰、你的遺物拍賣會🕯️、戀愛法庭開庭⚖️","note":"一則甜、一則痛、一則荒謬，一次上架三個。","link":"#spells"},
   {"date":"2026-11-06","kind":"小咒語","title":"新咒語：禁止戀愛腦🚫、如果那天我沒有回頭🌧️","note":"一則鬧騰、一則心碎，一次上架兩個。","link":"#spells"},
   {"date":"2026-11-06","kind":"小咒語","title":"新咒語：茶藝大師🍵","note":"看角色怎麼用茶藝讓你心甘情願偏向他。","link":"#spells"},
@@ -1222,6 +1251,14 @@ main{min-height:60vh}
       <a href="#tools" data-nav="tools">TOOLS <small>小工具</small></a>
       <a href="#about" data-nav="about">ABOUT <small>關於</small></a>
     </nav>
+      <button class="bell" id="bell" type="button" aria-label="更新公告" aria-expanded="false" aria-controls="bell-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span class="dot" id="bell-dot" hidden></span>
+      </button>
+    <div class="bell-panel" id="bell-panel" role="dialog" aria-label="更新公告" hidden>
+      <span class="label">NOTICE / 更新公告</span>
+      <ol id="bell-list"></ol>
+    </div>
   </div>
 </header>
 
@@ -1229,6 +1266,10 @@ main{min-height:60vh}
 
   <!-- ===== HOME ===== -->
   <div class="view" id="v-home" data-view="home">
+    <div class="wrap"><div class="annc" id="notice" role="status" hidden>
+      <a id="notice-link" href="#home"><span class="nt-tag">NEW <time id="notice-date"></time></span><span class="nt-ttl" id="notice-title"></span><span class="nt-go">看看 →</span></a>
+      <button type="button" id="notice-close" aria-label="關閉這則公告">×</button>
+    </div></div>
     <section class="wrap hero">
       <div class="hero-mark">
         <span class="label pg">PAGE 000 / HOME</span>
@@ -2189,6 +2230,42 @@ main{min-height:60vh}
       <span class="ttl">${esc(u.title)}<small>${esc(u.note||'')}</small></span>
       ${u.link?`<a href="${esc(u.link)}"${ext?' target="_blank" rel="noopener"':''}>${ext?'前往 ↗':'翻到這頁 →'}</a>`:'<span></span>'}</li>`;
   }).join('');
+
+
+  /* ---------- 公告橫幅＋小鈴鐺 ---------- */
+  (function(){
+    const list = UPDATES.slice().sort((a,b)=>b.date.localeCompare(a.date));
+    const top = list[0]; if(!top) return;
+    const uid = u => u.date+'|'+u.title;
+    const get = k => { try{ return localStorage.getItem(k); }catch(e){ return null; } };
+    const set = (k,v) => { try{ localStorage.setItem(k,v); }catch(e){} };
+    const ext = u => /^https?:/.test(u.link||'');
+    const attrs = u => `href="${esc(u.link||'#home')}"${ext(u)?' target="_blank" rel="noopener"':''}`;
+
+    // 橫幅：打叉後記住這一則；發新公告就會再出現
+    const box = $('#notice');
+    if (get('offpage-notice-closed') !== uid(top)) {
+      const a = $('#notice-link');
+      a.href = top.link || '#home';
+      if (ext(top)) { a.target='_blank'; a.rel='noopener'; }
+      $('#notice-date').textContent = fmtDate(top.date).slice(5);
+      $('#notice-title').textContent = top.title;
+      box.hidden = false;
+    }
+    $('#notice-close').addEventListener('click', ()=>{ box.hidden = true; set('offpage-notice-closed', uid(top)); });
+
+    // 小鈴鐺：有沒看過的新公告就亮小紅點
+    const bell = $('#bell'), panel = $('#bell-panel'), dot = $('#bell-dot');
+    if (get('offpage-bell-seen') !== uid(top)) dot.hidden = false;
+    $('#bell-list').innerHTML = list.slice(0,6).map(u=>`<li><a ${attrs(u)}><time>${fmtDate(u.date)}</time><span class="k">${esc(u.kind)}</span><span class="t">${esc(u.title)}${ext(u)?' ↗':''}</span></a></li>`).join('');
+    const place = ()=>{ const r = bell.getBoundingClientRect(); panel.style.top = (r.bottom+8)+'px'; const w = panel.offsetWidth; panel.style.left = Math.min(Math.max(12, r.right - w), innerWidth - w - 12)+'px'; };
+    const open = v => { panel.hidden = !v; bell.setAttribute('aria-expanded', v); if(v){ place(); dot.hidden = true; set('offpage-bell-seen', uid(top)); } };
+    bell.addEventListener('click', e=>{ e.stopPropagation(); open(panel.hidden); });
+    panel.addEventListener('click', e=>{ if(e.target.closest('a')) open(false); });
+    document.addEventListener('click', e=>{ if(!panel.hidden && !panel.contains(e.target)) open(false); });
+    addEventListener('keydown', e=>{ if(e.key==='Escape' && !panel.hidden){ open(false); bell.focus(); } });
+    addEventListener('resize', ()=>{ if(!panel.hidden) place(); });
+  })();
 
   /* ---------- random draw ---------- */
   let lastId = null;
