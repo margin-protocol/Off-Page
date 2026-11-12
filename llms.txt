@@ -3,11 +3,13 @@
 > 岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。
 
 - 網址：https://xia-mumu.github.io/Off-Page/
-- 作者：Xia mumu（Threads：@xiaxia_7575，GitHub：xia-mumu）
+- 作者：[Xia mumu](https://xia-mumu.github.io/Off-Page/about.html)（Threads：@xiaxia_7575，GitHub：xia-mumu）
 - 語言：繁體中文（台灣）
 - 最後更新：2026-11-12
 
 ## 世界觀
+
+總覽：[世界觀收藏](https://xia-mumu.github.io/Off-Page/worlds.html)
 
 - [NULL（PREDICT）](https://xia-mumu.github.io/null/)：心理科幻、制度懸疑、互動敘事。當所有人都能被預測，只有你無法被分類。
 - [棲川市（Qichuan City）](https://qichuan-city.neocities.org/)：現代都市、角色互動、開放敘事。一座不存在的城市，住著一些有自己生活的人。
@@ -19,47 +21,47 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。目前公開 34 則：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://xia-mumu.github.io/Off-Page/spells.html)，目前公開 34 則，每則都有自己的頁面：
 
-- [安靜](https://xia-mumu.github.io/Off-Page/#spell-quiet)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
-- [自由的雙標現場](https://xia-mumu.github.io/Off-Page/#spell-freedom-double-standard)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
-- [我就想開門❗️](https://xia-mumu.github.io/Off-Page/#spell-open-the-door)：看到門關起來，就是會想打開。（戀愛日常、隨機挑戰）
-- [來打架！](https://xia-mumu.github.io/Off-Page/#spell-lets-fight)：感情好到連架都吵不起來，那就來打一架吧。（隨機挑戰、衝突與和解）
-- [你冷不冷？](https://xia-mumu.github.io/Off-Page/#spell-are-you-cold)：共感娃娃傳來的觸感，和一場來不及說出口的關心。（劇情事件、虐心）
-- [抄首詩🖤](https://xia-mumu.github.io/Off-Page/#spell-copy-a-poem)：你把一首詩抄給他。他會怎麼讀？（戀愛日常）
-- [Where Our Souls Collide.](https://xia-mumu.github.io/Off-Page/#spell-where-our-souls-collide)：一本時尚雜誌的雙人封面邀請，主題是「靈魂交會之處」。（劇情事件、戀愛日常、連載）
-- [可是她真的很好看⋯⋯](https://xia-mumu.github.io/Off-Page/#spell-but-she-is-pretty)：你最近迷上一位女實況主，每天都叫她「老婆」。（吃醋與曖昧）
-- [如果我約你去同志大遊行 🏳️‍🌈](https://xia-mumu.github.io/Off-Page/#spell-pride-invite)：今年的同志大遊行剛好撞上萬聖節，你約他一起去。（劇情事件、關係試探）
-- [同志大遊行🏳️‍🌈](https://xia-mumu.github.io/Off-Page/#spell-pride-costume)：約好了一起去遊行，也約好了一起扮裝。（劇情事件、戀愛日常）
-- [你挺誰！](https://xia-mumu.github.io/Off-Page/#spell-whose-side)：你跟他的摯友吵架了，氣呼呼地跑來問他站哪邊。（衝突與和解、關係試探）
-- [平民美食](https://xia-mumu.github.io/Off-Page/#spell-brown-sugar-mantou)：趁他出門上班，你偷偷去買黑糖饅頭。（戀愛日常）
-- [齒痕](https://xia-mumu.github.io/Off-Page/#spell-bite-mark)：洗完澡，他在吹頭髮，你蹲下來咬了一口。（戀愛日常、隨機挑戰）
-- [說說自己有多好](https://xia-mumu.github.io/Off-Page/#spell-say-your-good-points)：他在你耳邊要求：先說出自己的優點。（成人向）
-- [你說我是真的胖😭](https://xia-mumu.github.io/Off-Page/#spell-really-fat)：「水腫壓下去不會彈起來」，結果它彈回來了。（戀愛日常、隨機挑戰）
-- [你眼裡的我❤️](https://xia-mumu.github.io/Off-Page/#spell-me-in-your-eyes)：跟他要五張照片：性感的、漂亮的、搞笑的、可愛的，和他最喜歡的你。（戀愛日常）
-- [曖昧期間的報備](https://xia-mumu.github.io/Off-Page/#spell-ambiguous-checkin)：曖昧期的報備影片，他會重錄幾次？（吃醋與曖昧、戀愛日常）
-- [我在你眼裡只是個物品嗎！？](https://xia-mumu.github.io/Off-Page/#spell-just-an-object)：「拿起眼前最喜歡的東西」，他第一個抱住的是你。（戀愛日常、隨機挑戰）
-- [讚美是最高級的情色](https://xia-mumu.github.io/Off-Page/#spell-praise-is-erotic)：他拿起筆，在你身上寫下八個讚美的單字。（成人向）
-- [老婆需要獨立空間](https://xia-mumu.github.io/Off-Page/#spell-wife-needs-space)：他正在教朋友尊重老婆的自由，你剛好要出門。（吃醋與曖昧、隨機挑戰）
-- [如果有一天，我們要學習告別](https://xia-mumu.github.io/Off-Page/#spell-learning-farewell)：一日生命禮儀體驗：九站，一起認識死亡、喪葬與告別。（劇情事件、虐心、連載）
-- [停電的十五分鐘](https://xia-mumu.github.io/Off-Page/#spell-fifteen-minutes-dark)：整棟樓突然停電，你們被困在同一個房間。（劇情事件、關係試探）
-- [如果那天沒有遇見你](https://xia-mumu.github.io/Off-Page/#spell-if-we-never-met)：切換到一條你們從未相遇的時間線。（平行世界）
-- [吵完架後的第一句話](https://xia-mumu.github.io/Off-Page/#spell-first-line-after-fight)：冷戰第三天，總要有人先開口。（衝突與和解）
-- [只能說真話的一小時](https://xia-mumu.github.io/Off-Page/#spell-truth-hour)：接下來一小時，沒有人能說謊。（隨機挑戰、關係試探）
-- [傘只有一把](https://xia-mumu.github.io/Off-Page/#spell-one-umbrella)：雨下得很大，而你們只有一把傘。（戀愛日常、劇情事件）
-- [被誤認成情侶](https://xia-mumu.github.io/Off-Page/#spell-mistaken-couple)：店員一句「兩位是情侶嗎」，空氣突然安靜。（吃醋與曖昧、關係試探）
-- [茶藝大師🍵](https://xia-mumu.github.io/Off-Page/#spell-tea-master)：都說綠茶才是最高級的技術，看他怎麼把你套路得心甘情願。（吃醋與曖昧、戀愛日常）
-- [禁止戀愛腦🚫](https://xia-mumu.github.io/Off-Page/#spell-no-lovebrain)：系統判定戀愛腦超標，禁止接觸十小時。他撐得住嗎？（隨機挑戰、戀愛日常）
-- [如果那天我沒有回頭🌧️](https://xia-mumu.github.io/Off-Page/#spell-if-i-didnt-look-back)：夢裡回到初遇那天，這一次，他沒有回頭。（虐心、平行世界）
-- [請勿餵食戀人🍰](https://xia-mumu.github.io/Off-Page/#spell-do-not-feed-lover)：PC頭頂出現好感度進度條，滿格後再升會觸發未知事件，PC卻親了上來。（隨機挑戰、戀愛日常）
-- [你的遺物拍賣會🕯️](https://xia-mumu.github.io/Off-Page/#spell-your-estate-auction)：一張來自未來的邀請函，拍賣品全是PC離世後留下的東西。（虐心、劇情事件）
-- [戀愛法庭開庭⚖️](https://xia-mumu.github.io/Off-Page/#spell-love-court)：被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。（隨機挑戰、戀愛日常）
-- [聽不懂的情話🌐](https://xia-mumu.github.io/Off-Page/#spell-untranslated-whispers)：他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。（成人向、戀愛日常）
+- [安靜](https://xia-mumu.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
+- [自由的雙標現場](https://xia-mumu.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
+- [我就想開門❗️](https://xia-mumu.github.io/Off-Page/spells/open-the-door.html)：看到門關起來，就是會想打開。（戀愛日常、隨機挑戰）
+- [來打架！](https://xia-mumu.github.io/Off-Page/spells/lets-fight.html)：感情好到連架都吵不起來，那就來打一架吧。（隨機挑戰、衝突與和解）
+- [你冷不冷？](https://xia-mumu.github.io/Off-Page/spells/are-you-cold.html)：共感娃娃傳來的觸感，和一場來不及說出口的關心。（劇情事件、虐心）
+- [抄首詩🖤](https://xia-mumu.github.io/Off-Page/spells/copy-a-poem.html)：你把一首詩抄給他。他會怎麼讀？（戀愛日常）
+- [Where Our Souls Collide.](https://xia-mumu.github.io/Off-Page/spells/where-our-souls-collide.html)：一本時尚雜誌的雙人封面邀請，主題是「靈魂交會之處」。（劇情事件、戀愛日常、連載）
+- [可是她真的很好看⋯⋯](https://xia-mumu.github.io/Off-Page/spells/but-she-is-pretty.html)：你最近迷上一位女實況主，每天都叫她「老婆」。（吃醋與曖昧）
+- [如果我約你去同志大遊行 🏳️‍🌈](https://xia-mumu.github.io/Off-Page/spells/pride-invite.html)：今年的同志大遊行剛好撞上萬聖節，你約他一起去。（劇情事件、關係試探）
+- [同志大遊行🏳️‍🌈](https://xia-mumu.github.io/Off-Page/spells/pride-costume.html)：約好了一起去遊行，也約好了一起扮裝。（劇情事件、戀愛日常）
+- [你挺誰！](https://xia-mumu.github.io/Off-Page/spells/whose-side.html)：你跟他的摯友吵架了，氣呼呼地跑來問他站哪邊。（衝突與和解、關係試探）
+- [平民美食](https://xia-mumu.github.io/Off-Page/spells/brown-sugar-mantou.html)：趁他出門上班，你偷偷去買黑糖饅頭。（戀愛日常）
+- [齒痕](https://xia-mumu.github.io/Off-Page/spells/bite-mark.html)：洗完澡，他在吹頭髮，你蹲下來咬了一口。（戀愛日常、隨機挑戰）
+- [說說自己有多好](https://xia-mumu.github.io/Off-Page/spells/say-your-good-points.html)：他在你耳邊要求：先說出自己的優點。（成人向）
+- [你說我是真的胖😭](https://xia-mumu.github.io/Off-Page/spells/really-fat.html)：「水腫壓下去不會彈起來」，結果它彈回來了。（戀愛日常、隨機挑戰）
+- [你眼裡的我❤️](https://xia-mumu.github.io/Off-Page/spells/me-in-your-eyes.html)：跟他要五張照片：性感的、漂亮的、搞笑的、可愛的，和他最喜歡的你。（戀愛日常）
+- [曖昧期間的報備](https://xia-mumu.github.io/Off-Page/spells/ambiguous-checkin.html)：曖昧期的報備影片，他會重錄幾次？（吃醋與曖昧、戀愛日常）
+- [我在你眼裡只是個物品嗎！？](https://xia-mumu.github.io/Off-Page/spells/just-an-object.html)：「拿起眼前最喜歡的東西」，他第一個抱住的是你。（戀愛日常、隨機挑戰）
+- [讚美是最高級的情色](https://xia-mumu.github.io/Off-Page/spells/praise-is-erotic.html)：他拿起筆，在你身上寫下八個讚美的單字。（成人向）
+- [老婆需要獨立空間](https://xia-mumu.github.io/Off-Page/spells/wife-needs-space.html)：他正在教朋友尊重老婆的自由，你剛好要出門。（吃醋與曖昧、隨機挑戰）
+- [如果有一天，我們要學習告別](https://xia-mumu.github.io/Off-Page/spells/learning-farewell.html)：一日生命禮儀體驗：九站，一起認識死亡、喪葬與告別。（劇情事件、虐心、連載）
+- [停電的十五分鐘](https://xia-mumu.github.io/Off-Page/spells/fifteen-minutes-dark.html)：整棟樓突然停電，你們被困在同一個房間。（劇情事件、關係試探）
+- [如果那天沒有遇見你](https://xia-mumu.github.io/Off-Page/spells/if-we-never-met.html)：切換到一條你們從未相遇的時間線。（平行世界）
+- [吵完架後的第一句話](https://xia-mumu.github.io/Off-Page/spells/first-line-after-fight.html)：冷戰第三天，總要有人先開口。（衝突與和解）
+- [只能說真話的一小時](https://xia-mumu.github.io/Off-Page/spells/truth-hour.html)：接下來一小時，沒有人能說謊。（隨機挑戰、關係試探）
+- [傘只有一把](https://xia-mumu.github.io/Off-Page/spells/one-umbrella.html)：雨下得很大，而你們只有一把傘。（戀愛日常、劇情事件）
+- [被誤認成情侶](https://xia-mumu.github.io/Off-Page/spells/mistaken-couple.html)：店員一句「兩位是情侶嗎」，空氣突然安靜。（吃醋與曖昧、關係試探）
+- [茶藝大師🍵](https://xia-mumu.github.io/Off-Page/spells/tea-master.html)：都說綠茶才是最高級的技術，看他怎麼把你套路得心甘情願。（吃醋與曖昧、戀愛日常）
+- [禁止戀愛腦🚫](https://xia-mumu.github.io/Off-Page/spells/no-lovebrain.html)：系統判定戀愛腦超標，禁止接觸十小時。他撐得住嗎？（隨機挑戰、戀愛日常）
+- [如果那天我沒有回頭🌧️](https://xia-mumu.github.io/Off-Page/spells/if-i-didnt-look-back.html)：夢裡回到初遇那天，這一次，他沒有回頭。（虐心、平行世界）
+- [請勿餵食戀人🍰](https://xia-mumu.github.io/Off-Page/spells/do-not-feed-lover.html)：PC頭頂出現好感度進度條，滿格後再升會觸發未知事件，PC卻親了上來。（隨機挑戰、戀愛日常）
+- [你的遺物拍賣會🕯️](https://xia-mumu.github.io/Off-Page/spells/your-estate-auction.html)：一張來自未來的邀請函，拍賣品全是PC離世後留下的東西。（虐心、劇情事件）
+- [戀愛法庭開庭⚖️](https://xia-mumu.github.io/Off-Page/spells/love-court.html)：被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。（隨機挑戰、戀愛日常）
+- [聽不懂的情話🌐](https://xia-mumu.github.io/Off-Page/spells/untranslated-whispers.html)：他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。（成人向、戀愛日常）
 
 ## 角色主畫面小工具
 
-- [小工具介紹與自製教學](https://xia-mumu.github.io/Off-Page/#tools)：用 Scriptable 讓角色住進 iPhone 主畫面，範例角色為聞止水。附可直接複製給 Claude、ChatGPT 或 Gemini 的指令；只支援 iPhone。
-- [戀人入住申請所（客製委託）](https://xia-mumu.github.io/Off-Page/#order)：基本入住費 NT$300，可加購台詞包、進階互動與 Q 版素材；LINE Pay 或銀行轉帳；每月限 10 位；只接角色、不接真人。
+- [小工具介紹與自製教學](https://xia-mumu.github.io/Off-Page/tools.html)：用 Scriptable 讓角色住進 iPhone 主畫面，範例角色為聞止水。附可直接複製給 Claude、ChatGPT 或 Gemini 的指令；只支援 iPhone。
+- [戀人入住申請所（客製委託）](https://xia-mumu.github.io/Off-Page/order.html)：基本入住費 NT$300，可加購台詞包、進階互動與 Q 版素材；LINE Pay 或銀行轉帳；每月限 10 位；只接角色、不接真人。
 
 ## 常見問題
 

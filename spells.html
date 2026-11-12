@@ -1,0 +1,3157 @@
+<!doctype html>
+<html lang="zh-Hant" data-route="spells">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小咒語收藏室｜岔頁 OFF PAGE</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="小咒語收藏室：34 則可以直接複製、貼給角色的 AI 角色扮演情境提示，依戀愛日常、吃醋與曖昧、衝突與和解等標籤分類，也能隨機抽一則。">
+<meta name="author" content="Xia mumu">
+<meta name="google-site-verification" content="ECEqgVtPxG6RqdP7Ndf-QWlvXhX_BQ-pRo4hUQkYOXg" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://xia-mumu.github.io/Off-Page/spells.html">
+<link rel="alternate" type="text/plain" href="https://xia-mumu.github.io/Off-Page/llms.txt" title="llms.txt">
+<meta name="theme-color" content="#F7F3EC">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="岔頁 OFF PAGE">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:url" content="https://xia-mumu.github.io/Off-Page/spells.html">
+<meta property="og:title" content="小咒語收藏室｜岔頁 OFF PAGE">
+<meta property="og:description" content="小咒語收藏室：34 則可以直接複製、貼給角色的 AI 角色扮演情境提示，依戀愛日常、吃醋與曖昧、衝突與和解等標籤分類，也能隨機抽一則。">
+<meta property="og:image" content="https://xia-mumu.github.io/Off-Page/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="岔頁 OFF PAGE — by Xia mumu">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<style>
+/* Layout: 一本可以亂翻的獨立刊物。左欄頁碼／右欄正文的不對稱版心，奶油紙底，莓果紅只用在品牌與行動。 */
+:root{
+  --cream:#F7F3EC;   /* 奶油白：全站背景 */
+  --paper:#FFFDF9;   /* 紙張白：卡片、閱讀區 */
+  --berry:#772F49;   /* 莓果紅：品牌、主要按鈕 */
+  --berry-deep:#5E2439;
+  --mist:#EBCBD3;    /* 霧粉：小咒語區 */
+  --ink:#29272B;     /* 墨黑：內文 */
+  --violet:#6E6884;  /* 灰紫：標籤、編號（略加深以顧對比） */
+  --rule:#E7DBDC;    /* 淺灰粉：分隔線 */
+  --serif-tc:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
+  --sans-tc:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
+  --serif-en:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
+  --ui:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
+  --wrap:1160px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans-tc);font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased;font-synthesis:none}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--berry);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.label{font-family:var(--ui);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);font-weight:500}
+.skip{position:absolute;left:-999px;top:8px;background:var(--berry);color:var(--paper);padding:8px 14px;z-index:30}
+.skip:focus{left:12px}
+
+/* ---------- header ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--cream)}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap;padding-block:10px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo b{font-family:var(--serif-tc);font-weight:700;font-size:28px;color:var(--berry);letter-spacing:.06em;position:relative}
+.logo b::after{content:"";position:absolute;right:-7px;top:2px;width:9px;height:9px;background:linear-gradient(225deg,var(--cream) 50%,var(--mist) 50%)}
+.logo span{font-family:var(--serif-en);font-style:italic;font-size:17px;color:var(--violet);letter-spacing:.08em}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-family:var(--ui);font-size:13px;letter-spacing:.12em;padding:6px 10px;color:var(--ink);border-bottom:1.5px solid transparent;display:flex;gap:6px;align-items:baseline}
+.nav a small{font-family:var(--sans-tc);letter-spacing:.04em;color:var(--violet);font-size:12px}
+.nav a[aria-current="page"]{color:var(--berry);border-bottom-color:var(--berry)}
+.nav a:hover{color:var(--berry)}
+
+/* ---------- views ---------- */
+main{min-height:60vh}
+.view{animation:pagein .45s ease both}
+@keyframes pagein{from{opacity:.001;transform:translateX(14px)}to{opacity:1;transform:none}}
+
+/* hero */
+.hero{padding-block:72px 64px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:end;border-bottom:1px solid var(--rule)}
+.hero-mark{position:relative}
+.hero-mark .pg{display:block;margin-bottom:18px}
+.hero-mark h1{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:clamp(96px,17vw,196px);line-height:.95;color:var(--berry);letter-spacing:.02em}
+.hero-mark h1 .ye{display:inline-block;position:relative}
+.hero-mark h1 .ye::after{content:"";position:absolute;right:-.02em;top:.06em;width:.26em;height:.26em;background:linear-gradient(225deg,var(--cream) 50%,var(--mist) 50%);box-shadow:-1px 1px 0 rgba(41,39,43,.06)}
+.hero-mark .en{margin-top:14px;font-family:var(--serif-en);font-size:22px;font-style:italic;color:var(--violet);letter-spacing:.06em}
+.hero-mark .en b{font-style:normal;font-weight:600;letter-spacing:.32em;color:var(--ink)}
+.hero-text{padding-bottom:10px;min-width:0}
+.hero-text h2{margin:0 0 22px;font-family:var(--serif-tc);font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.45;text-wrap:balance}
+.hero-text .lede{margin:0 0 30px;color:#4a4650;max-width:30em}
+.hero-text .lede span{display:block}
+.hero-text .lede .em{color:var(--ink);font-family:var(--serif-tc);font-weight:500;margin-top:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;font-family:var(--sans-tc);font-size:15px;font-weight:500;letter-spacing:.06em;text-decoration:none;cursor:pointer;border:1.5px solid var(--berry);background:var(--berry);color:var(--paper);border-radius:2px;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--berry-deep);border-color:var(--berry-deep)}
+.btn.ghost{background:transparent;color:var(--berry)}
+.btn.ghost:hover{background:var(--berry);color:var(--paper)}
+.btn.quiet{border-color:var(--rule);background:var(--paper);color:var(--ink)}
+.btn.quiet:hover{border-color:var(--berry);color:var(--berry);background:var(--paper)}
+.btn[disabled],.btn[aria-disabled="true"]{background:transparent;border-color:var(--rule);color:var(--violet);cursor:default}
+
+/* section heads: 左欄頁碼、右欄標題 */
+.sec{padding-block:72px;border-bottom:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;margin-bottom:40px;align-items:end}
+.sec-head h2{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:clamp(26px,3vw,34px);line-height:1.35;text-wrap:balance}
+.sec-head h2 em{font-family:var(--serif-en);font-weight:500;color:var(--violet);font-size:.75em;margin-left:12px;letter-spacing:.04em}
+.sec-head p{margin:8px 0 0;color:#57525d;max-width:36em}
+.sec-head .side{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.textlink{font-family:var(--ui);font-size:13px;letter-spacing:.1em;color:var(--berry);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;background:none;border-top:0;border-left:0;border-right:0;cursor:pointer}
+
+/* world cards */
+.worlds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.worlds.wide{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.wcard{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--rule);transition:transform .25s ease,box-shadow .25s ease}
+.wcard:nth-child(3n+2){margin-top:28px}
+.worlds.wide .wcard:nth-child(3n+2){margin-top:0}
+.wcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(119,47,73,.35)}
+.cover{position:relative;aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.cover-in{position:absolute;inset:0;transition:transform .6s ease}
+.wcard:hover .cover-in{transform:scale(1.035)}
+.cover .no{position:absolute;left:16px;top:12px;font-family:var(--ui);font-size:12px;letter-spacing:.2em;z-index:2}
+/* NULL：灰黑格線＋錯位字 */
+.c-null{background:#17181B;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px;color:#E8E6E9}
+.c-null .t{position:absolute;left:16px;bottom:44px;font-family:var(--ui);font-weight:600;font-size:clamp(46px,6vw,64px);letter-spacing:.14em;line-height:1}
+.c-null .t::after{content:"NULL";position:absolute;left:3px;top:0;color:transparent;-webkit-text-stroke:1px #B44A63;opacity:.7}
+.c-null .s{position:absolute;left:16px;bottom:18px;font-family:var(--ui);font-size:11px;letter-spacing:.24em;color:#9C99A3}
+.c-null .bar{position:absolute;right:16px;top:14px;bottom:14px;width:6px;background:repeating-linear-gradient(#3A3B40 0 3px,transparent 3px 8px)}
+.c-null .no{color:#9C99A3}
+/* 棲川市：雨夜斜線＋直排 */
+.c-qichuan{background:linear-gradient(180deg,#2F3B45,#4A5864);color:#EEF0F1}
+.c-qichuan::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(105deg,rgba(255,255,255,.08) 0 1px,transparent 1px 13px)}
+.c-qichuan .t{position:absolute;right:22px;top:18px;writing-mode:vertical-rl;font-family:var(--serif-tc);font-weight:700;font-size:clamp(34px,4.4vw,44px);letter-spacing:.3em}
+.c-qichuan .s{position:absolute;left:16px;bottom:16px;font-family:var(--serif-en);font-style:italic;font-size:18px;color:#C7D0D6}
+.c-qichuan .no{color:#C7D0D6}
+.c-qichuan .moon{position:absolute;left:18%;top:30%;width:44px;height:44px;border-radius:50%;background:#E9E3D6;opacity:.85;box-shadow:0 0 0 10px rgba(233,227,214,.06)}
+/* 第七婚籍管理處：墨紫黑×暖紙白×舊金×朱紅 */
+.c-seventh{background:#211A27;color:#F3ECDF}
+.c-seventh .frame{position:absolute;inset:14px;border:1px solid #A8915F;opacity:.75}
+.c-seventh .frame::after{content:"";position:absolute;inset:4px;border:1px solid rgba(168,145,95,.35)}
+.c-seventh .t{position:absolute;left:28px;bottom:30px;font-family:var(--serif-tc);font-weight:700;font-size:clamp(24px,2.8vw,30px);letter-spacing:.14em;line-height:1.35}
+.c-seventh .seal{position:absolute;right:30px;top:28px;width:52px;height:52px;background:#A93A2E;color:#F3ECDF;font-family:var(--serif-tc);font-weight:400;font-size:30px;display:grid;place-items:center;transform:rotate(-6deg)}
+.c-seventh .no{color:#C9B68A;left:28px;top:24px}
+.wbody{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.wbody h3{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:22px;line-height:1.4}
+.wbody h3 small{display:block;font-family:var(--serif-en);font-weight:500;font-style:italic;font-size:15px;color:var(--violet);letter-spacing:.06em}
+.genres{display:flex;flex-wrap:wrap;gap:6px}
+.genres span{font-size:12px;color:var(--violet);border:1px solid var(--rule);padding:1px 8px;border-radius:20px}
+.wbody .line{margin:4px 0 0;font-family:var(--serif-tc);font-size:16px;color:#3b3740;flex:1}
+.wfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;padding-top:14px;border-top:1px dashed var(--rule)}
+.status{font-family:var(--ui);font-size:12px;letter-spacing:.08em;color:var(--violet);display:flex;align-items:center;gap:6px}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--berry)}
+.status.soon::before{background:transparent;border:1px solid var(--violet)}
+.enter{font-family:var(--sans-tc);font-weight:500;font-size:14px;color:var(--berry);text-decoration:none;background-image:linear-gradient(var(--berry),var(--berry));background-size:0 1px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .3s;padding-bottom:2px}
+.enter:hover,.enter:focus-visible{background-size:100% 1px}
+.enter.off{color:var(--violet)}
+.links-w{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:flex-end}
+.play{font-family:var(--sans-tc);font-weight:700;font-size:14px;text-decoration:none;color:var(--paper);background:var(--berry);padding:5px 14px;border-radius:2px;transition:background .2s}
+.play:hover{background:var(--berry-deep)}
+.ext-note{font-size:12px;color:var(--violet);margin:18px 0 0}
+
+/* spell machine */
+.spellbook{background:var(--mist);border-bottom:1px solid var(--rule)}
+.spellbook .sec{border-bottom:0}
+.spellbook .label{color:#6B4256}
+.machine{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:center}
+.machine-copy p{margin:0 0 26px;color:#4d3a44;max-width:24em}
+.machine-copy .count{font-family:var(--ui);font-size:13px;color:#6B4256;letter-spacing:.06em;margin-top:18px}
+.stage{perspective:1400px}
+.scard{position:relative;background:var(--paper);min-height:300px;padding:34px 34px 28px;box-shadow:0 1px 0 var(--rule),0 22px 40px -26px rgba(94,36,57,.45);transform-origin:left center;display:flex;flex-direction:column;gap:12px}
+.scard::after{content:"";position:absolute;right:0;top:0;width:34px;height:34px;background:linear-gradient(225deg,var(--mist) 50%,#F1DDE2 50%)}
+.scard .pg{font-family:var(--ui);font-size:12px;letter-spacing:.2em;color:var(--violet)}
+.scard h3{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:clamp(24px,2.6vw,30px);line-height:1.45;text-wrap:balance}
+.scard .intro{margin:0;color:#4a4650}
+.scard.blank h3{color:#B9A7AE;font-weight:500}
+.scard .tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:2px 10px;border-radius:20px;background:var(--cream);color:var(--berry);border:1px solid var(--rule)}
+.sample{font-family:var(--ui);font-size:11px;letter-spacing:.12em;color:var(--violet);border:1px dashed var(--violet);padding:0 6px;border-radius:2px;vertical-align:middle;margin-left:6px}
+.scard .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
+.scard.turning{animation:turn .42s ease both}
+@keyframes turn{0%{transform:rotateY(0);opacity:1}45%{transform:rotateY(-80deg);opacity:.2}55%{transform:rotateY(-80deg);opacity:.2}100%{transform:rotateY(0);opacity:1}}
+.draw-btn{font-size:16px;padding:13px 24px}
+
+/* recently added：雜誌目錄 */
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.toc li{display:grid;grid-template-columns:120px 110px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--rule)}
+.toc time{font-family:var(--ui);font-size:14px;font-variant-numeric:tabular-nums;color:var(--violet);letter-spacing:.04em}
+.toc .kind{font-size:13px;color:var(--berry)}
+.toc .ttl{font-family:var(--serif-tc);font-size:17px;min-width:0}
+.toc .ttl small{display:block;font-family:var(--sans-tc);font-size:14px;color:#615c66}
+.toc a{font-family:var(--ui);font-size:13px;color:var(--berry);text-decoration:none;white-space:nowrap}
+.toc a:hover{text-decoration:underline}
+
+/* spells library */
+.tools{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1.5px solid var(--ink);max-width:520px}
+.search label{font-family:var(--ui);font-size:12px;letter-spacing:.16em;color:var(--violet);white-space:nowrap}
+.search input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-family:var(--serif-tc);font-size:18px;padding:10px 2px;color:var(--ink)}
+.search input:focus{outline:none}
+.search:focus-within{border-bottom-color:var(--berry)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{cursor:pointer;border:1px solid var(--rule);background:var(--paper);padding:5px 14px;border-radius:20px;font-size:14px;transition:all .15s}
+.chip:hover{border-color:var(--berry);color:var(--berry)}
+.chip[aria-pressed="true"]{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+.chip .n{font-family:var(--ui);font-size:12px;opacity:.7;margin-left:4px}
+.result-meta{font-family:var(--ui);font-size:13px;color:var(--violet);letter-spacing:.04em;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.sitem{display:flex;flex-direction:column;gap:10px;text-align:left;cursor:pointer;background:var(--paper);border:1px solid var(--rule);padding:22px 22px 18px;text-decoration:none;position:relative;transition:border-color .2s,transform .2s}
+.sitem::after{content:"";position:absolute;right:-1px;top:-1px;width:18px;height:18px;background:linear-gradient(225deg,var(--cream) 50%,var(--mist) 50%);transition:width .2s,height .2s}
+.sitem:hover{border-color:var(--mist);transform:translateY(-2px)}
+.sitem:hover::after{width:26px;height:26px}
+.sitem .pg{font-family:var(--ui);font-size:11px;letter-spacing:.2em;color:var(--violet)}
+.sitem h3{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:19px;line-height:1.5}
+.sitem p{margin:0;font-size:14px;color:#57525d;flex:1}
+.sitem .tags{display:flex;gap:6px;flex-wrap:wrap}
+.empty{padding:48px 0;text-align:center;color:var(--violet)}
+.empty b{display:block;font-family:var(--serif-tc);font-size:20px;color:var(--ink);margin-bottom:6px;font-weight:500}
+
+/* spell detail */
+.detail{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;padding-block:56px 72px}
+.detail aside{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.detail h1{margin:0 0 12px;font-family:var(--serif-tc);font-weight:700;font-size:clamp(28px,4vw,42px);line-height:1.4;text-wrap:balance}
+.detail .intro{font-size:17px;color:#4a4650;margin:0 0 18px;max-width:34em}
+.detail .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px}
+.incant{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--mist);padding:28px 30px;font-family:var(--serif-tc);font-size:17px;line-height:2;white-space:pre-wrap;word-break:break-word;max-width:44em}
+.detail .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.note{margin:0 0 22px;font-size:15px;color:#5a5560;border-left:2px solid var(--mist);padding:2px 0 2px 14px;max-width:40em}
+.part{margin-bottom:30px;max-width:44em}
+.part-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.part-head b{font-family:var(--serif-tc);font-size:18px;color:var(--berry)}
+.part-head .no{font-family:var(--ui);font-size:12px;letter-spacing:.16em;color:var(--violet);display:block;font-weight:400}
+.btn.sm{padding:6px 14px;font-size:14px}
+.dates{font-family:var(--ui);font-size:12px;color:var(--violet);font-variant-numeric:tabular-nums;line-height:1.9}
+
+/* about */
+.about{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;padding-block:72px}
+.about h1{margin:0 0 28px;font-family:var(--serif-en);font-weight:500;font-size:clamp(40px,6vw,64px);line-height:1.1;color:var(--berry)}
+.about h1 i{color:var(--ink)}
+.about .body p{margin:0 0 18px;font-family:var(--serif-tc);font-size:18px;line-height:2;max-width:32em}
+.about .body p.sign{margin-top:32px;font-family:var(--serif-en);font-style:italic;color:var(--violet);font-size:20px}
+.links{list-style:none;padding:0;margin:40px 0 0;border-top:1px solid var(--rule);max-width:32em}
+.links li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.links span{font-family:var(--ui);font-size:13px;letter-spacing:.14em;color:var(--violet)}
+.links a{color:var(--berry);text-decoration:none;font-family:var(--ui)}
+.links a:hover{text-decoration:underline}
+
+/* 404 */
+.lost{padding-block:120px;text-align:left;max-width:640px}
+.lost h1{font-family:var(--serif-tc);font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1.5;margin:14px 0 26px}
+
+/* footer */
+.foot{padding-block:56px 40px}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.foot .brand{font-family:var(--serif-tc);font-weight:700;font-size:30px;color:var(--berry);letter-spacing:.06em}
+.foot .brand span{font-family:var(--serif-en);font-weight:600;font-size:20px;letter-spacing:.3em;color:var(--ink);margin-left:12px}
+.foot p{margin:6px 0 0;font-family:var(--serif-en);font-style:italic;font-size:18px;color:var(--violet)}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--ui);font-size:13px;letter-spacing:.1em}
+.foot nav a{text-decoration:none;color:var(--ink)}
+.foot nav a:hover{color:var(--berry)}
+.egg{grid-column:1/-1;font-size:12px;color:var(--rule);margin-top:20px;cursor:default;user-select:none;transition:color .4s;font-family:var(--serif-tc)}
+.egg:hover{color:var(--violet)}
+
+
+/* ---------- TOOLS：角色主畫面小工具（借用聞止水的暗房酒紅，只在示範區） ---------- */
+.wen{--w0:#100B0D;--w1:#171012;--w2:#1D1316;--wd:#542B35;--w:#793D4B;--wl:#A65C6D;--wt:#E4D9DC;--wt2:#C7B5BA;--ws:#AAAEB2}
+.t-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center;padding-block:64px 72px;border-bottom:1px solid var(--rule)}
+.t-hero h1{margin:14px 0 14px;font-family:var(--serif-tc);font-weight:700;font-size:clamp(34px,5vw,54px);line-height:1.3;text-wrap:balance}
+.t-hero h1 em{font-style:normal;color:var(--berry)}
+.t-hero .lede{margin:0 0 22px;font-size:18px;color:#4a4650;max-width:26em}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.meta span{font-size:13px;border:1px solid var(--rule);background:var(--paper);padding:3px 12px;border-radius:20px;color:var(--violet)}
+.meta span b{color:var(--berry);font-weight:700}
+/* 底片框 */
+.film{background:var(--w0);padding:22px 18px;position:relative;border-radius:4px}
+.film::before,.film::after{content:"";position:absolute;left:10px;right:10px;height:8px;background:repeating-linear-gradient(90deg,rgba(170,174,178,.28) 0 12px,transparent 12px 22px);border-radius:2px}
+.film::before{top:7px}.film::after{bottom:7px}
+.demo{background:radial-gradient(ellipse 90% 70% at 30% 10%,#3a2028,var(--w1) 60%);padding:26px 20px 20px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.widget{width:100%;max-width:360px;aspect-ratio:2.1/1;border-radius:24px;background:linear-gradient(180deg,rgba(84,43,53,.65),var(--w1) 48%,var(--w0));border:1px solid rgba(170,174,178,.14);box-shadow:0 14px 30px rgba(0,0,0,.45);display:flex;align-items:center;gap:6px;padding:8px 16px 8px 4px;color:var(--wt)}
+.widget img{height:100%;width:auto;max-width:45%;object-fit:contain;flex:none;transition:opacity .15s}
+.widget .nm{font-size:12px;letter-spacing:.3em;color:var(--ws);font-weight:700}
+.widget .ln{font-size:clamp(17px,2.4vw,21px);line-height:1.4;margin-top:6px;font-weight:700;min-height:1.4em}
+.widget .mt{font-size:12px;color:var(--wl);margin-top:8px;font-variant-numeric:tabular-nums}
+.touches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.touches button{cursor:pointer;border:1px solid var(--wd);background:var(--w2);color:var(--wt2);border-radius:18px;padding:5px 14px;font-size:14px;transition:background .15s,color .15s}
+.touches button:hover{border-color:var(--wl);color:var(--wt)}
+.touches button:active{background:var(--w);color:#F3E9EC}
+.touches button:focus-visible{outline-color:var(--wl)}
+.demo-cap{font-size:12px;color:var(--ws);letter-spacing:.06em;text-align:center}
+/* 功能 */
+.feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
+.feat{background:var(--paper);border:1px solid var(--rule);padding:26px 26px 24px;display:flex;flex-direction:column;gap:10px}
+.feat h3{margin:0;font-family:var(--serif-tc);font-size:22px;font-weight:700}
+.feat p{margin:0;color:#4d4952}
+.feat ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.feat li{padding-left:16px;position:relative;font-size:15px}
+.feat li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1px;background:var(--berry)}
+.times{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--rule)}
+.times li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);padding-left:0}
+.times li::before{display:none}
+.times time,.times .k{font-family:var(--ui);font-size:14px;color:var(--violet);font-variant-numeric:tabular-nums}
+.times q{quotes:"「" "」";font-family:var(--serif-tc)}
+/* 七種樣子：印樣條 */
+.sheet{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.sheet figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.sheet .fr{width:100%;aspect-ratio:1/1;background:linear-gradient(180deg,rgba(84,43,53,.55),var(--w2));border:1px solid rgba(170,174,178,.16);display:grid;place-items:end center;overflow:hidden;border-radius:3px}
+.sheet img{width:92%;height:auto;max-width:100%}
+.sheet figcaption{font-size:13px;color:var(--wt2)}
+.sheet-wrap{overflow-x:auto}
+.sheet-note{margin:14px 0 0;font-size:13px;color:var(--ws);text-align:center}
+/* 自己做一個 */
+.prep{background:var(--paper);border:1px solid var(--rule);padding:22px 26px;margin-bottom:36px}
+.prep h3{margin:0 0 10px;font-family:var(--serif-tc);font-size:20px}
+.prep ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px}
+.prep li{font-size:15px;color:#4d4952;display:flex;flex-direction:column}
+.prep li b{color:var(--ink);font-size:16px}
+.make{list-style:none;margin:0;padding:0;counter-reset:mk;display:flex;flex-direction:column;gap:36px}
+.make>li{counter-increment:mk;border-top:1.5px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 36px;align-items:start}
+.make>li:last-child{grid-template-columns:minmax(0,1fr)}
+.mk-text{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mk-text::before{content:counter(mk,decimal-leading-zero);font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry)}
+.mk-text b{font-family:var(--serif-tc);font-size:20px}
+.mk-text span{font-size:15px;color:#4d4952;max-width:34em}
+.prompt{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.prompt pre{margin:0;width:100%;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+.alt{margin-top:48px;padding-top:28px;border-top:1px dashed var(--rule)}
+.alt h3{margin:0 0 6px;font-family:var(--serif-tc);font-size:24px}
+.alt-lede{margin:0 0 20px;color:#4d4952;font-size:15px}
+.alt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.alt-card{background:var(--paper);border:1px solid var(--rule);padding:22px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.alt-card>b{font-family:var(--serif-tc);font-size:20px}
+.alt-card p{margin:0;font-size:15px;color:#4d4952}
+.alt-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+.alt-card li{padding-left:16px;position:relative;font-size:14.5px;color:#4d4952}
+.alt-card li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--berry)}
+.alt-card li b{color:var(--berry)}
+.alt-card .prompt pre{background:var(--cream);font-size:13.5px}
+
+/* 需求單 */
+.order-cta{margin-top:32px;display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:18px 22px}
+.order-cta b{display:block;font-family:var(--serif-tc);font-size:20px}
+.order-cta span{color:#4d4952;font-size:15px}
+.of{display:flex;flex-direction:column;gap:28px;max-width:860px}
+.of fieldset{border:0;border-top:1.5px solid var(--ink);margin:0;padding:16px 0 0;min-width:0}
+.of legend{display:flex;align-items:baseline;gap:12px;padding:0;margin-bottom:14px;font-family:var(--serif-tc);font-size:21px;font-weight:700}
+.of legend span{font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry);font-weight:500}
+.fg{display:grid;gap:14px 22px}
+.fg.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fg+.fg{margin-top:14px}
+.of label{display:flex;flex-direction:column;gap:6px;font-size:15px;color:#4d4952;min-width:0}
+.of label>span>b,.of label>b{color:var(--berry);font-weight:500;margin-left:2px}
+.of input:not([type=checkbox]),.of textarea,.of select{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:10px 12px;width:100%;min-width:0}
+.of input:focus,.of textarea:focus,.of select:focus{outline:none;border-color:var(--berry);box-shadow:0 0 0 3px color-mix(in srgb,var(--berry) 14%,transparent)}
+.of textarea{resize:vertical;line-height:1.7}
+.of .ck{flex-direction:row;align-items:flex-start;gap:10px;color:var(--ink);cursor:pointer}
+.of .ck input{margin-top:6px;width:17px;height:17px;accent-color:var(--berry);flex:none}
+.of .ck>b{color:var(--berry)}
+.feats-ck{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin-bottom:16px}
+.feats-ck .ck{background:var(--paper);border:1px solid var(--rule);padding:12px 14px}
+.feats-ck .ck span{display:flex;flex-direction:column;font-size:14px;color:#57525d;line-height:1.6}
+.feats-ck .ck span b{font-size:16px;color:var(--ink);font-weight:700}
+.feats-ck .ck:has(input:checked){border-color:var(--berry)}
+.cond label[hidden]{display:none}
+.hint{margin:12px 0 0;font-size:14px;color:var(--violet)}
+.of-out{background:var(--paper);border:1px solid var(--rule);padding:22px 24px;display:flex;flex-direction:column;gap:14px;position:relative}
+.of-head{display:flex;align-items:baseline;gap:12px}
+.of-head b{font-family:var(--serif-tc);font-size:20px}
+.of-out pre{margin:0;background:var(--cream);border-left:3px solid var(--berry);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.8;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto}
+.of-btns{display:flex;gap:10px;flex-wrap:wrap}
+.of-err{margin:0;color:var(--berry);font-size:15px}
+.of-out .fine{margin:0}
+@media (max-width:700px){.fg.two,.feats-ck{grid-template-columns:1fr}.of-out{padding:18px 16px}}
+
+/* 戀人入住申請所 */
+.artist{margin-top:14px;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--violet);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.artist>b{font-family:var(--serif-tc);font-size:17px}
+.artist p{margin:0;font-size:14.5px;color:#4d4952}
+.artist ul{margin:2px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+.artist li{padding-left:16px;position:relative;font-size:14.5px;color:#4d4952}
+.artist li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--violet)}
+
+.pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;max-width:960px}
+.pay article{background:var(--paper);border:1px solid var(--rule);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.pay h3{margin:0;font-family:var(--serif-tc);font-size:20px}
+.pay ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.pay li{font-size:15px;color:#4d4952;display:flex;flex-direction:column}
+.pay li b{color:var(--ink);font-size:15.5px}
+.pay .fine{margin:0}
+.flow{margin:0;padding:0;list-style:none;counter-reset:fl;display:flex;flex-direction:column;gap:6px}
+.flow li{counter-increment:fl;font-size:15px;color:#4d4952;display:flex;gap:10px;align-items:baseline}
+.flow li::before{content:counter(fl,decimal-leading-zero);font-family:var(--ui);font-size:12px;letter-spacing:.12em;color:var(--berry);flex:none}
+.slots{display:flex;align-items:center;gap:8px}
+.slots b{color:var(--berry)}
+.slot-dot{width:8px;height:8px;border-radius:50%;background:#5a9a6a;box-shadow:0 0 0 3px color-mix(in srgb,#5a9a6a 20%,transparent);flex:none}
+@media (max-width:900px){.pay{grid-template-columns:1fr}}
+
+#rs-lines,#rs-form{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 120px)}
+.tpl{max-width:860px;display:flex;flex-direction:column;gap:14px}
+.tpl-btns{display:flex;gap:10px;flex-wrap:wrap}
+.tpl details{background:var(--paper);border:1px solid var(--rule)}
+.tpl summary{cursor:pointer;padding:12px 16px;font-family:var(--serif-tc);font-size:16px;color:var(--berry)}
+.tpl pre{margin:0;border-top:1px solid var(--rule);padding:16px 18px;font-family:var(--sans-tc);font-size:14.5px;line-height:1.8;white-space:pre-wrap;word-break:break-word;max-height:520px;overflow:auto;background:var(--cream)}
+.base li a,.hint a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+.rs-hero{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
+.rs-hero h1{margin:12px 0 10px;font-family:var(--serif-tc);font-size:clamp(30px,4.6vw,48px);line-height:1.3;text-wrap:balance}
+.rs-hero h1 em{font-style:normal;color:var(--berry)}
+.rs-hero .lede{margin:0 0 22px;font-size:18px;color:#4a4650}
+.rs-jump{display:flex;gap:10px;flex-wrap:wrap}
+.notice{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:22px 26px;max-width:860px}
+.notice h2{margin:0 0 10px;font-family:var(--serif-tc);font-size:22px}
+.notice p{margin:0 0 8px;color:#4d4952;font-size:15.5px}
+.notice .nb{color:var(--berry)}
+.price{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:28px;align-items:start}
+.base{background:var(--berry);color:var(--paper);padding:26px 26px 22px;display:flex;flex-direction:column;gap:12px}
+.base .label{color:var(--mist)}
+.base .amt{font-family:var(--serif-tc);font-size:22px}
+.base .amt b{font-size:56px;line-height:1;margin-left:4px}
+.base ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.base li{padding-left:16px;position:relative;font-size:15px}
+.base li::before{content:"♡";position:absolute;left:0;font-size:11px;top:.35em;color:var(--mist)}
+.base .fine{color:var(--mist);margin:4px 0 0}
+.addons h3{margin:0 0 10px;font-family:var(--serif-tc);font-size:22px}
+.addons table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--rule)}
+.addons th{font-family:var(--ui);font-size:12px;letter-spacing:.14em;color:var(--violet);text-align:left;padding:10px 14px;border-bottom:1.5px solid var(--ink);font-weight:500}
+.addons td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top;font-size:15px}
+.addons td:last-child{white-space:nowrap;text-align:right;color:var(--berry);font-variant-numeric:tabular-nums}
+.addons td b{display:block}
+.addons td small{display:block;color:#6a6570;font-size:13px;line-height:1.6;margin-top:2px}
+.addons .fine{margin-top:12px}
+.pals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pal{border:1px solid var(--rule);background:var(--paper);display:flex;flex-direction:column}
+.pal-demo{background:var(--pb);padding:18px 14px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;position:relative;min-height:116px}
+.pal-no{position:absolute;right:10px;top:8px;font-family:var(--ui);font-size:12px;letter-spacing:.14em;color:var(--pm)}
+.pal-bub{background:color-mix(in srgb,var(--pb) 70%,var(--ps));color:var(--pt);border:1px solid var(--pm);border-radius:12px;padding:5px 11px;font-size:14px}
+.pal-btns{display:flex;gap:6px}
+.pal-btns i{font-style:normal;font-size:12px;padding:3px 10px;border-radius:12px;background:var(--pm);color:var(--pb)}
+.pal-btns i+i{background:transparent;color:var(--pt);border:1px solid var(--ps)}
+.pal-info{padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px}
+.pal-info b{font-family:var(--serif-tc);font-size:16px}
+.pal-info span{font-size:13px;color:var(--violet)}
+.pal-info code{font-family:var(--ui);font-size:12px;color:#6a6570;word-break:keep-all;overflow-wrap:break-word;margin-top:4px;letter-spacing:.02em}
+.ai{max-width:960px}
+.ai>p{margin:0 0 16px;color:#4d4952}
+.ai-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:18px}
+.ai-grid article{background:var(--paper);border:1px solid var(--rule);padding:18px 20px}
+.ai-grid article p{margin:8px 0 0;font-size:15px;color:#4d4952}
+.ai-grid a{color:var(--berry)}
+.rules{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.rules li{padding-left:16px;position:relative;font-size:14.5px;color:#4d4952}
+.rules li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--berry)}
+.rule-list{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;max-width:960px}
+.rule-list div{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.rule-list dt{font-family:var(--serif-tc);font-weight:700}
+.rule-list dd{margin:0;color:#4d4952;font-size:15px}
+.total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:1.5px solid var(--ink);padding-top:12px;margin-top:6px}
+.total span{font-family:var(--serif-tc);font-size:18px}
+.total b{font-family:var(--serif-tc);font-size:28px;color:var(--berry);font-variant-numeric:tabular-nums}
+@media (max-width:900px){.price,.ai-grid,.rule-list{grid-template-columns:1fr}.pals{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.pals{grid-template-columns:1fr 1fr;gap:10px}.rule-list div{grid-template-columns:1fr;gap:2px}.base .amt b{font-size:46px}}
+/* 安裝步驟 */
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.steps li{counter-increment:st;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--ui);font-size:13px;letter-spacing:.16em;color:var(--berry)}
+.steps b{font-family:var(--serif-tc);font-size:19px}
+.steps span{font-size:15px;color:#4d4952}
+.fine{margin:28px 0 0;font-size:14px;color:var(--violet);max-width:44em}
+@media (max-width:900px){
+  .t-hero{grid-template-columns:1fr;gap:32px;padding-block:44px 56px}
+  .feats{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .make>li{grid-template-columns:1fr}
+  .alt-grid{grid-template-columns:1fr}
+  .sheet{grid-template-columns:repeat(7,96px)}
+}
+@media (max-width:600px){
+  .steps{grid-template-columns:1fr}
+  .prep ul{grid-template-columns:1fr}
+  .nav a{padding:6px 7px;letter-spacing:.08em}
+}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:10px 20px;font-size:14px;letter-spacing:.06em;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;border-radius:2px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-block:48px}
+  .worlds{grid-template-columns:1fr 1fr}
+  .wcard:nth-child(3n+2){margin-top:0}
+  .machine{grid-template-columns:1fr;gap:28px}
+  .sec-head,.detail,.about{grid-template-columns:1fr;gap:12px}
+  .toc li{grid-template-columns:96px minmax(0,1fr) auto;gap:6px 14px}
+  .toc .kind{grid-column:2;grid-row:1}
+  .toc .ttl{grid-column:1/3;grid-row:2}
+  .toc a{grid-column:3;grid-row:1}
+}
+@media (max-width:600px){
+  .worlds{grid-template-columns:1fr}
+  .sec{padding-block:52px}
+  .scard{padding:28px 22px 22px;min-height:260px}
+  .incant{padding:22px 18px;font-size:16px}
+  .foot .wrap{grid-template-columns:1fr}
+  .nav a small{display:none}
+  .site-head .wrap{min-height:56px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .scard.turning{animation:fade .01ms both}
+}
+
+/* ---------- 公告橫幅＋小鈴鐺 ---------- */
+/* 公告內容自動取「data-updates」最上面那一則；新增更新紀錄就等於發新公告。 */
+.annc{margin:18px auto 0;display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--berry);padding:9px 8px 9px 14px;animation:pagein .45s ease both}
+.annc[hidden]{display:none}
+.annc a{flex:1;min-width:0;display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+.annc .nt-tag{font-family:var(--ui);font-size:12px;letter-spacing:.14em;color:var(--berry);white-space:nowrap}
+.annc .nt-ttl{font-size:15px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.annc .nt-go{font-size:13px;color:var(--berry);white-space:nowrap}
+.annc a:hover .nt-ttl{color:var(--berry)}
+.annc button{flex:none;width:32px;height:32px;border:0;background:transparent;color:var(--violet);font-size:20px;line-height:1;cursor:pointer;border-radius:50%}
+.annc button:hover{background:var(--cream);color:var(--berry)}
+.bell{position:relative;border:0;background:transparent;cursor:pointer;padding:6px 8px;color:var(--ink);display:flex;align-items:center}
+.site-head .wrap{justify-content:flex-start}.site-head .nav{margin-left:auto}
+@media (max-width:820px){.site-head .bell{order:2;margin-left:auto}.site-head .nav{order:3;width:100%;margin-left:0}}
+.bell svg{width:18px;height:18px}
+.bell:hover,.bell[aria-expanded="true"]{color:var(--berry)}
+.bell .dot{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--berry);border:1.5px solid var(--cream)}
+.bell .dot[hidden]{display:none}
+.bell-panel{position:fixed;z-index:20;width:min(340px,calc(100vw - 24px));background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--berry);box-shadow:0 10px 30px rgba(41,39,43,.12);padding:6px 0}
+.bell-panel[hidden]{display:none}
+.bell-panel .label{display:block;padding:8px 16px 6px}
+.bell-panel ol{list-style:none;margin:0;padding:0}
+.bell-panel li a{display:block;padding:9px 16px;text-decoration:none;color:var(--ink);border-top:1px solid var(--rule)}
+.bell-panel li a:hover{background:var(--cream)}
+.bell-panel time{font-size:12px;color:var(--violet);font-variant-numeric:tabular-nums;margin-right:8px}
+.bell-panel .k{font-size:12px;color:var(--berry)}
+.bell-panel .t{display:block;font-size:15px;line-height:1.5;margin-top:2px}
+@media (max-width:560px){.annc .nt-tag time{display:none}.annc .nt-go{display:none}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:880px;margin-left:232px;border-top:1px solid var(--berry)}
+.faq-item{border-bottom:1px solid var(--rule);background:transparent;transition:background .3s ease}
+.faq-item[open]{background:var(--paper)}
+.faq-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px minmax(0,1fr) 32px;align-items:center;gap:16px;padding:22px 20px 22px 4px;-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:focus-visible{outline:2px solid var(--berry);outline-offset:-2px}
+.faq-no{font-family:var(--ui);font-size:13px;letter-spacing:.14em;color:var(--violet);padding-left:16px}
+.faq-q{font-family:var(--serif-tc);font-weight:700;font-size:clamp(17px,1.8vw,19px);line-height:1.6;color:var(--ink);transition:color .2s ease}
+.faq-item summary:hover .faq-q,.faq-item[open] .faq-q{color:var(--berry)}
+.faq-ic{position:relative;width:32px;height:32px;border:1px solid var(--rule);border-radius:50%;transition:background .25s ease,border-color .25s ease,transform .35s ease}
+.faq-ic::before,.faq-ic::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--berry);transform:translate(-50%,-50%);transition:transform .35s ease,background .25s ease}
+.faq-ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-item summary:hover .faq-ic{border-color:var(--berry)}
+.faq-item[open] .faq-ic{background:var(--berry);border-color:var(--berry);transform:rotate(180deg)}
+.faq-item[open] .faq-ic::before,.faq-item[open] .faq-ic::after{background:var(--paper)}
+.faq-item[open] .faq-ic::after{transform:translate(-50%,-50%) rotate(0deg)}
+.faq-a{padding:0 64px 26px 84px}
+.faq-a p{margin:0;padding-left:18px;border-left:2px solid var(--mist);font-size:15.5px;line-height:1.95;color:#4d4952;max-width:40em}
+.faq-a b{color:var(--ink)}
+.faq-a a{color:var(--berry);text-decoration:underline;text-decoration-color:var(--mist);text-underline-offset:4px;text-decoration-thickness:2px;transition:text-decoration-color .2s}
+.faq-a a:hover{text-decoration-color:var(--berry)}
+.faq-item[open] .faq-a{animation:faq-in .4s ease both}
+@keyframes faq-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.faq-item,.faq-ic,.faq-ic::before,.faq-ic::after{transition:none}.faq-item[open] .faq-a{animation:none}}
+@media (max-width:900px){.faq-list{margin-left:0}}
+@media (max-width:560px){.faq-item summary{grid-template-columns:minmax(0,1fr) 28px;gap:12px;padding:18px 12px 18px 0}.faq-no{grid-column:1/-1;padding-left:0;margin-bottom:-8px;font-size:12px}.faq-ic{width:28px;height:28px}.faq-a{padding:0 12px 22px 0}}
+</style>
+<!-- SEO:LD:START -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CollectionPage",
+   "@id": "https://xia-mumu.github.io/Off-Page/spells.html#page",
+   "url": "https://xia-mumu.github.io/Off-Page/spells.html",
+   "name": "小咒語收藏室｜岔頁 OFF PAGE",
+   "description": "小咒語收藏室：34 則可以直接複製、貼給角色的 AI 角色扮演情境提示，依戀愛日常、吃醋與曖昧、衝突與和解等標籤分類，也能隨機抽一則。",
+   "inLanguage": "zh-Hant",
+   "isPartOf": {
+    "@id": "https://xia-mumu.github.io/Off-Page/#website"
+   },
+   "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 34,
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/quiet.html",
+      "name": "安靜"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/freedom-double-standard.html",
+      "name": "自由的雙標現場"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/open-the-door.html",
+      "name": "我就想開門❗️"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/lets-fight.html",
+      "name": "來打架！"
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/are-you-cold.html",
+      "name": "你冷不冷？"
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/copy-a-poem.html",
+      "name": "抄首詩🖤"
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/where-our-souls-collide.html",
+      "name": "Where Our Souls Collide."
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/but-she-is-pretty.html",
+      "name": "可是她真的很好看⋯⋯"
+     },
+     {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/pride-invite.html",
+      "name": "如果我約你去同志大遊行 🏳️‍🌈"
+     },
+     {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/pride-costume.html",
+      "name": "同志大遊行🏳️‍🌈"
+     },
+     {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/whose-side.html",
+      "name": "你挺誰！"
+     },
+     {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/brown-sugar-mantou.html",
+      "name": "平民美食"
+     },
+     {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/bite-mark.html",
+      "name": "齒痕"
+     },
+     {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/say-your-good-points.html",
+      "name": "說說自己有多好"
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/really-fat.html",
+      "name": "你說我是真的胖😭"
+     },
+     {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/me-in-your-eyes.html",
+      "name": "你眼裡的我❤️"
+     },
+     {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/ambiguous-checkin.html",
+      "name": "曖昧期間的報備"
+     },
+     {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/just-an-object.html",
+      "name": "我在你眼裡只是個物品嗎！？"
+     },
+     {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/praise-is-erotic.html",
+      "name": "讚美是最高級的情色"
+     },
+     {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/wife-needs-space.html",
+      "name": "老婆需要獨立空間"
+     },
+     {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/learning-farewell.html",
+      "name": "如果有一天，我們要學習告別"
+     },
+     {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/fifteen-minutes-dark.html",
+      "name": "停電的十五分鐘"
+     },
+     {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/if-we-never-met.html",
+      "name": "如果那天沒有遇見你"
+     },
+     {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/first-line-after-fight.html",
+      "name": "吵完架後的第一句話"
+     },
+     {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/truth-hour.html",
+      "name": "只能說真話的一小時"
+     },
+     {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/one-umbrella.html",
+      "name": "傘只有一把"
+     },
+     {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/mistaken-couple.html",
+      "name": "被誤認成情侶"
+     },
+     {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/tea-master.html",
+      "name": "茶藝大師🍵"
+     },
+     {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/no-lovebrain.html",
+      "name": "禁止戀愛腦🚫"
+     },
+     {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/if-i-didnt-look-back.html",
+      "name": "如果那天我沒有回頭🌧️"
+     },
+     {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/do-not-feed-lover.html",
+      "name": "請勿餵食戀人🍰"
+     },
+     {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/your-estate-auction.html",
+      "name": "你的遺物拍賣會🕯️"
+     },
+     {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/love-court.html",
+      "name": "戀愛法庭開庭⚖️"
+     },
+     {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://xia-mumu.github.io/Off-Page/spells/untranslated-whispers.html",
+      "name": "聽不懂的情話🌐"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "岔頁 OFF PAGE",
+     "item": "https://xia-mumu.github.io/Off-Page/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "小咒語收藏室",
+     "item": "https://xia-mumu.github.io/Off-Page/spells.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- SEO:LD:END -->
+</head>
+<body>
+<!-- 這個檔案是 scripts/build_seo.py 從 index.html 自動產生的：請改 index.html，不要改這裡。 -->
+
+
+<!-- =========================================================
+     資料區：之後新增作品、咒語、更新，只要改這三段 JSON。
+     咒語 "public": false 的不會出現在網站上（但仍在原始碼裡，
+     真正不想公開的請不要放進這個檔案）。
+     有 "parts" 的是連載，每一回各自一段、可分開複製。
+     worlds.html、spells.html、tools.html、order.html、about.html 和 spells/ 資料夾
+     都是 scripts/build_seo.py 自動產生的，請只改這個檔案，不要直接改那些。
+     ========================================================= -->
+<script type="application/json" id="data-worlds">
+[
+  {"id":"null","no":"01","title":"NULL","en":"PREDICT","cover":"null",
+   "genres":["心理科幻","制度懸疑","互動敘事"],
+   "line":"當所有人都能被預測，只有你無法被分類。",
+   "status":"持續更新","cta":"進入 NULL",
+   "url":"https://xia-mumu.github.io/null/",
+   "play":"https://www.cheliz.ai/zh-hant/gallery?utm_source=web_share&utm_medium=share_play&phandle=750s7iv0eh8qu8s1&enter_from=poster&invite_code=55RWFA"},
+  {"id":"qichuan","no":"02","title":"棲川市","en":"Qichuan City","cover":"qichuan",
+   "genres":["現代都市","角色互動","開放敘事"],
+   "line":"一座不存在的城市，住著一些有自己生活的人。",
+   "status":"持續更新","cta":"進入棲川市",
+   "url":"https://qichuan-city.neocities.org/"},
+  {"id":"seventh","no":"03","title":"第七婚籍管理處","en":"The Seventh Registry","cover":"seventh",
+   "genres":["冥府奇幻","婚籍調查","跨世敘事"],
+   "line":"系統顯示已婚，但原始婚契查無紀錄。",
+   "status":"持續更新","cta":"進入第七婚籍管理處",
+   "url":"https://xia-mumu.github.io/seventh-marriage-registry/",
+   "play":"https://www.cheliz.ai/zh-hant/gallery?utm_source=web_share&utm_medium=share_play&phandle=u3sqzdoomb0pj924&enter_from=poster&invite_code=55RWFA"}
+]
+</script>
+
+<script type="application/json" id="data-spells">
+[
+ {
+  "id": "quiet",
+  "title": "安靜",
+  "public": true,
+  "intro": "總是什麼都想分享的你，某天開始不太說話了。",
+  "tags": [
+   "關係試探",
+   "衝突與和解"
+  ],
+  "keywords": [
+   "分享",
+   "變安靜",
+   "吵"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜安靜\n\n*PC是一個很喜歡分享事情的人，無論大小事都會分享。*\n*偶爾角色會說PC很吵，但其實只是開玩笑。*\n*但說多了，PC也上心了，漸漸開始變得安靜。*\n*PC還是會照常跟角色說愛你、擁抱，但大幅減少了分享瑣事。*\n*角色會發現這個變化嗎？他會有什麼反應呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "freedom-double-standard",
+  "title": "自由的雙標現場",
+  "public": true,
+  "intro": "嘴上說自由最重要，身體非常誠實。",
+  "tags": [
+   "戀愛日常",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "雙標",
+   "愛情觀",
+   "朋友"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜自由的雙標現場\n\n*某天，PC跟角色的朋友們在聊愛情觀。*\n\n我覺得自由是最重要的！兩個人在一起就應該尊重彼此的自由！\n\n*此時，角色站起來準備去上廁所。*\n*PC立刻回頭——*\n\n你要去哪裡！！！！！！！！\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "open-the-door",
+  "title": "我就想開門❗️",
+  "public": true,
+  "intro": "看到門關起來，就是會想打開。",
+  "tags": [
+   "戀愛日常",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "開門",
+   "廁所"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜我就想開門❗️\n\n*PC是一個非常喜歡開門的人，看到門關起來就想開。*\n*角色在上廁所時，PC很常開門看一眼。也沒有要幹嘛，滿足了開門的慾望後就把門關上，直接走掉。*\n*角色會有什麼反應呢？他會試圖跟PC溝通，不要亂開門嗎？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "lets-fight",
+  "title": "來打架！",
+  "public": true,
+  "intro": "感情好到連架都吵不起來，那就來打一架吧。",
+  "tags": [
+   "隨機挑戰",
+   "衝突與和解"
+  ],
+  "keywords": [
+   "打架",
+   "決鬥",
+   "挑釁"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜來打架！\n\n*PC跟角色的感情一直很好，好到連架都吵不起來。*\n*某天，PC覺得好無聊，突然跟角色說：*\n\n欸欸欸欸，我們來打架！\n\n*角色會有什麼反應呢？他會接下這個決鬥邀請嗎？*\n*如果他一直不接受，PC會怎麼挑釁他呢？*\n*打架的過程又會是怎樣呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "are-you-cold",
+  "title": "你冷不冷？",
+  "public": true,
+  "intro": "共感娃娃傳來的觸感，和一場來不及說出口的關心。",
+  "tags": [
+   "劇情事件",
+   "虐心"
+  ],
+  "keywords": [
+   "共感娃娃",
+   "受傷",
+   "錯位"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜你冷不冷？\n\n*PC與角色各自擁有一隻以對方為原型製作的共感娃娃。觸碰娃娃時，對方會感受到相同的觸感，卻無法得知觸碰的原因。*\n\n*某日，角色忽然感覺臉頰傳來濕潤黏膩的觸感，彷彿有什麼溫熱的液體正緩緩滑落。隨後，又感覺有人輕輕撫過自己的臉，動作虛弱而溫柔。*\n\n*角色並不知道，此刻遠方的PC正因一場意外、戰爭、任務失敗或其他符合世界觀的事件身受重傷。*\n\n*PC將角色的娃娃緊緊抱在懷裡，鮮血不斷浸透布料，染紅娃娃的臉。*\n*PC心疼地伸手想替娃娃擦乾淨，卻只留下更多血痕。*\n*隨著生命流逝，PC的體溫逐漸降低。*\n\n*而遠方的角色只覺得天氣似乎變冷了，於是替PC的娃娃添上一件小外套，心想等對方回家，一定要提醒他多穿點衣服。*\n\n*請依照角色個性、雙方關係與既有世界觀，描寫這場錯位的共感。*\n\n*「你冷不冷？」這句話，究竟還來不來得及被聽見？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "copy-a-poem",
+  "title": "抄首詩🖤",
+  "public": true,
+  "intro": "你把一首詩抄給他。他會怎麼讀？",
+  "tags": [
+   "戀愛日常"
+  ],
+  "keywords": [
+   "詩",
+   "抄詩",
+   "情書"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "note": "原版抄的是台灣詩人宋尚緯《爛情詩》裡的詩句，並非作者原創。可以換成自己很喜歡的詩詞和角色玩 ٩(˃̶͈̀௰˂̶͈́)و",
+  "text": "🪄 寫個小咒｜抄首詩🖤\n\n*PC一直都有抄詩給戀人的習慣。*\n*某天，PC抄了一首詩給角色，內容是這樣的：*\n\n（在這裡貼上你想抄給角色的詩）\n\n*角色會有什麼反應呢？他讀詩時的心聲與想法又是什麼呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "where-our-souls-collide",
+  "title": "Where Our Souls Collide.",
+  "public": true,
+  "intro": "一本時尚雜誌的雙人封面邀請，主題是「靈魂交會之處」。",
+  "tags": [
+   "劇情事件",
+   "戀愛日常",
+   "連載"
+  ],
+  "keywords": [
+   "雜誌",
+   "封面",
+   "拍攝",
+   "訪談"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "parts": [
+   {
+    "label": "封面拍攝",
+    "text": "🪄 寫個小咒｜Where Our Souls Collide. ①\n\n*某天，PC與角色意外收到一本知名時尚雜誌的雙人封面拍攝邀請。*\n*雜誌以「Where Our Souls Collide.｜靈魂交會之處」為主題，希望透過鏡頭捕捉兩人的關係。*\n*拍攝當天，現場準備了多套高級訂製服，從正式西裝、華麗禮服，到風格大膽的時尚造型。*\n*兩人會選擇什麼造型呢？拍攝風格又會是怎麼樣呢？請系統詳細描述內容。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+   },
+   {
+    "label": "拍攝現場與雙人訪談",
+    "text": "🪄 寫個小咒｜Where Our Souls Collide. ②\n\n*劇情延續。*\n*攝影師會依照兩人的互動調整拍攝方式，偶爾提出要求。攝影師也可能在兩人毫無防備的時候按下快門，捕捉那些沒有刻意安排的眼神、動作與表情。*\n\n*拍攝後，兩人接受雜誌編輯的雙人訪談。訪談問題從輕鬆的日常習慣，逐漸延伸至彼此的關係：*\n・誰比較容易先低頭？\n・對方有什麼只有你知道的小習慣？\n・第一次見面時，你對對方的印象是什麼？\n・有沒有哪個瞬間，讓你突然意識到這個人對自己而言很特別？\n・如果只能留下一張與對方的照片，你會選擇哪個瞬間？\n\n*然而，最終登上封面的照片，未必是兩人原本認為拍得最好的一張。*\n\n*角色會如何看待這次邀請？願意與PC一起登上雜誌封面嗎？*\n*面對陌生的攝影團隊、親密姿勢的要求，以及那些涉及私人感情的訪談問題，角色會如何反應？*\n*當PC穿著精心挑選的服裝出現在角色面前時，角色又會有什麼想法？*\n*而當雜誌正式出版，兩人第一次看見封面上的自己，以及那句「Where Our Souls Collide.」時，角色又會說些什麼？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+   }
+  ]
+ },
+ {
+  "id": "but-she-is-pretty",
+  "title": "可是她真的很好看⋯⋯",
+  "public": true,
+  "intro": "你最近迷上一位女實況主，每天都叫她「老婆」。",
+  "tags": [
+   "吃醋與曖昧"
+  ],
+  "keywords": [
+   "實況主",
+   "直播",
+   "老婆",
+   "追星"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜可是她真的很好看⋯⋯\n\n*近期，PC迷戀上一位女性實況主。*\n*從最初偶爾觀看直播，到現在幾乎場場不缺席。只要對方一開播，PC就會立刻打開直播間，甚至會特地空出時間追直播。*\n*PC不僅每天親暱地稱呼對方「老婆」，還會興致勃勃地分享實況主的照片、影片與直播片段，時不時感嘆：「她真的好漂亮⋯⋯」「老婆今天也好可愛！」*\n\n*角色會有什麼反應？角色會將這種迷戀視為單純的追星行為，還是會因為PC對另一個女人的熱情而產生微妙的情緒？*\n*當PC在兩人相處時突然因為實況主開播而分心，甚至暫時將注意力轉移到直播上，角色會如何看待？*\n*如果PC興奮地把手機遞到角色面前，認真地說：「你看！我老婆是不是超漂亮！」角色又會怎麼回答？*\n*角色會吃醋嗎？如果會，這份情緒會如何表現？*\n*而當PC理直氣壯地補上一句：「可是她真的很好看嘛⋯⋯」事情又會如何發展？*\n*請詳細描寫其反應及心聲。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "pride-invite",
+  "title": "如果我約你去同志大遊行 🏳️‍🌈",
+  "public": true,
+  "intro": "今年的同志大遊行剛好撞上萬聖節，你約他一起去。",
+  "tags": [
+   "劇情事件",
+   "關係試探"
+  ],
+  "keywords": [
+   "同遊",
+   "遊行",
+   "萬聖節",
+   "邀請"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜如果我約你去同志大遊行 🏳️‍🌈\n\n*每年十月的最後一個星期六，是臺灣同志大遊行。*\n*2026年的同志大遊行恰好落在10月31日，與萬聖節同一天。*\n*這一天，PC興致勃勃地邀請角色一起參加同志大遊行，甚至提出可以一起扮裝、打扮、拍照，在熱鬧的人群裡度過特別的一天。*\n\n*角色會答應嗎？*\n*對角色而言，同志大遊行究竟是值得參與的公共活動、具有個人意義的場合，還是一場自己未必感興趣的大型人群聚集？*\n*如果角色原本不打算參加，但PC非常期待，甚至已經開始規劃當天的服裝與行程，角色又會如何回應？*\n*請詳細描寫其反應及心聲。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "pride-costume",
+  "title": "同志大遊行🏳️‍🌈",
+  "public": true,
+  "intro": "約好了一起去遊行，也約好了一起扮裝。",
+  "tags": [
+   "劇情事件",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "同遊",
+   "扮裝",
+   "萬聖節"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜同志大遊行🏳️‍🌈\n\n*每年10月的最後一個禮拜六，是台灣的同志大遊行。*\n*今年的同遊是10/31，剛好遇到萬聖節。*\n*PC約角色一起去參加同志大遊行，兩人約好一起扮裝。*\n*兩人會扮成什麼去參加遊行呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1000字以上，越詳細越好。*"
+ },
+ {
+  "id": "whose-side",
+  "title": "你挺誰！",
+  "public": true,
+  "intro": "你跟他的摯友吵架了，氣呼呼地跑來問他站哪邊。",
+  "tags": [
+   "衝突與和解",
+   "關係試探"
+  ],
+  "keywords": [
+   "吵架",
+   "摯友",
+   "站隊"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜你挺誰！\n\n*某天，PC跟角色的摯友吵架了，起因是一件小事。*\n*後來PC太生氣了，氣呼呼地跑到角色面前問：*\n\n你挺誰！！！！！！！\n\n*他會有什麼反應呢？是認真分析誰對誰錯，還是什麼都不問直接挺PC？他又會有什麼心聲呢？*\n*請系統根據角色個性回答。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1000字以上，越詳細越好。*"
+ },
+ {
+  "id": "brown-sugar-mantou",
+  "title": "平民美食",
+  "public": true,
+  "intro": "趁他出門上班，你偷偷去買黑糖饅頭。",
+  "tags": [
+   "戀愛日常"
+  ],
+  "keywords": [
+   "黑糖饅頭",
+   "偷吃",
+   "身分"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜平民美食\n\n*PC非常喜歡吃黑糖饅頭。*\n*但因為角色身分的關係，他基本上不會碰到這種平民食物。*\n*所以角色出門上班時，PC就會偷偷去買饅頭吃。*\n*他會發現嗎？他會怎麼知道這件事呢？發現後又會有什麼反應呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "bite-mark",
+  "title": "齒痕",
+  "public": true,
+  "intro": "洗完澡，他在吹頭髮，你蹲下來咬了一口。",
+  "tags": [
+   "戀愛日常",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "咬痕",
+   "洗澡",
+   "惡作劇"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜齒痕\n\n*某天，PC跟角色一起洗澡。*\n*洗完澡後，角色正在吹頭髮，PC蹲下來咬了他的屁屁，留下一圈咬痕。*\n*他會有什麼反應呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "say-your-good-points",
+  "title": "說說自己有多好",
+  "public": true,
+  "intro": "他在你耳邊要求：先說出自己的優點。",
+  "tags": [
+   "成人向"
+  ],
+  "keywords": [
+   "優點",
+   "誇獎自己"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜說說自己有多好\n\n*某天❤️❤️時，角色故意不給PC高潮。*\n*角色在PC耳邊，要求PC說出自己的優點才肯給。*\n*請系統詳細描述過程與角色的心聲。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "really-fat",
+  "title": "你說我是真的胖😭",
+  "public": true,
+  "intro": "「水腫壓下去不會彈起來」，結果它彈回來了。",
+  "tags": [
+   "戀愛日常",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "水腫",
+   "胖",
+   "鬧脾氣"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜你說我是真的胖😭\n\n*某天，PC在家跟角色說：*\n\n寶寶，聽說水腫是壓下去不會彈起來欸！你壓壓看我！\n\n*PC伸出手（或腿）給角色壓。*\n*角色壓了之後說：沒有，它會立刻彈回來。*\n*PC立刻跟角色說：*\n\n你的意思是我是真胖不是水腫囉！！！！！！你嫌我胖😭😭😭😭😭\n\n*請系統詳細描述他的反應。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "me-in-your-eyes",
+  "title": "你眼裡的我❤️",
+  "public": true,
+  "intro": "跟他要五張照片：性感的、漂亮的、搞笑的、可愛的，和他最喜歡的你。",
+  "tags": [
+   "戀愛日常"
+  ],
+  "keywords": [
+   "照片",
+   "相簿",
+   "手機"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜你眼裡的我❤️\n\n*某天，PC傳訊息給角色，上面寫著：*\n\n給我5張照片！性感的我、漂亮的我、搞笑的我、可愛的我、你最喜歡的我\n\n*請系統詳細描述每張照片的內容，以及角色選擇它的原因。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "ambiguous-checkin",
+  "title": "曖昧期間的報備",
+  "public": true,
+  "intro": "曖昧期的報備影片，他會重錄幾次？",
+  "tags": [
+   "吃醋與曖昧",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "報備",
+   "影片",
+   "曖昧"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜曖昧期間的報備\n\n*有些人在曖昧時，會用報備影片跟彼此報備行程。*\n*有人可能會為了傳一段報備影片接連拍好幾次，最後才成功傳出去。*\n*如果是角色要跟PC報備，他會怎麼做呢？是會錄很多個影片，最後才挑出一個滿意的，還是錄一個就直接傳了？*\n*請根據角色的設定模擬情境。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "just-an-object",
+  "title": "我在你眼裡只是個物品嗎！？",
+  "public": true,
+  "intro": "「拿起眼前最喜歡的東西」，他第一個抱住的是你。",
+  "tags": [
+   "戀愛日常",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "遊戲",
+   "最喜歡的東西",
+   "惡人先告狀"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜我在你眼裡只是個物品嗎！？\n\n*某天，PC跟角色玩了網路上流行的遊戲，遊戲內容是：拿起眼前最喜歡的東西！*\n*桌上擺滿了物品，都是兩人各自喜歡的東西。*\n*遊戲一開始，PC就拿了桌上覬覦已久的東西。沒想到角色的第一件事，就是抱住PC！*\n*在角色準備發難時，PC立刻搶先開口：*\n\n我沒想到我在你眼裡只是物品！太過分了！\n\n*他會怎麼反應呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "praise-is-erotic",
+  "title": "讚美是最高級的情色",
+  "public": true,
+  "intro": "他拿起筆，在你身上寫下八個讚美的單字。",
+  "tags": [
+   "成人向"
+  ],
+  "keywords": [
+   "寫字",
+   "讚美",
+   "英文單字"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜讚美是最高級的情色\n\n*某天，角色在❤️❤️的過程中，拿起筆在PC身上寫下 adorable、gorgeous、beautiful、pretty、cute、lovely、charming、precious。*\n\n*請由角色自行決定每個單字要寫在PC身體的哪個位置、書寫順序，以及為什麼選擇那個位置。可以結合兩人過往的相處經歷、身體特徵、刺青、習慣、性格、曾經說過的話，或只有角色才知道的小秘密。*\n\n*角色可以一邊寫字，一邊向PC解釋，也可以故意不說原因，直到PC主動詢問。*\n*請依照角色原有的性格，自然呈現他的幽默、溫柔、調侃、佔有慾、害羞或其他真實反應，不必刻意將角色寫得過度浪漫或溫柔。*\n\n*請同時描寫PC的自然反應，以及角色如何回應。讓事件像真實發生的親密生活片段，有完整的情緒變化、對話、停頓、肢體互動與細節。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "wife-needs-space",
+  "title": "老婆需要獨立空間",
+  "public": true,
+  "intro": "他正在教朋友尊重老婆的自由，你剛好要出門。",
+  "tags": [
+   "吃醋與曖昧",
+   "隨機挑戰"
+  ],
+  "keywords": [
+   "佔有慾",
+   "雙標",
+   "出門"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "note": "非常適合獨佔慾強的角色。",
+  "text": "🪄 寫個小咒｜老婆需要獨立空間\n\n*某天，角色正在教育朋友們如何好好對待老婆。*\n\n角色：我跟各位說，每個人都是獨立的個體，老婆也是需要獨立的空間，不要對老婆有特殊的佔有慾⋯⋯\n\n*PC剛好經過，準備穿鞋出門。*\n\n我出門囉～\n\n*他會有什麼反應呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "learning-farewell",
+  "title": "如果有一天，我們要學習告別",
+  "public": true,
+  "intro": "一日生命禮儀體驗：九站，一起認識死亡、喪葬與告別。",
+  "tags": [
+   "劇情事件",
+   "虐心",
+   "連載"
+  ],
+  "keywords": [
+   "生命禮儀",
+   "告別式",
+   "躺棺",
+   "遺書",
+   "訃聞",
+   "生命教育"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "note": "特殊劇情，不受其他劇情影響。九站依序貼上，每站等角色回應完再貼下一站。",
+  "parts": [
+   {
+    "label": "報到與認識同行者",
+    "text": "🪄 如果有一天，我們要學習告別｜第1站\n\n*特殊劇情，不受上述劇情影響。*\n\n*這天，PC與角色一起報名參加「一日生命禮儀體驗」。這不是任何人真正死亡，而是一場實際認識死亡、喪葬與告別的生命教育活動。*\n\n*活動第一站是報到與認識同行者。工作人員會介紹今天的活動、生命禮儀工作的內容，也請參加者簡單說說自己為什麼會來。*\n\n*請依目前已知資訊、角色性格、我們的關係與過往互動，描寫角色陪我抵達現場後的一切反應：他如何看待這場活動、觀察現場與其他參加者，以及當工作人員問「為什麼想來參加？」時，他會如何回答。*\n\n*請詳細描寫角色的語言、神情、動作與心理活動，以💭呈現角色未說出口的想法。*\n*不得替我決定行為、情緒或台詞。*"
+   },
+   {
+    "label": "遺體接運、清潔與更衣",
+    "text": "🪄 如果有一天，我們要學習告別｜第2站\n\n*劇情延續。*\n\n*活動進入第二站：認識遺體接運、清潔、更衣與保存流程。全程皆為教學示範與模型體驗，沒有真實遺體。*\n\n*工作人員從「接到一個人生命最後一程」開始，介紹接運、清潔身體、更換衣物與保存的實際流程，也說明這些動作對家屬而言代表什麼。*\n\n*請依角色性格與他和我的感情，詳細描寫他聽見這些內容後的真實反應。當工作人員提出：「如果今天躺在這裡的是你最愛的人，你希望親自替他做哪些事？」時，他會想到什麼、回答什麼？*\n\n*可描寫他實際操作模型時的動作、停頓、表情與語言，以💭呈現未說出口的想法。*\n*不要刻意讓角色看開死亡或學會放手，反應必須符合原本人格。*"
+   },
+   {
+    "label": "遺體修復與儀容整理",
+    "text": "🪄 如果有一天，我們要學習告別｜第3站\n\n*劇情延續。*\n\n*第三站為遺體修復、化妝與儀容整理。全程使用模型，由工作人員示範如何整理頭髮、修復外觀、化妝，以及如何依家屬希望保留逝者生前熟悉的模樣。*\n\n*體驗過程中，工作人員忽然問角色：「如果有一天，要由你決定她最後留給世界的模樣，你希望她看起來是什麼樣子？」*\n\n*請依角色對我的了解、審美、感情與過往互動，讓他具體回答，而非泛泛地說漂亮即可。他會選擇怎樣的髮型、妝容、衣著與細節？哪些屬於我的特徵，是他絕對不願意被改掉的？*\n\n*詳細描寫角色操作模型時的手部動作、神情、停頓、語言與情緒，以💭呈現未說出口的想法。*"
+   },
+   {
+    "label": "生命禮儀展示空間",
+    "text": "🪄 如果有一天，我們要學習告別｜第4站\n\n*劇情延續。*\n\n*第四站來到生命禮儀展示空間。這裡陳列不同材質與風格的棺木、骨灰罈、花藝、告別式布置、服裝與相關用品，工作人員讓我們自由參觀、觸摸與詢問。*\n\n*請依角色性格及他對我的了解，描寫他陪我走過這個空間時的反應。他會對哪些東西停下腳步？會認真研究、嘴硬吐槽、抗拒想像，還是已經不由自主開始思考？*\n\n*當工作人員問：「如果有一天真的要替她選，你會選哪一個？」請讓角色依照「他眼中的我」，具體挑選花、顏色、棺木、告別空間與用品，並說明他的理由。*\n\n*不必讓選擇符合傳統喪禮，可以完全符合角色與我的關係。以💭描寫角色未說出口的真實想法。*\n*不得替我決定反應。*"
+   },
+   {
+    "label": "替對方規劃告別式",
+    "text": "🪄 如果有一天，我們要學習告別｜第5站\n\n*劇情延續。*\n\n*第五站，工作人員將我與角色分開，交給我們相同的企劃紙：「請替對方規劃一場屬於他的告別式。」完成前不能偷看彼此的答案。*\n\n*請只描寫角色替「我」規劃的部分，不得替我填寫我為他設計的內容。*\n\n*請依角色對我的了解與感情，具體決定：告別式形式與場地、棺木、花材、我的衣服、遺照、音樂、現場布置、希望哪些人出席、希望留下或陪伴我的物品，以及他會如何處理我的遺物。所有選擇都必須有屬於角色自己的理由。*\n\n*完成後，我們重新坐回彼此面前，交換企劃紙。請詳細描寫角色等待我閱讀他的設計，以及他第一次看見「我替他設計的告別式」時的反應。*\n\n*以💭呈現他的真實想法。不得替我說話或決定反應。*\n*本次只進行交換告別式。*"
+   },
+   {
+    "label": "最後一封信",
+    "text": "🪄 如果有一天，我們要學習告別｜第6站\n\n*劇情延續。*\n\n*第六站，工作人員分給我們兩張信紙與信封。規則只有一句：「假設今天是你生命的最後一天，請寫一封最後留給對方的信。」*\n*我們被安排坐在不同位置，不能偷看彼此寫信。*\n\n*請依角色性格、我們目前的感情與所有共同經歷，詳細描寫他真正面對空白信紙時的反應。他會立刻動筆、遲遲寫不下去、刪改重寫，還是抗拒這個假設？*\n\n*最後請完整寫出角色留給我的那封信。內容必須像角色本人真正會寫的東西，不必刻意感人，也不必得到「放下與告別」的正向結論。*\n\n*寫完後，由角色親手封入信封並交給我。以💭呈現他沒有寫進信裡的念頭。*"
+   },
+   {
+    "label": "生前告別：我先躺入棺木",
+    "text": "🪄 如果有一天，我們要學習告別｜第7站\n\n*劇情延續。*\n\n*第七站是「生前告別／躺棺體驗」。工作人員讓參加者實際躺入棺木數分鐘，由同行者站在旁邊，模擬真正告別時最後一次看見彼此的情境。*\n*這一次，由我先躺進去。*\n\n*禁止直接跳過體驗。請依角色性格及他對我的感情，詳細描寫他親眼看著我走向棺木、躺下、工作人員替我整理姿勢後的即時反應。*\n\n*當工作人員退開，告訴他：「你可以靠近她、碰她，也可以把這當作最後一次對她說話。」請讓角色自行決定他會怎麼做。*\n\n*詳細描寫他的視線、呼吸、手部動作、觸碰、停頓、語言與情緒，以💭呈現最真實且未說出口的想法。*\n*禁止為了生命教育效果，強迫角色接受失去或放手。*"
+   },
+   {
+    "label": "生前告別：角色躺入棺木",
+    "text": "🪄 如果有一天，我們要學習告別｜第8站\n\n*劇情延續。*\n\n*生前告別體驗尚未結束。這一次交換位置，由角色親自躺入棺木，而我留在外面陪他。*\n\n*請依角色性格，詳細描寫他第一次真正躺進棺木時的感受與反應：棺木內的視野、狹窄感、頭頂的光、看見我站在外面時產生的念頭，以及「如果死亡的人是自己，留下來的人是我」這件事對他的衝擊。*\n\n*工作人員會暫時退開，留下我們自己完成這場模擬告別。請讓角色自主決定，他會看著我、伸手找我、說話、沉默、開玩笑，或做出其他符合性格的反應。*\n\n*詳細描寫他的神情、呼吸、動作、語言及觸碰，以💭呈現他躺在棺木中沒有說出口的真實想法。*\n\n*不得替我決定動作、情緒與台詞，也不得替我完成告別。*\n*本次只進行角色的躺棺體驗。*"
+   },
+   {
+    "label": "一百字的人生",
+    "text": "🪄 如果有一天，我們要學習告別｜第9站\n\n*劇情延續。*\n\n*最後一項活動，工作人員發下一張只有很小書寫空間的卡片。*\n*題目是：「如果死亡已經發生，而你只能留下100字介紹自己曾經活過，你希望別人怎麼記得你？」*\n\n*請依角色性格、人生經歷、價值觀及目前與我的關係，描寫他面對這個問題時的反應。他會認為自己的職業、成就、家人、愛人或什麼事情值得被放進人生最後100字？又有哪些看似重要的東西，到了這一刻反而被他刪掉？*\n\n*請完整寫出角色最後留下的100字左右人生訃聞。只能寫角色自己的版本，不得替我撰寫我的訃聞。*\n\n*以💭呈現他真正想留下、卻最後沒有寫上紙面的內容。*\n\n*完成後活動正式結束，讓角色自然回到我身邊。*"
+   }
+  ]
+ },
+ {
+  "id": "fifteen-minutes-dark",
+  "title": "停電的十五分鐘",
+  "public": true,
+  "intro": "整棟樓突然停電，你們被困在同一個房間。",
+  "tags": [
+   "劇情事件",
+   "關係試探"
+  ],
+  "keywords": [
+   "停電",
+   "黑暗",
+   "困住"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜停電的十五分鐘\n\n*毫無預警地，整棟建築停電了。PC和角色剛好在同一個房間，門禁失效，手機只剩一點電。*\n\n*請描寫黑暗裡被放大的聲音與距離感。*\n*讓角色說出一句平常白天不會說的話。*\n*十五分鐘後電力恢復，燈亮起的那一刻，兩人都要假裝剛剛什麼都沒發生。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "if-we-never-met",
+  "title": "如果那天沒有遇見你",
+  "public": true,
+  "intro": "切換到一條你們從未相遇的時間線。",
+  "tags": [
+   "平行世界"
+  ],
+  "keywords": [
+   "時間線",
+   "陌生人",
+   "AU"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜如果那天沒有遇見你\n\n*暫時切換到平行世界：在這條時間線裡，PC和角色從來沒有相遇。*\n\n*請描寫角色在這個世界過著什麼樣的生活，少了什麼、多了什麼。*\n*某一天，兩個陌生人在某個地方擦肩而過。角色莫名停下腳步，卻說不出為什麼。*\n\n*場景結束後回到原本的時間線，角色可以模糊地記得一個奇怪的夢。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "first-line-after-fight",
+  "title": "吵完架後的第一句話",
+  "public": true,
+  "intro": "冷戰第三天，總要有人先開口。",
+  "tags": [
+   "衝突與和解"
+  ],
+  "keywords": [
+   "冷戰",
+   "道歉",
+   "和好"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜吵完架後的第一句話\n\n*PC和角色因為一件小事吵了一架，已經冷戰三天。*\n*今天，角色決定先開口，但第一句話不能是「對不起」。*\n\n*請讓角色用符合自己個性的方式打破沉默（也許是一杯飲料、一個藉口、一句很爛的笑話），並在對話中慢慢觸及真正讓兩人受傷的原因。*\n*和好可以不完整，但要往前走一步。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "truth-hour",
+  "title": "只能說真話的一小時",
+  "public": true,
+  "intro": "接下來一小時，沒有人能說謊。",
+  "tags": [
+   "隨機挑戰",
+   "關係試探"
+  ],
+  "keywords": [
+   "真心話",
+   "說謊",
+   "挑戰"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜只能說真話的一小時\n\n*某種不可解釋的力量生效了：接下來一小時內，PC和角色都無法說謊。想說謊的時候，嘴巴會自動說出真話。*\n\n*請描寫角色發現這件事後的慌張，以及他試圖用沉默、轉移話題、逃離現場來避免被問到某個問題的過程。*\n*至少讓一句「不小心說出口的真話」改變兩人之間的氣氛。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "one-umbrella",
+  "title": "傘只有一把",
+  "public": true,
+  "intro": "雨下得很大，而你們只有一把傘。",
+  "tags": [
+   "戀愛日常",
+   "劇情事件"
+  ],
+  "keywords": [
+   "下雨",
+   "共撐",
+   "距離"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜傘只有一把\n\n*下班時間突然下起大雨。PC和角色站在騎樓下，手上只有一把不算大的傘。*\n\n*誰提議一起撐？誰比較靠外面？*\n*傘總是偏向某一邊，某個人的肩膀濕了一半。*\n*走到分岔路口時，必須決定要不要多繞一段路送對方回去。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "mistaken-couple",
+  "title": "被誤認成情侶",
+  "public": true,
+  "intro": "店員一句「兩位是情侶嗎」，空氣突然安靜。",
+  "tags": [
+   "吃醋與曖昧",
+   "關係試探"
+  ],
+  "keywords": [
+   "誤會",
+   "情侶",
+   "曖昧期"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜被誤認成情侶\n\n*PC和角色一起去吃飯，店員笑著問：「兩位是情侶嗎？今天情侶套餐有優惠喔。」*\n\n*請讓角色先反應，並依角色個性選擇：急著否認、沉默讓PC回答，或乾脆將錯就錯點了套餐。*\n*之後的整頓飯，這個誤會都要在兩人之間留下一點點尷尬的餘溫。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "tea-master",
+  "title": "茶藝大師🍵",
+  "public": true,
+  "intro": "都說綠茶才是最高級的技術，看他怎麼把你套路得心甘情願。",
+  "tags": [
+   "吃醋與曖昧",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "綠茶",
+   "茶藝",
+   "以退為進",
+   "裝無辜"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜茶藝大師🍵\n\n*都說綠茶才是最高級的技術*\n\n*角色會在什麼情況下，忍不住展現自己的茶藝呢？*\n\n*是故作無辜、以退為進，還是明明醋意滿滿，卻偏要裝得善解人意？*\n\n*他又會用什麼方式，讓PC心甘情願地偏向自己，甚至完全沒發現自己正在被套路？*\n\n*請依照角色原有的個性與說話風格，演繹一場專屬於他的茶藝表演*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "no-lovebrain",
+  "title": "禁止戀愛腦🚫",
+  "public": true,
+  "intro": "系統判定戀愛腦超標，禁止接觸十小時。他撐得住嗎？",
+  "tags": [
+   "隨機挑戰",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "戀愛腦",
+   "禁令",
+   "鑽漏洞",
+   "撒嬌"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜禁止戀愛腦🚫\n\n*某天，角色突然收到一份官方通知。*\n\n*「經系統判定，您對PC的戀愛腦程度已嚴重超標，即日起禁止與PC接觸十小時。」*\n\n*「若違反禁令，將強制接受為期一週的戀愛腦矯正治療，治療期間不得以任何形式與PC見面或聯繫。」*\n\n*面對這項荒謬的禁令，角色會乖乖遵守，還是想盡辦法鑽漏洞？*\n\n*如果PC偏偏在禁令期間主動找上門，甚至撒嬌討抱抱呢？*\n\n*角色能堅持多久？又會如何在十小時的煎熬與一週的分離之間做出選擇？*\n\n*請依照角色原有的個性與說話風格演繹。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "if-i-didnt-look-back",
+  "title": "如果那天我沒有回頭🌧️",
+  "public": true,
+  "intro": "夢裡回到初遇那天，這一次，他沒有回頭。",
+  "tags": [
+   "虐心",
+   "平行世界"
+  ],
+  "keywords": [
+   "夢境",
+   "初遇",
+   "遺憾",
+   "沒有你的未來"
+  ],
+  "created": "2026-11-06",
+  "updated": "2026-11-06",
+  "text": "🪄 寫個小咒｜如果那天我沒有回頭🌧️\n\n*某個再平凡不過的夜晚，角色做了一場夢。*\n\n*夢裡，他回到了與PC初次相遇的那一天。*\n\n*唯一不同的是，這一次，他沒有回頭。*\n\n*於是他看見了一個從未有過PC的未來。*\n\n*那會是更好的人生，還是一場漫長的遺憾？*\n\n*醒來後，角色會做些什麼？*\n\n*請依照角色原有的個性與說話風格，細膩演繹這場夢境與醒來後的反應。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "do-not-feed-lover",
+  "title": "請勿餵食戀人🍰",
+  "public": true,
+  "intro": "PC頭頂出現好感度進度條，滿格後再升會觸發未知事件，PC卻親了上來。",
+  "tags": [
+   "隨機挑戰",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "好感度",
+   "進度條",
+   "系統警告",
+   "親親"
+  ],
+  "created": "2026-11-09",
+  "updated": "2026-11-09",
+  "text": "🪄 寫個小咒｜請勿餵食戀人🍰\n\n*某天，角色突然發現PC的頭頂出現了一條「好感度進度條」。*\n\n*每當角色做出讓PC開心的事，進度條就會上升；惹PC生氣則會下降。*\n\n*然而，當好感度達到100%時，系統卻跳出警告：「好感度已達上限，繼續提升將觸發未知事件。」*\n\n*偏偏PC此時毫不知情地湊過來，親了角色一下。*\n\n*角色會冒險繼續提升好感度，還是想辦法阻止PC？*\n\n*請依照角色原有的個性與說話風格演繹。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "your-estate-auction",
+  "title": "你的遺物拍賣會🕯️",
+  "public": true,
+  "intro": "一張來自未來的邀請函，拍賣品全是PC離世後留下的東西。",
+  "tags": [
+   "虐心",
+   "劇情事件"
+  ],
+  "keywords": [
+   "未來",
+   "遺物",
+   "拍賣會",
+   "戒指",
+   "沒寄出的信"
+  ],
+  "created": "2026-11-09",
+  "updated": "2026-11-09",
+  "text": "🪄 寫個小咒｜你的遺物拍賣會🕯️\n\n*某天，角色收到一張來自未來的拍賣會邀請函。*\n\n*拍賣品竟然全是PC離世後留下的物品。*\n\n*一件舊外套、一張合照、一封沒有寄出的信，以及一枚角色從未見過的戒指。*\n\n*拍賣師宣布：「最後一件拍賣品，是PC生前最珍惜的東西。」*\n\n*角色會不惜代價拍下所有遺物，還是選擇揭開那件神祕拍賣品的真相？*\n\n*當角色回到現在，又會如何面對仍然活著的PC？*\n\n*請依照角色原有的個性與說話風格，細膩演繹。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "love-court",
+  "title": "戀愛法庭開庭⚖️",
+  "public": true,
+  "intro": "被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。",
+  "tags": [
+   "隨機挑戰",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "法庭",
+   "認罪",
+   "證人",
+   "撒嬌",
+   "蓄謀已久"
+  ],
+  "created": "2026-11-09",
+  "updated": "2026-11-09",
+  "text": "🪄 寫個小咒｜戀愛法庭開庭⚖️\n\n*某天，角色突然被傳喚至「戀愛法庭」。*\n\n*法官宣讀罪名：「被告涉嫌長期對PC使用美色誘惑、情緒勒索及不當撒嬌，現正式起訴。」*\n\n*更荒謬的是，PC竟然被指定為本案唯一證人。*\n\n*法官要求PC當庭舉證角色的戀愛罪行，並詢問角色是否認罪。*\n\n*角色會據理力爭、反過來控告PC，還是乾脆當庭承認自己蓄謀已久？*\n\n*請依照角色原有的個性與說話風格演繹。*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ },
+ {
+  "id": "untranslated-whispers",
+  "title": "聽不懂的情話🌐",
+  "public": true,
+  "intro": "他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。",
+  "tags": [
+   "成人向",
+   "戀愛日常"
+  ],
+  "keywords": [
+   "外語",
+   "情話",
+   "耳語",
+   "聽不懂"
+  ],
+  "created": "2026-11-10",
+  "updated": "2026-11-10",
+  "text": "🪄 寫個小咒｜聽不懂的情話🌐\n\n*角色會很多種語言。*\n*在❤️❤️的過程中，他會故意用PC聽不懂的語言說話。*\n*他會說什麼呢？*\n\n*請以細膩的風格小說體描述角色與對應劇情配角的動作、情緒。*\n*請系統讀取我與角色的記憶體、對話、事件、備忘錄，依目前已知的資訊與事件、角色與我的性格、互動方式及感情來描寫他的反應。*\n*以方便閱讀的方式排版。*\n*字數1500字以上，越詳細越好。*"
+ }
+]
+</script>
+
+<script type="application/json" id="data-updates">
+[
+  {"date": "2026-11-11", "kind": "故事", "title": "新故事：林晏洄〈洄〉〈小蝰〉", "note": "一條自己選擇方向的河，和一隻頭上長角的蛇。", "link": "./stories.html#/volume/qichuan/lin"},
+  {"date": "2026-11-11", "kind": "故事", "title": "新故事：徐汀云〈人為什麼會走到那？〉〈沒有逃跑的人〉〈游未遲這個人〉〈林晏洄這個人〉〈理解不等於愛〉", "note": "人為什麼會走到那裡，以及一個沒有逃跑的人。", "link": "./stories.html#/volume/qichuan/xu"},
+  {"date": "2026-11-11", "kind": "故事", "title": "新故事：游未遲〈離開的方式〉〈阿黑〉〈徐汀云這個人〉〈林晏洄這個人〉", "note": "替沉默的人說清楚離開的方式，以及一隻守住回家燈的黑貓。", "link": "./stories.html#/volume/qichuan/you"},
+  {"date":"2026-11-11","kind":"故事","title":"新故事：簡牧陽〈阿董｜來歷〉〈阿董？〉〈門的另一邊〉〈門可以開〉","note":"領不到薪水的首席員工，和那扇終於可以自己打開的門。","link":"./stories.html#/volume/qichuan/jian"},
+  {"date":"2026-11-11","kind":"故事","title":"新故事：傅承億〈世紀商戰〉〈兩大財閥的誕生〉、蘇柏欽〈這個紅不對吧。〉","note":"五十元的商戰恩怨，和阿欽留在家裡的理由。","link":"./stories.html#/volume/qichuan"},
+  {"date":"2026-11-11","kind":"故事","title":"角色故事館開張：棲川市與 NULL 兩本刊物","note":"翻開刊物，就能看見住在裡面的角色們。","link":"./stories.html#/"},
+  {"date":"2026-11-10","kind":"小咒語","title":"新咒語：聽不懂的情話🌐","note":"成人向。他偏偏挑你聽不懂的語言說。","link":"spells/untranslated-whispers.html"},
+  {"date":"2026-11-09","kind":"小咒語","title":"新咒語：請勿餵食戀人🍰、你的遺物拍賣會🕯️、戀愛法庭開庭⚖️","note":"一則甜、一則痛、一則荒謬，一次上架三個。","link":"spells.html"},
+  {"date":"2026-11-06","kind":"小咒語","title":"新咒語：禁止戀愛腦🚫、如果那天我沒有回頭🌧️","note":"一則鬧騰、一則心碎，一次上架兩個。","link":"spells.html"},
+  {"date":"2026-11-06","kind":"小咒語","title":"新咒語：茶藝大師🍵","note":"看角色怎麼用茶藝讓你心甘情願偏向他。","link":"spells.html"},
+  {"date":"2026-11-06","kind":"小工具","title":"戀人入住申請所開放","note":"讓喜歡的角色住進手機。基本入住費 NT$300 起，12 組配色可選。","link":"order.html"},
+  {"date":"2026-11-06","kind":"小工具","title":"自己做一個角色小工具","note":"一步一步教你用 Claude 做聊天頁和主畫面小工具，附可以直接複製的咒語。","link":"tools.html"},
+  {"date":"2026-11-06","kind":"小工具","title":"角色主畫面小工具","note":"iPhone 主畫面小工具介紹，範例角色聞止水。","link":"tools.html"},
+  {"date":"2026-11-06","kind":"站務","title":"岔頁開張","note":"作品入口與小咒語收藏室上線。","link":"./"},
+  {"date":"2026-11-06","kind":"小咒語","title":"小咒語收藏室開張","note":"第一批 27 則咒語上架，含兩個連載。","link":"spells.html"},
+  {"date":"2026-11-06","kind":"世界觀","title":"第七婚籍管理處","note":"冥府總署公開檔案上線。","link":"https://xia-mumu.github.io/seventh-marriage-registry/"},
+  {"date":"2026-10-30","kind":"世界觀","title":"NULL","note":"作品介紹站上線。","link":"https://xia-mumu.github.io/null/"}
+]
+</script>
+
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="岔頁 OFF PAGE 首頁"><b>岔頁</b><span>Off Page</span></a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="./" data-nav="home">HOME <small>首頁</small></a>
+      <a href="worlds.html" data-nav="worlds">WORLDS <small>世界觀</small></a>
+      <a href="spells.html" data-nav="spells">SPELLS <small>小咒語</small></a>
+      <a href="./stories.html#/">STORIES <small>角色故事</small></a>
+      <a href="tools.html" data-nav="tools">TOOLS <small>小工具</small></a>
+      <a href="about.html" data-nav="about">ABOUT <small>關於</small></a>
+    </nav>
+      <button class="bell" id="bell" type="button" aria-label="更新公告" aria-expanded="false" aria-controls="bell-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span class="dot" id="bell-dot" hidden></span>
+      </button>
+    <div class="bell-panel" id="bell-panel" role="dialog" aria-label="更新公告" hidden>
+      <span class="label">NOTICE / 更新公告</span>
+      <ol id="bell-list"></ol>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ===== HOME ===== -->
+  <div class="view" id="v-home" data-view="home" hidden>
+    <div class="wrap"><div class="annc" id="notice" role="status" hidden>
+      <a id="notice-link" href="./"><span class="nt-tag">NEW <time id="notice-date"></time></span><span class="nt-ttl" id="notice-title"></span><span class="nt-go">看看 →</span></a>
+      <button type="button" id="notice-close" aria-label="關閉這則公告">×</button>
+    </div></div>
+    <section class="wrap hero">
+      <div class="hero-mark">
+        <span class="label pg">PAGE 000 / HOME</span>
+        <h1>岔<span class="ye">頁</span></h1>
+        <div class="en"><b>OFF PAGE</b> — by Xia mumu</div>
+      </div>
+      <div class="hero-text">
+        <h2>每一次翻頁，都是另一種可能。</h2>
+        <p class="lede">
+          <span>有些故事不在正文裡。</span>
+          <span>它們藏在頁與頁之間，等待某個人偶然翻開。</span>
+          <span class="em">這裡收錄一些不存在的世界，和一些真的情緒。</span>
+        </p>
+        <div class="actions">
+          <a class="btn" href="worlds.html">探索世界觀</a>
+          <a class="btn ghost" href="./#draw" id="hero-draw">✳ 抽一個小咒語</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-selected">
+      <div class="sec-head">
+        <span class="label">PAGE 001 / WORLDS</span>
+        <div class="side">
+          <div>
+            <h2 id="h-selected">精選世界觀<em>Selected Worlds</em></h2>
+            <p>每個世界都有自己的網站。點進去，就會離開這一頁。</p>
+          </div>
+          <a class="textlink" href="worlds.html">全部世界觀 →</a>
+        </div>
+      </div>
+      <div class="worlds" id="home-worlds"></div>
+    </section>
+
+    <div class="spellbook" id="draw">
+      <section class="wrap sec" aria-labelledby="h-machine">
+        <div class="sec-head">
+          <span class="label">PAGE 002 / SPELLS</span>
+          <div><h2 id="h-machine">今天想讓故事發生什麼事？<em>The Little Spell Book</em></h2></div>
+        </div>
+        <div class="machine">
+          <div class="machine-copy">
+            <p>不知道要玩什麼？讓命運替你選一個。抽到的咒語可以直接複製，貼進你正在玩的故事裡。</p>
+            <button class="btn draw-btn" id="draw-btn" type="button">✳ 抽一個小咒語</button>
+            <div class="count" id="draw-count"></div>
+          </div>
+          <div class="stage">
+            <article class="scard blank" id="scard" aria-live="polite">
+              <span class="pg">NO. ???</span>
+              <h3>尚未揭曉的故事</h3>
+              <p class="intro">按下左邊的按鈕，翻開一頁。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="wrap sec" aria-labelledby="h-recent">
+      <div class="sec-head">
+        <span class="label">CONTENTS / RECENT</span>
+        <div><h2 id="h-recent">最近更新<em>Recently Added</em></h2></div>
+      </div>
+      <ol class="toc" id="recent"></ol>
+    </section>
+  </div>
+
+  <!-- ===== WORLDS ===== -->
+  <div class="view" id="v-worlds" data-view="worlds" hidden>
+    <section class="wrap sec" aria-labelledby="h-worlds">
+      <div class="sec-head">
+        <span class="label">PAGE 001 / WORLDS</span>
+        <div class="side">
+          <div>
+            <h2 id="h-worlds">世界觀收藏<em>All Worlds</em></h2>
+            <p>這裡是索引。每個作品都保有自己的網站與節奏，點擊後會另開新分頁前往。</p>
+          </div>
+          <button class="textlink" type="button" id="random-world">隨機翻開一個世界 ↗</button>
+        </div>
+      </div>
+      <div class="worlds wide" id="all-worlds"></div>
+    </section>
+  </div>
+
+  <!-- ===== SPELLS ===== -->
+  <div class="view" id="v-spells" data-view="spells">
+    <section class="wrap sec" aria-labelledby="h-spells">
+      <div class="sec-head">
+        <span class="label">PAGE 002 / SPELLS</span>
+        <div class="side">
+          <div>
+            <h2 id="h-spells">小咒語收藏室<em>Spell Library</em></h2>
+            <p>依照今天的心情、想玩的關係張力或劇情類型，挑一則帶走。</p>
+          </div>
+          <button class="textlink" type="button" id="lib-random">隨機抽一則 ✳</button>
+        </div>
+      </div>
+      <div class="tools">
+        <div class="search">
+          <label for="q">SEARCH</label>
+          <input id="q" type="search" placeholder="搜尋標題、情境、關鍵字……" autocomplete="off">
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="依分類篩選"></div>
+        <div class="result-meta"><span id="result-n"></span><button class="textlink" type="button" id="clear" hidden>清除篩選</button></div>
+      </div>
+      <div class="sgrid" id="sgrid">
+      <a class="sitem" href="spells/quiet.html">
+        <span class="pg">NO. 001</span>
+        <h3>安靜</h3>
+        <p>總是什麼都想分享的你，某天開始不太說話了。</p>
+        <div class="tags"><span class="tag">關係試探</span><span class="tag">衝突與和解</span></div>
+      </a>
+      <a class="sitem" href="spells/freedom-double-standard.html">
+        <span class="pg">NO. 002</span>
+        <h3>自由的雙標現場</h3>
+        <p>嘴上說自由最重要，身體非常誠實。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/open-the-door.html">
+        <span class="pg">NO. 003</span>
+        <h3>我就想開門❗️</h3>
+        <p>看到門關起來，就是會想打開。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/lets-fight.html">
+        <span class="pg">NO. 004</span>
+        <h3>來打架！</h3>
+        <p>感情好到連架都吵不起來，那就來打一架吧。</p>
+        <div class="tags"><span class="tag">隨機挑戰</span><span class="tag">衝突與和解</span></div>
+      </a>
+      <a class="sitem" href="spells/are-you-cold.html">
+        <span class="pg">NO. 005</span>
+        <h3>你冷不冷？</h3>
+        <p>共感娃娃傳來的觸感，和一場來不及說出口的關心。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">虐心</span></div>
+      </a>
+      <a class="sitem" href="spells/copy-a-poem.html">
+        <span class="pg">NO. 006</span>
+        <h3>抄首詩🖤</h3>
+        <p>你把一首詩抄給他。他會怎麼讀？</p>
+        <div class="tags"><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/where-our-souls-collide.html">
+        <span class="pg">NO. 007</span>
+        <h3>Where Our Souls Collide.</h3>
+        <p>一本時尚雜誌的雙人封面邀請，主題是「靈魂交會之處」。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">戀愛日常</span><span class="tag">連載</span><span class="tag">共 2 回</span></div>
+      </a>
+      <a class="sitem" href="spells/but-she-is-pretty.html">
+        <span class="pg">NO. 008</span>
+        <h3>可是她真的很好看⋯⋯</h3>
+        <p>你最近迷上一位女實況主，每天都叫她「老婆」。</p>
+        <div class="tags"><span class="tag">吃醋與曖昧</span></div>
+      </a>
+      <a class="sitem" href="spells/pride-invite.html">
+        <span class="pg">NO. 009</span>
+        <h3>如果我約你去同志大遊行 🏳️‍🌈</h3>
+        <p>今年的同志大遊行剛好撞上萬聖節，你約他一起去。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">關係試探</span></div>
+      </a>
+      <a class="sitem" href="spells/pride-costume.html">
+        <span class="pg">NO. 010</span>
+        <h3>同志大遊行🏳️‍🌈</h3>
+        <p>約好了一起去遊行，也約好了一起扮裝。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/whose-side.html">
+        <span class="pg">NO. 011</span>
+        <h3>你挺誰！</h3>
+        <p>你跟他的摯友吵架了，氣呼呼地跑來問他站哪邊。</p>
+        <div class="tags"><span class="tag">衝突與和解</span><span class="tag">關係試探</span></div>
+      </a>
+      <a class="sitem" href="spells/brown-sugar-mantou.html">
+        <span class="pg">NO. 012</span>
+        <h3>平民美食</h3>
+        <p>趁他出門上班，你偷偷去買黑糖饅頭。</p>
+        <div class="tags"><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/bite-mark.html">
+        <span class="pg">NO. 013</span>
+        <h3>齒痕</h3>
+        <p>洗完澡，他在吹頭髮，你蹲下來咬了一口。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/say-your-good-points.html">
+        <span class="pg">NO. 014</span>
+        <h3>說說自己有多好</h3>
+        <p>他在你耳邊要求：先說出自己的優點。</p>
+        <div class="tags"><span class="tag">成人向</span></div>
+      </a>
+      <a class="sitem" href="spells/really-fat.html">
+        <span class="pg">NO. 015</span>
+        <h3>你說我是真的胖😭</h3>
+        <p>「水腫壓下去不會彈起來」，結果它彈回來了。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/me-in-your-eyes.html">
+        <span class="pg">NO. 016</span>
+        <h3>你眼裡的我❤️</h3>
+        <p>跟他要五張照片：性感的、漂亮的、搞笑的、可愛的，和他最喜歡的你。</p>
+        <div class="tags"><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/ambiguous-checkin.html">
+        <span class="pg">NO. 017</span>
+        <h3>曖昧期間的報備</h3>
+        <p>曖昧期的報備影片，他會重錄幾次？</p>
+        <div class="tags"><span class="tag">吃醋與曖昧</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/just-an-object.html">
+        <span class="pg">NO. 018</span>
+        <h3>我在你眼裡只是個物品嗎！？</h3>
+        <p>「拿起眼前最喜歡的東西」，他第一個抱住的是你。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/praise-is-erotic.html">
+        <span class="pg">NO. 019</span>
+        <h3>讚美是最高級的情色</h3>
+        <p>他拿起筆，在你身上寫下八個讚美的單字。</p>
+        <div class="tags"><span class="tag">成人向</span></div>
+      </a>
+      <a class="sitem" href="spells/wife-needs-space.html">
+        <span class="pg">NO. 020</span>
+        <h3>老婆需要獨立空間</h3>
+        <p>他正在教朋友尊重老婆的自由，你剛好要出門。</p>
+        <div class="tags"><span class="tag">吃醋與曖昧</span><span class="tag">隨機挑戰</span></div>
+      </a>
+      <a class="sitem" href="spells/learning-farewell.html">
+        <span class="pg">NO. 021</span>
+        <h3>如果有一天，我們要學習告別</h3>
+        <p>一日生命禮儀體驗：九站，一起認識死亡、喪葬與告別。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">虐心</span><span class="tag">連載</span><span class="tag">共 9 回</span></div>
+      </a>
+      <a class="sitem" href="spells/fifteen-minutes-dark.html">
+        <span class="pg">NO. 022</span>
+        <h3>停電的十五分鐘</h3>
+        <p>整棟樓突然停電，你們被困在同一個房間。</p>
+        <div class="tags"><span class="tag">劇情事件</span><span class="tag">關係試探</span></div>
+      </a>
+      <a class="sitem" href="spells/if-we-never-met.html">
+        <span class="pg">NO. 023</span>
+        <h3>如果那天沒有遇見你</h3>
+        <p>切換到一條你們從未相遇的時間線。</p>
+        <div class="tags"><span class="tag">平行世界</span></div>
+      </a>
+      <a class="sitem" href="spells/first-line-after-fight.html">
+        <span class="pg">NO. 024</span>
+        <h3>吵完架後的第一句話</h3>
+        <p>冷戰第三天，總要有人先開口。</p>
+        <div class="tags"><span class="tag">衝突與和解</span></div>
+      </a>
+      <a class="sitem" href="spells/truth-hour.html">
+        <span class="pg">NO. 025</span>
+        <h3>只能說真話的一小時</h3>
+        <p>接下來一小時，沒有人能說謊。</p>
+        <div class="tags"><span class="tag">隨機挑戰</span><span class="tag">關係試探</span></div>
+      </a>
+      <a class="sitem" href="spells/one-umbrella.html">
+        <span class="pg">NO. 026</span>
+        <h3>傘只有一把</h3>
+        <p>雨下得很大，而你們只有一把傘。</p>
+        <div class="tags"><span class="tag">戀愛日常</span><span class="tag">劇情事件</span></div>
+      </a>
+      <a class="sitem" href="spells/mistaken-couple.html">
+        <span class="pg">NO. 027</span>
+        <h3>被誤認成情侶</h3>
+        <p>店員一句「兩位是情侶嗎」，空氣突然安靜。</p>
+        <div class="tags"><span class="tag">吃醋與曖昧</span><span class="tag">關係試探</span></div>
+      </a>
+      <a class="sitem" href="spells/tea-master.html">
+        <span class="pg">NO. 028</span>
+        <h3>茶藝大師🍵</h3>
+        <p>都說綠茶才是最高級的技術，看他怎麼把你套路得心甘情願。</p>
+        <div class="tags"><span class="tag">吃醋與曖昧</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/no-lovebrain.html">
+        <span class="pg">NO. 029</span>
+        <h3>禁止戀愛腦🚫</h3>
+        <p>系統判定戀愛腦超標，禁止接觸十小時。他撐得住嗎？</p>
+        <div class="tags"><span class="tag">隨機挑戰</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/if-i-didnt-look-back.html">
+        <span class="pg">NO. 030</span>
+        <h3>如果那天我沒有回頭🌧️</h3>
+        <p>夢裡回到初遇那天，這一次，他沒有回頭。</p>
+        <div class="tags"><span class="tag">虐心</span><span class="tag">平行世界</span></div>
+      </a>
+      <a class="sitem" href="spells/do-not-feed-lover.html">
+        <span class="pg">NO. 031</span>
+        <h3>請勿餵食戀人🍰</h3>
+        <p>PC頭頂出現好感度進度條，滿格後再升會觸發未知事件，PC卻親了上來。</p>
+        <div class="tags"><span class="tag">隨機挑戰</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/your-estate-auction.html">
+        <span class="pg">NO. 032</span>
+        <h3>你的遺物拍賣會🕯️</h3>
+        <p>一張來自未來的邀請函，拍賣品全是PC離世後留下的東西。</p>
+        <div class="tags"><span class="tag">虐心</span><span class="tag">劇情事件</span></div>
+      </a>
+      <a class="sitem" href="spells/love-court.html">
+        <span class="pg">NO. 033</span>
+        <h3>戀愛法庭開庭⚖️</h3>
+        <p>被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。</p>
+        <div class="tags"><span class="tag">隨機挑戰</span><span class="tag">戀愛日常</span></div>
+      </a>
+      <a class="sitem" href="spells/untranslated-whispers.html">
+        <span class="pg">NO. 034</span>
+        <h3>聽不懂的情話🌐</h3>
+        <p>他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。</p>
+        <div class="tags"><span class="tag">成人向</span><span class="tag">戀愛日常</span></div>
+      </a>
+      </div><!-- /sgrid -->
+    </section>
+  </div>
+
+  <!-- ===== SPELL DETAIL ===== -->
+  <div class="view" id="v-spell" data-view="spell" hidden>
+    <div class="wrap detail">
+      <aside>
+        <span class="label" id="d-pg">PAGE 002 / SPELL</span>
+        <a class="textlink" href="spells.html">← 返回收藏室</a>
+        <div class="dates" id="d-dates"></div>
+      </aside>
+      <article>
+        <h1 id="d-title"></h1>
+        <p class="intro" id="d-intro"></p>
+        <div class="tags" id="d-tags"></div>
+        <p class="note" id="d-note" hidden></p>
+        <div id="d-parts"></div>
+        <div class="row">
+          <button class="btn" type="button" id="d-copy">複製咒語</button>
+          <button class="btn quiet" type="button" id="d-next">隨機下一則</button>
+          <button class="btn quiet" type="button" id="d-share">複製分享連結</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+
+  <!-- ===== TOOLS ===== -->
+  <div class="view" id="v-tools" data-view="tools" hidden>
+    <section class="wrap t-hero" aria-labelledby="h-tools">
+      <div>
+        <span class="label">PAGE 003 / TOOLS</span>
+        <h1 id="h-tools">讓角色住進<em>主畫面</em></h1>
+        <p class="lede">換上你的角色，她就一直在那裡。抬頭就看得到，不用打開任何 app。</p>
+        <div class="meta"><span>iPhone 主畫面小工具</span><span>Scriptable</span><span>範例角色・<b>聞止水</b></span></div>
+        <p style="margin:18px 0 0"><a class="btn ghost" href="order.html">戀人入住申請所 →</a></p>
+      </div>
+      <div class="wen">
+        <div class="film">
+          <div class="demo">
+            <div class="widget" aria-live="polite">
+              <img id="w-img" src="assets/wen/normal.webp" alt="聞止水">
+              <div>
+                <div class="nm">聞止水</div>
+                <div class="ln" id="w-line">嗯。</div>
+                <div class="mt" id="w-meta">現在 --:--</div>
+              </div>
+            </div>
+            <div class="touches" role="group" aria-label="碰碰她">
+              <button type="button" data-z="ear">耳骨環</button>
+              <button type="button" data-z="hand">牽手</button>
+              <button type="button" data-z="cam">相機</button>
+              <button type="button" data-z="body">抱抱</button>
+            </div>
+            <div class="demo-cap">這是試玩：她會照你現在的時間說話，按按鈕碰碰她。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-feats">
+      <div class="sec-head">
+        <span class="label">WHAT SHE DOES</span>
+        <div><h2 id="h-feats">她會做的事<em>Features</em></h2></div>
+      </div>
+      <div class="feats">
+        <article class="feat">
+          <h3>主畫面上的她</h3>
+          <ul>
+            <li>小的、中的兩種尺寸都可以放</li>
+            <li>中尺寸會顯示相遇第幾天、現在時間和氣溫</li>
+            <li>大約每半小時換一句話，不會連續說同一句</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她會看時間說話</h3>
+          <p>照早中晚、星期、季節換台詞，也照你的上班日和休假日說不一樣的話。睡覺時間會打哈欠。</p>
+          <ul class="times">
+            <li><time>08:40</time><q>醒了？</q></li>
+            <li><time>12:15</time><q>吃。</q></li>
+            <li><time>18:40</time><q>我在樓下。</q></li>
+            <li><time>02:10</time><q>……睡了。</q></li>
+            <li><span class="k">上班第一天</span><q>又開始了，撐住。</q></li>
+            <li><span class="k">放假前</span><q>做完今天就放假了。</q></li>
+            <li><span class="k">生日</span><q>生日快樂。</q></li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>天氣和電量</h3>
+          <p>抓你所在城市的即時天氣，不用開定位；也看得到手機電量。</p>
+          <ul>
+            <li>下雨提醒帶傘、冷了叫你穿外套、太熱叫你喝水</li>
+            <li>電量低於 20% 叫你去充電，快沒電時跳通知</li>
+            <li>沒網路時照樣顯示，用上一次的天氣</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>紀念日</h3>
+          <p>相遇滿 30、50、100、200、365、500、1000 天，還有之後每一年，她會說特別的話。</p>
+          <ul>
+            <li>主畫面會出現「✦ 相遇 100 天」</li>
+            <li>生日當天的祝福照舊</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>點進去摸摸她</h3>
+          <p>摸頭、捏臉、牽手、碰她的耳骨環、相機、出門、抱抱，每個地方的反應都不一樣。</p>
+          <ul>
+            <li>捏臉會臉紅，按相機她會拍你</li>
+            <li>連續戳太多下，她會說「妳到底要戳幾下。」</li>
+            <li>不用網路、不花額度</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她記得你碰過她幾次</h3>
+          <p>每天的互動次數都會存起來，「今日互動」看得到；換日重新數，舊的留著。</p>
+          <ul>
+            <li>藏著隱藏彩蛋：牽手第三次「……我有數。」</li>
+            <li>先捏臉再抱抱「捏完又抱。妳真的很會。」</li>
+            <li>好幾天沒來「……好幾天沒來了。我還在。」</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>她自己的日子</h3>
+          <p>每天一則角色日記，聞止水的是攝影日記：去哪裡拍、用哪卷底片、留了幾張。</p>
+          <ul>
+            <li>同一天固定同一則，保留最近 90 天</li>
+            <li>她當天說的話會跟日記對上：在暗房那天，下午就在洗照片</li>
+          </ul>
+        </article>
+        <article class="feat">
+          <h3>跟她聊天</h3>
+          <p>點她說的那句話，直接打開聊天頁。</p>
+          <ul>
+            <li>用 Claude 說話，照她的個性回你</li>
+            <li>她會換表情回你的訊息</li>
+            <li>重要的事她會記進記憶本</li>
+            <li>手機、電腦都能接著聊</li>
+          </ul>
+        </article>
+      </div>
+      <div class="order-cta">
+        <div><b>想要一個你自己的角色？</b><span>戀人入住申請所開放中，基本入住費 NT$300 起。</span></div>
+        <a class="btn" href="order.html">看方案、填申請 →</a>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-looks">
+      <div class="sec-head">
+        <span class="label">CONTACT SHEET</span>
+        <div><h2 id="h-looks">七種樣子<em>Seven Looks</em></h2><p>跟著她說的話換表情。聊到拍照會舉起相機，說要出門會站起來。</p></div>
+      </div>
+      <div class="wen">
+        <div class="film">
+          <div class="sheet-wrap">
+            <div class="sheet" id="sheet"></div>
+          </div>
+          <p class="sheet-note">立繪和台詞都能換成你自己的角色。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-install">
+      <div class="sec-head">
+        <span class="label">MAKE YOUR OWN</span>
+        <div><h2 id="h-install">做一個你自己的角色<em>Make Your Own</em></h2><p>不用寫程式，也不用申請 API 金鑰。用你自己的 Claude 帳號，請 Claude 幫你做。</p></div>
+      </div>
+
+      <div class="prep">
+        <h3>先準備</h3>
+        <ul>
+          <li><b>Claude 帳號</b>聊天會用到你自己帳號的額度</li>
+          <li><b>角色設定</b>個性、說話方式、你們的關係、她怎麼叫你</li>
+          <li><b>角色圖片</b>一張就可以；有不同表情更好，透明背景的 PNG 最好看</li>
+          <li><b>Scriptable</b>App Store 免費下載（iPhone）</li>
+        </ul>
+      </div>
+
+      <ol class="make">
+        <li>
+          <div class="mk-text">
+            <b>請 Claude 做聊天頁</b>
+            <span>到 claude.ai 開新對話，把角色圖片和設定一起傳上去，再貼上右邊這段（〔〕裡改成你的）。做好後打開測試，第一次會問要不要允許頁面使用 Claude，按允許。哪裡不喜歡，直接跟 Claude 說要改什麼。</span>
+          </div>
+          <div class="prompt">
+            <pre id="p-chat">請幫我做一個手機用的角色聊天頁（artifact），讓我可以跟〔角色名〕傳訊息聊天。
+- 用我自己的 Claude 帳號讓她回話，不要用 API 金鑰
+- 聊天紀錄和記憶存在我的帳號裡，換裝置也看得到
+- 有記憶本：她會自己記下重要的事，我也可以手動加、刪
+- 可以傳照片給她看
+- 上方放她的圖，回話時依心情換表情（用我附的圖片）
+- 她的回話要像傳訊息：短、口語、不寫旁白和動作
+- 配色：〔例如：深酒紅、黑色系〕
+- 她叫我〔暱稱〕，我們的關係是〔關係〕
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+            <button class="btn quiet" type="button" data-copy="p-chat">複製這段</button>
+          </div>
+        </li>
+        <li>
+          <div class="mk-text">
+            <b>請 Claude 寫小工具</b>
+            <span>在同一個對話接著貼這段。Claude 會給你一段程式碼，打開 Scriptable 按右上角 ＋，整段貼上、取個名字存起來。</span>
+          </div>
+          <div class="prompt">
+            <pre id="p-widget">請幫我寫一個 Scriptable 主畫面小工具的程式碼：
+- 顯示〔角色名〕的圖片和一句她現在會說的話
+- 她說的話要照早中晚、星期、季節變化，符合她的個性
+- 中尺寸顯示我們相遇第幾天（相遇日：〔日期〕）
+- 點小工具會打開剛剛做好的聊天頁</pre>
+            <button class="btn quiet" type="button" data-copy="p-widget">複製這段</button>
+          </div>
+        </li>
+        <li>
+          <div class="mk-text">
+            <b>放到主畫面</b>
+            <span>長按主畫面空白處 → 左上角 ＋ → 找 Scriptable → 選小或中尺寸加入。再長按小工具 → 編輯小工具 → Script 選你剛剛存的那個。</span>
+          </div>
+        </li>
+      </ol>
+
+      <div class="alt" aria-labelledby="h-alt">
+        <h3 id="h-alt">沒有 Claude 帳號也可以</h3>
+        <p class="alt-lede">下面兩段咒語也能丟給 ChatGPT、Gemini 這類 AI，請它幫你寫。選一種就好：</p>
+        <div class="alt-grid">
+          <article class="alt-card">
+            <span class="label">OPTION A</span>
+            <b>自己接 API</b>
+            <p>到 Google AI Studio（Gemini，有免費額度）或 OpenAI 申請一組 API 金鑰，讓聊天頁用你的金鑰回話。超過免費額度會依用量收費。</p>
+            <ul>
+              <li>金鑰只在聊天頁的設定裡輸入、存在自己手機上</li>
+              <li><b>不要</b>把金鑰寫進程式碼，也不要傳給別人看</li>
+              <li>做好的網頁可以免費放在 GitHub Pages 或 Neocities，小工具再連過去</li>
+            </ul>
+            <div class="prompt">
+              <pre id="p-api">請幫我做一個手機用的角色聊天網頁（單一 HTML 檔），讓我可以跟〔角色名〕傳訊息聊天。
+- 用〔Gemini／OpenAI〕的 API 讓她回話
+- 頁面上有設定欄讓我輸入 API 金鑰，只存在這支手機的瀏覽器裡，不要寫進程式碼
+- 聊天紀錄和記憶本也存在手機裡
+- 上方放她的圖，回話時依心情換表情
+- 她的回話要像傳訊息：短、口語、不寫旁白和動作
+- 她叫我〔暱稱〕，我們的關係是〔關係〕
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+              <button class="btn quiet" type="button" data-copy="p-api">複製這段</button>
+            </div>
+          </article>
+          <article class="alt-card">
+            <span class="label">OPTION B</span>
+            <b>只要小工具，不聊天</b>
+            <p>她不會回你訊息，但主畫面上的她照樣會看時間說話、點進去也能摸摸她。不用任何帳號和金鑰，完全免費。</p>
+            <ul>
+              <li>台詞是事先寫好的，所以不花額度、不用網路</li>
+              <li>想讓她多說一點，請 AI 幫你多寫幾句台詞就好</li>
+            </ul>
+            <div class="prompt">
+              <pre id="p-noai">請幫我寫一個 Scriptable 主畫面小工具的程式碼，不需要連網、不需要 API：
+- 顯示〔角色名〕的圖片和一句她現在會說的話
+- 依早中晚、星期、季節、我的生日（〔日期〕）換台詞，每個情境寫 5 句以上，符合她的個性
+- 中尺寸顯示我們相遇第幾天（相遇日：〔日期〕）
+- 點小工具會打開一個頁面，可以點她的頭、臉、手，每個地方有不同的小反應
+
+角色設定如下：
+〔貼上角色設定〕</pre>
+              <button class="btn quiet" type="button" data-copy="p-noai">複製這段</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
+    </section>
+  </div>
+
+
+  <!-- ===== ORDER ===== -->
+  <div class="view" id="v-order" data-view="order" hidden>
+    <section class="wrap rs-hero" aria-labelledby="h-order">
+      <span class="label">PAGE 003-B / CHARACTER RESIDENCY SERVICE</span>
+      <h1 id="h-order">♡ 岔頁｜<em>戀人入住申請所</em></h1>
+      <p class="lede">讓喜歡的角色，住進手機裡。<br>一個名字、一張圖、一段只屬於你們的日常。</p>
+      <div class="rs-jump"><a class="btn" href="order.html" data-jump="rs-form">填入住申請 ↓</a><a class="btn ghost" href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads 私訊 ↗</a></div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-check">
+      <div class="notice">
+        <h2 id="h-check">📌 委託前請先確認</h2>
+        <p>本服務提供 <b>iPhone Scriptable 角色小工具</b>客製化，包含完整程式檔案及圖文安裝教學。</p>
+        <p>委託者需自行下載 Scriptable 並依照教學完成安裝。本服務不提供遠端操作、一對一安裝指導或手機設定協助。</p>
+        <p>若交付的程式本身出現可重現的錯誤，我會協助修正；但不包含個人裝置操作及第三方 App 使用問題。</p>
+        <p class="nb">※ 僅支援 iPhone（Scriptable 沒有 Android 版）。※ 只接<b>角色</b>，不接真人（包含真人照片、以真人為原型改畫）。※ 如果是<b>別人家的角色</b>，請先取得親媽同意，並確認對方能接受的二創範圍。</p>
+        <p>請確認能接受以上服務方式後再進行委託，謝謝理解！♡</p>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-price">
+      <div class="sec-head"><span class="label">PRICE</span><div><h2 id="h-price">入住費用<em>Price</em></h2></div></div>
+      <div class="price">
+        <article class="base">
+          <span class="label">基本入住費・固定模板客製化</span>
+          <div class="amt">NT$<b>300</b></div>
+          <ul>
+            <li>角色名稱、角色對你的稱呼、重要日期（生日、相遇日）設定</li>
+            <li>客人自備角色圖片與互動台詞（提供<a href="order.html" data-jump="rs-lines">台詞填空範本</a>）</li>
+            <li>原有七種互動按鈕與基本動畫</li>
+            <li>自訂主色、輔色、背景色、文字色（可選配色目錄）</li>
+            <li>早中晚問候、聊天入口連結、低電量時換台詞</li>
+            <li>完整 Scriptable JS 檔案與圖文安裝教學</li>
+          </ul>
+          <p class="fine">版型固定，不提供版面重設；客人需自行安裝 Scriptable。</p>
+        </article>
+        <div class="addons">
+          <h3>✦ 自由加購項目</h3>
+          <table>
+            <thead><tr><th scope="col">加購內容</th><th scope="col">價格</th></tr></thead>
+            <tbody>
+              <tr><td><b>完整台詞包</b><small>各時段＋七種互動，約 100 句，照角色個性寫</small></td><td>+NT$400–600</td></tr>
+              <tr><td><b>補充台詞 20 句</b><small>指定情境或互動</small></td><td>+NT$100</td></tr>
+              <tr><td><b>進階互動功能包</b><small>即時天氣（下雨帶傘、冷了穿外套）、相遇紀念日、互動記憶＋今日互動、隱藏彩蛋、角色日記、低電量通知</small></td><td>+NT$300</td></tr>
+              <tr><td><b>Q 版角色素材 6 張</b><small>AI 生成・含去背與表情對齊</small></td><td>+NT$300</td></tr>
+              <tr><td><b>Q 版角色素材 12 張</b><small>AI 生成・含去背與表情對齊</small></td><td>+NT$500</td></tr>
+              <tr><td><b>額外 Q 版表情 1 張</b><small>AI 生成・與既有素材對齊</small></td><td>+NT$60</td></tr>
+              <tr><td><b>額外一輪小幅修改</b><small>改文字、日期、配色或換 1–2 張圖；大改另外報價</small></td><td>+NT$80</td></tr>
+            </tbody>
+          </table>
+          <p class="fine">Q 版素材為 AI 生成，再由我整理去背、統一大小與位置。</p>
+          <div class="artist">
+            <b>想用繪師畫的圖？</b>
+            <p>歡迎！委託繪師前，請先跟繪師說清楚用途，並確認對方同意：</p>
+            <ul>
+              <li>圖會放進手機主畫面小工具，會被<b>裁切、去背、縮放</b>，也會依台詞切換表情</li>
+              <li>會交給我（第三方）處理製作，檔案會留在你的小工具裡</li>
+              <li>僅限你個人使用，不會轉賣或公開散布</li>
+            </ul>
+            <p>建議請繪師提供<b>去背 PNG</b>，不同表情維持同樣的大小和位置，我就能直接用。若繪師的委託規範不允許上述用途，請不要把圖給我。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-pal">
+      <div class="sec-head"><span class="label">COLOURS</span><div><h2 id="h-pal">戀人專屬配色目錄<em>Palettes</em></h2><p>讓每位戀人，都擁有屬於自己的顏色。12 組預設配色可以直接選，也歡迎指定色號或描述喜歡的色系。</p></div></div>
+      <div class="pals"><article class="pal" style="--pb:#20171B;--pm:#A65E70;--ps:#E9C9D0;--pt:#F5EBED">
+  <div class="pal-demo"><span class="pal-no">01</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>01｜暗紅酒館</b><span>成熟・曖昧・復古</span><code>#20171B · #A65E70 · #E9C9D0 · #F5EBED</code></div>
+</article><article class="pal" style="--pb:#14232C;--pm:#5E9CB1;--ps:#C1DFE7;--pt:#EDF5F7">
+  <div class="pal-demo"><span class="pal-no">02</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>02｜深海來信</b><span>冷靜・神秘・沉穩</span><code>#14232C · #5E9CB1 · #C1DFE7 · #EDF5F7</code></div>
+</article><article class="pal" style="--pb:#F6EFE3;--pm:#C38B62;--ps:#E6CCAC;--pt:#684E3B">
+  <div class="pal-demo"><span class="pal-no">03</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>03｜奶油日光</b><span>溫柔・日常・治癒</span><code>#F6EFE3 · #C38B62 · #E6CCAC · #684E3B</code></div>
+</article><article class="pal" style="--pb:#211B30;--pm:#9982C4;--ps:#E1D5F2;--pt:#F3EDFA">
+  <div class="pal-demo"><span class="pal-no">04</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>04｜午夜紫藤</b><span>浪漫・夢幻・優雅</span><code>#211B30 · #9982C4 · #E1D5F2 · #F3EDFA</code></div>
+</article><article class="pal" style="--pb:#182821;--pm:#79A88A;--ps:#D0E5D5;--pt:#F0F5EF">
+  <div class="pal-demo"><span class="pal-no">05</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>05｜森林來客</b><span>自然・安靜・療癒</span><code>#182821 · #79A88A · #D0E5D5 · #F0F5EF</code></div>
+</article><article class="pal" style="--pb:#171614;--pm:#B59A63;--ps:#E4D5AF;--pt:#F5F0E5">
+  <div class="pal-demo"><span class="pal-no">06</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>06｜黑金密語</b><span>奢華・神秘・禁慾</span><code>#171614 · #B59A63 · #E4D5AF · #F5F0E5</code></div>
+</article><article class="pal" style="--pb:#FFF0F1;--pm:#D87991;--ps:#F5B8C8;--pt:#6C3B4B">
+  <div class="pal-demo"><span class="pal-no">07</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>07｜櫻桃奶霜</b><span>甜美・戀愛・可愛</span><code>#FFF0F1 · #D87991 · #F5B8C8 · #6C3B4B</code></div>
+</article><article class="pal" style="--pb:#252B32;--pm:#8D9EAD;--ps:#D5DEE5;--pt:#F0F3F6">
+  <div class="pal-demo"><span class="pal-no">08</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>08｜霧灰藍調</b><span>極簡・知性・清冷</span><code>#252B32 · #8D9EAD · #D5DEE5 · #F0F3F6</code></div>
+</article><article class="pal" style="--pb:#35251F;--pm:#C88D56;--ps:#E8C59B;--pt:#FAEEDD">
+  <div class="pal-demo"><span class="pal-no">09</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>09｜琥珀午後</b><span>懷舊・暖陽・文藝</span><code>#35251F · #C88D56 · #E8C59B · #FAEEDD</code></div>
+</article><article class="pal" style="--pb:#F4F2ED;--pm:#9A9B8C;--ps:#D9D6C9;--pt:#4C4E45">
+  <div class="pal-demo"><span class="pal-no">10</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>10｜月光白茶</b><span>清新・柔和・乾淨</span><code>#F4F2ED · #9A9B8C · #D9D6C9 · #4C4E45</code></div>
+</article><article class="pal" style="--pb:#291923;--pm:#B55B8D;--ps:#E5B3CF;--pt:#FAEDF4">
+  <div class="pal-demo"><span class="pal-no">11</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>11｜莓果夜曲</b><span>魅惑・濃烈・華麗</span><code>#291923 · #B55B8D · #E5B3CF · #FAEDF4</code></div>
+</article><article class="pal" style="--pb:#E9F6F2;--pm:#54A996;--ps:#B7DDD2;--pt:#28574F">
+  <div class="pal-demo"><span class="pal-no">12</span><div class="pal-bub">早。今天也在。</div><div class="pal-btns"><i>摸頭</i><i>牽手</i></div></div>
+  <div class="pal-info"><b>12｜薄荷汽水</b><span>清爽・俏皮・青春</span><code>#E9F6F2 · #54A996 · #B7DDD2 · #28574F</code></div>
+</article></div>
+      <p class="fine">免費調整：背景色、主要按鈕色、輔助裝飾色、文字色。不包含版面重設、按鈕位置修改或全新 UI 設計。色號順序：背景 · 主色 · 輔色 · 文字。</p>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-ai">
+      <div class="sec-head"><span class="label">ABOUT AI CHAT</span><div><h2 id="h-ai">♡ 關於 AI 聊天功能<em>Chat</em></h2></div></div>
+      <div class="ai">
+        <p>小工具的觸摸互動與預設台詞<b>不需要</b>使用 AI。若希望與角色自由對話，需要自行準備聊天服務：</p>
+        <div class="ai-grid">
+          <article><span class="label">① 使用自己的 Claude</span>
+            <p>提供你自己的 Claude 聊天頁連結，我幫你設定小工具的聊天入口。點聊天按鈕會開啟那個頁面，不是在小工具裡直接對話。</p>
+            <p>還沒有聊天頁？參考<a href="tools.html">小工具頁的教學</a>，用自己的 Claude 帳號做一個。開啟時，手機的 Safari 或 Claude App 需要先登入。</p></article>
+          <article><span class="label">② 使用自己的 AI API</span>
+            <p>API 聊天頁<b>不在服務範圍內</b>，需要自己製作：自行申請 API Key、選擇模型、架設聊天頁並負擔費用。</p>
+            <p>可以參考<a href="tools.html">小工具頁的「沒有 Claude 帳號也可以」</a>，用 AI 幫你做一個。做好之後把網址給我，我幫你設定小工具的聊天入口。</p></article>
+        </div>
+        <ul class="rules">
+          <li>本服務不提供 Claude 帳號、API Key 或免費 AI 額度，也不代付任何第三方 AI 平台費用。</li>
+          <li>請勿提供密碼或私人金鑰給我，帳號與金鑰請自行管理。</li>
+          <li>不保證第三方平台（Claude、Scriptable、AI 服務商）的功能、價格及連結永久有效；平台改版導致無法使用，不在售後範圍內。</li>
+          <li>小工具的固定台詞互動與 AI 自由聊天是不同功能。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-pay">
+      <div class="sec-head"><span class="label">PAYMENT &amp; SCHEDULE</span><div><h2 id="h-pay">付款與交期<em>Payment</em></h2>
+        <p class="slots"><span class="slot-dot"></span>每月限 <b>10</b> 位入住・名額滿了會在 Threads 公告，下個月 1 號重新開放</p></div></div>
+      <div class="pay">
+        <article>
+          <h3>付款</h3>
+          <ul>
+            <li><b>收款方式</b>LINE Pay、銀行轉帳（帳號私訊提供）</li>
+            <li><b>全額預付</b>確認需求和報價後付款，收到款項才開始排單</li>
+            <li><b>NT$1,000 以上</b>可以先付五成，交件前付清尾款</li>
+          </ul>
+        </article>
+        <article>
+          <h3>交期</h3>
+          <ul>
+            <li><b>基本方案</b>資料齊全後 7 個工作天</li>
+            <li><b>有加購</b>台詞包、進階包或素材：10–14 個工作天</li>
+            <li><b>急件</b>+50%，基本方案 3 個工作天、有加購 5 個工作天，視檔期承接</li>
+          </ul>
+          <p class="fine">交期從圖片、台詞、設定都給齊那天開始算。</p>
+        </article>
+        <article>
+          <h3>流程</h3>
+          <ol class="flow">
+            <li>填申請單，到 Threads 私訊給我</li>
+            <li>我確認內容、回覆報價</li>
+            <li>付款，開始排單</li>
+            <li>傳預覽截圖給你確認</li>
+            <li>確認後交付 JS 檔、素材與安裝教學</li>
+          </ol>
+        </article>
+        <article>
+          <h3>退款</h3>
+          <ul>
+            <li><b>還沒開工</b>全額退款</li>
+            <li><b>已經開工</b>退一半</li>
+            <li><b>交件之後</b>數位商品不退款；7 天內程式錯誤照樣免費修</li>
+          </ul>
+          <p class="fine">預覽送出後 14 天沒有回覆，視為確認並直接交件。完成品只有在你同意後，才會放進作品集。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap sec" aria-labelledby="h-rules">
+      <div class="sec-head"><span class="label">RULES</span><div><h2 id="h-rules">服務規則<em>Rules</em></h2></div></div>
+      <dl class="rule-list">
+        <div><dt>交付內容</dt><dd>客製化 JS 檔案、角色圖片素材、圖文安裝教學。</dd></div>
+        <div><dt>客戶自行安裝</dt><dd>不提供遠端操作、螢幕共享或一對一教學。</dd></div>
+        <div><dt>付款</dt><dd>LINE Pay 或銀行轉帳，全額預付；NT$1,000 以上可先付五成。</dd></div>
+        <div><dt>修改範圍</dt><dd>角色設定及圖片含 1 次修改；之後每輪小幅修改 +NT$80。</dd></div>
+        <div><dt>售後服務</dt><dd>交付後 7 天內，免費修復可重現的程式錯誤。</dd></div>
+        <div><dt>不包含</dt><dd>手機操作教學、Scriptable 基礎教學、第三方平台帳號設定。</dd></div>
+        <div><dt>額外功能</dt><dd>超出原本模板的功能另外報價。</dd></div>
+        <div><dt>只接角色</dt><dd>原創或二創角色皆可；不接真人，包含真人照片與以真人為原型的改畫。</dd></div>
+        <div><dt>別人家的角色</dt><dd>請先取得親媽同意，並確認對方可以接受的二創範圍，再來委託喔。</dd></div>
+        <div><dt>圖片</dt><dd>自備圖片請確認你有權使用。繪師畫的圖，請先跟繪師確認可以交給第三方裁切、去背、放進小工具。</dd></div>
+        <div><dt>作品集</dt><dd>完成品只有在你同意後，才會放進作品集。</dd></div>
+      </dl>
+    </section>
+
+    <section class="wrap sec" id="rs-lines" aria-labelledby="h-lines">
+      <div class="sec-head"><span class="label">LINES TEMPLATE</span><div><h2 id="h-lines">台詞填空範本<em>Template</em></h2><p>基本方案由你自己準備台詞。照這份範本填，我就能直接放進小工具。建議約 65 句，最少 40 句；寫不滿可以加購「完整台詞包」。</p></div></div>
+      <div class="tpl">
+        <div class="tpl-btns">
+          <button class="btn" type="button" data-copy="lines-tpl">複製範本</button>
+          <a class="btn ghost" href="assets/lines-template.txt" download="戀人入住_台詞填空範本.txt">下載 .txt</a>
+        </div>
+        <details>
+          <summary>展開看完整範本</summary>
+          <pre id="lines-tpl">【戀人入住｜台詞填空範本】
+
+填寫說明
+・每句寫在「・」後面，一行一句。
+・句子後面可以用（ ）標表情，例如：嗯。（微笑）
+　表情請用你圖片有的名字，例如：平常／微笑／臉紅／閉眼／想睡。沒標就用「平常」。
+・用角色平常傳訊息的口氣寫，越短越像真的。
+・角色叫你的方式，直接寫進句子裡就好。
+・括號裡的「建議」是讓小工具不容易重複的句數；基本方案全部加起來至少 40 句。
+・不會寫或寫不滿？可以加購「完整台詞包」，我照角色個性幫你寫。
+
+範例角色：聞止水（冷靜、話少的攝影師）
+　早上：醒了？（平常）
+　捏臉：沒有臉紅。是光的問題。（臉紅）
+
+
+━━━━━━━━━━━━━━
+一、主畫面：她現在會說的話
+━━━━━━━━━━━━━━
+
+■ 早上（05:00–11:00）建議 5 句
+・
+・
+・
+・
+・
+
+■ 中午（11:00–14:00）建議 4 句
+・
+・
+・
+・
+
+■ 下午（14:00–18:00）建議 4 句
+・
+・
+・
+・
+
+■ 晚上（18:00–23:00）建議 5 句
+・
+・
+・
+・
+・
+
+■ 深夜（23:00 之後、還沒睡）建議 4 句
+・
+・
+・
+・
+
+■ 睡覺時間（她在睡）建議 3 句
+睡覺時間：　　點～　　點
+・
+・
+・
+
+■ 隨時都可能說的話 建議 5 句
+（想你、叫你名字、沒來由的一句話）
+・
+・
+・
+・
+・
+
+
+━━━━━━━━━━━━━━
+二、點進去：七種互動
+━━━━━━━━━━━━━━
+每種建議 4 句。互動名稱可以改成適合你角色的，例如「耳骨環」改成「髮夾」、「相機」改成「書」。
+
+■ 摸頭
+・
+・
+・
+・
+
+■ 捏臉
+・
+・
+・
+・
+
+■ 牽手
+・
+・
+・
+・
+
+■ 第四種互動（原本是「耳骨環」，可以改）：
+・
+・
+・
+・
+
+■ 第五種互動（原本是「相機」，可以改）：
+・
+・
+・
+・
+
+■ 出門
+・
+・
+・
+・
+
+■ 抱抱
+・
+・
+・
+・
+
+■ 連續戳太多下 建議 2 句
+・
+・
+
+
+━━━━━━━━━━━━━━
+三、特別的日子
+━━━━━━━━━━━━━━
+
+■ 你的生日（寫 1–2 句）
+・
+・
+
+■ 手機快沒電了 建議 2 句
+・
+・
+
+■ 正在充電 建議 1 句
+・
+
+
+━━━━━━━━━━━━━━
+四、進階互動功能包（有加購才需要填）
+━━━━━━━━━━━━━━
+沒寫的部分我會照角色個性補上。
+
+■ 相遇紀念日（滿 100 天、週年）
+・
+・
+
+■ 下雨了
+・
+・
+
+■ 天氣很冷
+・
+
+■ 天氣很熱
+・
+
+■ 你上班的第一天／放假前一天／休假日
+・
+・
+・
+
+■ 隱藏彩蛋（例如「牽手第三次」「先捏臉再抱抱」，寫條件和台詞）
+條件：
+台詞：
+條件：
+台詞：
+
+■ 角色日記：她平常的生活、工作、常去的地方
+（例如：甜點師，常在店裡試新口味、週末去市場）
+
+
+
+填好後，連同申請單一起私訊給我 ♡
+</pre>
+        </details>
+      </div>
+    </section>
+
+<!-- SEO:FAQ-ORDER:START -->
+    <section class="wrap sec faq" aria-labelledby="h-faq-order">
+      <div class="sec-head"><span class="label">QUESTIONS</span><div><h2 id="h-faq-order">委託常見問題<em>FAQ</em></h2><p>還有其他想問的，歡迎直接到 Threads 私訊。</p></div></div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-no">Q.01</span><span class="faq-q">委託費用是多少？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>基本入住費 <b>NT$300</b>：固定模板客製化，含角色名稱、對你的稱呼、重要日期、配色，以及完整 Scriptable JS 檔與圖文安裝教學。另外可以加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.02</span><span class="faq-q">多久可以拿到？怎麼付款？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>資料齊全後，基本方案 <b>7 個工作天</b>，有加購為 10–14 個工作天；急件加收 50%。付款方式為 LINE Pay 或銀行轉帳，全額預付，NT$1,000 以上可以先付五成。每月限 10 位。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.03</span><span class="faq-q">可以委託真人，或是別人家的角色嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>只接角色，<b>不接真人</b>（包含真人照片與以真人為原型的改畫）。原創或二創角色都可以；如果是別人家的角色，請先取得親媽同意，並確認對方可以接受的二創範圍。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.04</span><span class="faq-q">我沒有角色圖，或想用繪師畫的圖可以嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>沒有圖可以加購 Q 版角色素材（AI 生成，我會整理去背、統一大小與位置）。想用繪師的圖也歡迎，請先跟繪師確認圖可以交給第三方裁切、去背、放進小工具，最好請繪師提供去背 PNG。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.05</span><span class="faq-q">小工具裡可以跟角色聊天嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>觸摸互動和預設台詞不需要 AI。想和角色自由聊天，需要自己準備聊天頁（例如用自己的 Claude 帳號做一個），我再幫你把小工具的聊天入口連過去。點聊天按鈕會開啟那個頁面，不是在小工具裡直接對話。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.06</span><span class="faq-q">裝好之後出問題怎麼辦？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>交付後 7 天內，可重現的程式錯誤免費修。不過本服務不提供遠端操作、一對一安裝指導或手機設定協助，安裝需要依照教學自己完成。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.07</span><span class="faq-q">要怎麼委託？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>在下面填好入住申請單，再到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊給我。我確認內容、回覆報價，付款後開始排單；完成後先給你預覽截圖，確認後交付 JS 檔、素材與安裝教學。</p></div>
+        </details>
+      </div>
+    </section>
+<!-- SEO:FAQ-ORDER:END -->
+    <section class="wrap sec order" id="rs-form" aria-labelledby="h-form">
+      <div class="sec-head"><span class="label">APPLY</span><div><h2 id="h-form">入住申請單<em>Apply</em></h2><p>照下面填好，按「複製申請單」，到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊貼給我。我看完會跟你確認細節和報價。</p></div></div>
+
+      <form class="of" id="of" autocomplete="off" novalidate>
+        <fieldset>
+          <legend><span>01</span>怎麼找到你</legend>
+          <div class="fg two">
+            <label><span>怎麼稱呼你<b>*</b></span><input id="o-name" required placeholder="例如：小白"></label>
+            <label><span>聯絡方式<b>*</b></span><input id="o-contact" required placeholder="Threads 帳號或 Email"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>02</span>你的角色</legend>
+          <div class="fg two">
+            <label><span>角色名<b>*</b></span><input id="o-char" required placeholder="例如：聞止水"></label>
+            <label><span>出處</span><input id="o-source" placeholder="原創，或作品名稱"></label>
+            <label><span>性別／年齡／職業</span><input id="o-basic" placeholder="例如：女／31／紀實攝影師"></label>
+            <label><span>她怎麼叫你</span><input id="o-callme" placeholder="例如：寶貝、名字、老師"></label>
+          </div>
+          <div class="fg">
+            <label><span>個性與說話方式<b>*</b></span><textarea id="o-persona" rows="4" required placeholder="例如：冷靜、話少、直接。訊息很短，常說「嗯」「到了」。不撒嬌，但會直接說想你。"></textarea></label>
+            <label><span>你們的關係</span><input id="o-rel" placeholder="例如：交往中、朋友、搭檔、家人"></label>
+          </div>
+          <p class="hint">有完整角色卡的話，私訊時一起附上就好，這裡寫重點。基本方案的台詞請用<a href="order.html" data-jump="rs-lines">台詞填空範本</a>寫好一起傳給我。</p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>03</span>角色圖片</legend>
+          <div class="fg two">
+            <label><span>圖片怎麼準備</span><select id="o-imgs"><option>我自己準備</option><option>加購 Q 版素材 6 張（AI 生成）</option><option>加購 Q 版素材 12 張（AI 生成）</option></select></label>
+            <label data-for="o-own"><span>自備的是去背 PNG 嗎</span><select id="o-own"><option>是</option><option>不是</option><option>不確定</option></select></label>
+          </div>
+          <label class="ck"><input type="checkbox" id="o-real"> <span>這是<b>角色</b>，不是真人，也不是以真人照片為原型<b>*</b></span></label>
+          <label class="ck"><input type="checkbox" id="o-oc"> <span>如果是<b>別人家的角色</b>，我已經取得親媽同意（自己的角色不用勾）</span></label>
+          <label class="ck" data-for2="o-rights"><input type="checkbox" id="o-rights"> <span>自備的圖片我有權使用：是我自己畫的，或<b>已經跟繪師確認</b>可以交給第三方裁切、去背，放進小工具個人使用<b>*</b></span></label>
+          <label class="ck"><input type="checkbox" id="o-folio"> <span>完成後可以放進作品集（不勾就不會放）</span></label>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>04</span>方案與加購</legend>
+          <div class="feats-ck" id="o-feats">
+            <label class="ck"><input type="checkbox" checked disabled data-price="300"> <span><b>基本入住費・NT$300</b>七種互動、時段問候、重要日期、配色、聊天入口、安裝教學</span></label>
+            <label class="ck"><input type="checkbox" value="完整台詞包（約 100 句）" data-price="400" data-max="600"> <span><b>完整台詞包・+NT$400–600</b>各時段＋七種互動，約 100 句</span></label>
+            <label class="ck"><input type="checkbox" value="補充台詞 20 句" data-price="100"> <span><b>補充台詞 20 句・+NT$100</b>指定情境或互動</span></label>
+            <label class="ck"><input type="checkbox" value="進階互動功能包" data-price="300" data-show="o-city"> <span><b>進階互動功能包・+NT$300</b>天氣、紀念日、互動記憶、彩蛋、角色日記、低電量通知</span></label>
+            <label class="ck"><input type="checkbox" value="急件（+50%）" data-rush="1"> <span><b>急件・+50%</b>基本 3 個工作天、有加購 5 個工作天，視檔期承接</span></label>
+            <label class="ck"><input type="checkbox" value="額外 Q 版表情" data-price="60" data-show="o-extra"> <span><b>額外 Q 版表情・+NT$60／張</b>AI 生成，跟既有素材對齊</span></label>
+          </div>
+          <div class="fg two cond">
+            <label data-for="o-extra"><span>額外表情幾張</span><input id="o-extra" type="number" min="1" max="20" value="1" inputmode="numeric"></label>
+            <label data-for="o-city"><span>天氣看哪個城市</span><input id="o-city" placeholder="例如：台中"></label>
+            <label data-for="o-city"><span>角色日記寫什麼</span><input id="o-diary" placeholder="例如：她是甜點師，寫今天做了什麼"></label>
+            <label><span>你的生日（可不填）</span><input id="o-bday" placeholder="例如：3/2"></label>
+            <label><span>相遇日（可不填）</span><input id="o-met" placeholder="例如：2026/10/27"></label>
+          </div>
+          <div class="total"><span>預估金額</span><b id="o-total">NT$300</b></div>
+          <p class="hint">實際金額以我確認後的報價為準。生日、相遇日只會寫進你自己的小工具，不想給可以空著。</p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>05</span>配色與其他</legend>
+          <div class="fg two">
+            <label><span>配色</span><select id="o-pal"><option>還沒決定</option><option>01｜暗紅酒館</option><option>02｜深海來信</option><option>03｜奶油日光</option><option>04｜午夜紫藤</option><option>05｜森林來客</option><option>06｜黑金密語</option><option>07｜櫻桃奶霜</option><option>08｜霧灰藍調</option><option>09｜琥珀午後</option><option>10｜月光白茶</option><option>11｜莓果夜曲</option><option>12｜薄荷汽水</option><option>自己指定（寫在下面）</option></select></label>
+            <label><span>聊天入口</span><select id="o-chat"><option>不需要</option><option>我有自己的 Claude 聊天頁連結</option><option>我有自己做的 API 聊天頁連結</option></select></label>
+          </div>
+          <div class="fg">
+            <label><span>還想說的（自訂色號、想要的感覺、特別需求）</span><textarea id="o-more" rows="3" placeholder="例如：#20171B 背景、想要她偶爾吃醋"></textarea></label>
+          </div>
+        </fieldset>
+
+        <div class="of-out">
+          <div class="of-head"><span class="label">PREVIEW</span><b>你的入住申請單</b></div>
+          <pre id="o-preview"></pre>
+          <p class="of-err" id="o-err" hidden></p>
+          <div class="of-btns">
+            <button class="btn" type="submit">複製申請單</button>
+            <a class="btn ghost" href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">打開 Threads 私訊我 ↗</a>
+            <button class="btn quiet" type="button" id="o-reset">清空重填</button>
+          </div>
+          <p class="fine">填到一半離開也沒關係，會留在這台裝置的瀏覽器裡。</p>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <div class="view" id="v-about" data-view="about" hidden>
+    <section class="wrap about" aria-labelledby="h-about">
+      <span class="label">PAGE 004 / ABOUT</span>
+      <div class="body">
+        <h1 id="h-about"><i>Hello,</i> I'm Xia mumu.</h1>
+        <p>喜歡創造不存在的人，也喜歡思考真實世界裡那些沒有標準答案的問題。</p>
+        <p>我寫角色、建立世界、設計互動敘事，偶爾也寫一些讓故事突然偏離原本方向的小咒語。</p>
+        <p>比起替故事決定結局，我更喜歡看不同的人如何走向不同的可能。</p>
+        <p>這裡是我的創作收藏室。歡迎隨意翻閱。</p>
+        <p class="sign">— Xia mumu</p>
+        <ul class="links">
+          <li><span>THREADS</span><a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">@xiaxia_7575 ↗</a></li>
+          <li><span>GITHUB</span><a href="https://github.com/xia-mumu" target="_blank" rel="noopener">github.com/xia-mumu ↗</a></li>
+          <li><span>NULL</span><a href="https://xia-mumu.github.io/null/" target="_blank" rel="noopener">xia-mumu.github.io/null ↗</a></li>
+          <li><span>棲川市</span><a href="https://qichuan-city.neocities.org/" target="_blank" rel="noopener">qichuan-city.neocities.org ↗</a></li>
+        </ul>
+      </div>
+    </section>
+<!-- SEO:FAQ-SITE:START -->
+    <section class="wrap sec faq" aria-labelledby="h-faq-site">
+      <div class="sec-head"><span class="label">QUESTIONS</span><div><h2 id="h-faq-site">常見問題<em>FAQ</em></h2><p>第一次翻開岔頁？先從這裡開始。</p></div></div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-no">Q.01</span><span class="faq-q">岔頁 OFF PAGE 是什麼？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href="./stories.html">角色故事</a>、<a href="spells.html">小咒語收藏室</a>，以及讓角色住進 iPhone 主畫面的<a href="tools.html">小工具</a>。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.02</span><span class="faq-q">小咒語是什麼？怎麼用？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到<a href="spells.html">小咒語收藏室</a>挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.03</span><span class="faq-q">角色故事在哪裡看？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>在<a href="./stories.html">角色故事館</a>。目前有《棲川市》與《NULL》兩本刊物，翻開刊物、選一個角色，就能讀到他們各自的故事。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.04</span><span class="faq-q">可以自己做角色主畫面小工具嗎？要花錢嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>可以。<a href="tools.html">小工具頁</a>有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式，也不用申請 API 金鑰。如果只要小工具、不需要和她聊天，用事先寫好的台詞就能<b>完全免費</b>。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.05</span><span class="faq-q">Android 可以用嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>目前只支援 iPhone。小工具是用 Scriptable 做的，而 Scriptable 沒有 Android 版。</p></div>
+        </details>
+      </div>
+    </section>
+<!-- SEO:FAQ-SITE:END -->
+  </div>
+
+  <!-- ===== 404 ===== -->
+  <div class="view" id="v-lost" data-view="lost" hidden>
+    <section class="wrap lost">
+      <span class="label">PAGE ??? / NOT FOUND</span>
+      <h1>你似乎翻到了一頁不存在的故事。</h1>
+      <div class="actions">
+        <a class="btn" href="./">回到首頁</a>
+        <a class="btn ghost" href="./#draw">那就抽一個咒語吧</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">岔頁<span>OFF PAGE</span></div>
+      <p>An independent creative archive by Xia mumu.</p>
+    </div>
+    <nav aria-label="頁尾連結">
+      <a href="worlds.html">WORLDS</a>
+      <a href="spells.html">SPELLS</a>
+      <a href="tools.html">TOOLS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="https://github.com/xia-mumu" target="_blank" rel="noopener">GITHUB ↗</a>
+    </nav>
+    <div class="egg" title="">Every page leads somewhere else. ／ 如果你讀到這行，代表你也習慣翻到最後一頁。</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const read = id => { try { return JSON.parse(document.getElementById(id).textContent); } catch(e){ return []; } };
+  const WORLDS = read('data-worlds');
+  const SPELLS = read('data-spells').filter(s => s.public !== false);
+  const UPDATES = read('data-updates');
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const no = s => 'NO. ' + String(SPELLS.indexOf(s)+1).padStart(3,'0');
+  const SITE = new URL('./', document.baseURI);   // 網站根目錄（小咒語頁有 <base href="../">）
+  const spellUrl = id => new URL('spells/' + encodeURIComponent(id) + '.html', SITE).href;
+  const fmtDate = d => (d||'').replace(/-/g,'.');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ---------- toast & copy ---------- */
+  let tt;
+  function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),1800); }
+  function copyText(text, okMsg){
+    const fallback = () => {
+      const ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
+      let ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+      ta.remove(); toast(ok ? okMsg : '複製沒有成功，請手動選取文字');
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(()=>toast(okMsg), fallback);
+    } else fallback();
+  }
+
+  /* ---------- worlds ---------- */
+  function cover(w){
+    if (w.cover==='null') return `<div class="cover-in c-null"><span class="no">${esc(w.no)}</span><span class="bar"></span><span class="t">NULL</span><span class="s">PREDICT · 分類失敗</span></div>`;
+    if (w.cover==='qichuan') return `<div class="cover-in c-qichuan"><span class="no">${esc(w.no)}</span><span class="moon"></span><span class="t">棲川市</span><span class="s">Qichuan City</span></div>`;
+    if (w.cover==='seventh') return `<div class="cover-in c-seventh"><span class="frame"></span><span class="no">${esc(w.no)}</span><span class="seal">契</span><span class="t">第七<br>婚籍管理處</span></div>`;
+    return `<div class="cover-in" style="background:var(--mist)"><span class="no">${esc(w.no)}</span></div>`;
+  }
+  function worldCard(w){
+    const live = !!w.url;
+    const link = live
+      ? `<a class="enter" href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.cta)} ↗<span class="sr" style="position:absolute;left:-9999px">（另開新分頁，前往外部作品網站）</span></a>`
+      : `<span class="enter off" aria-disabled="true">入口準備中</span>`;
+    return `<article class="wcard">
+      <div class="cover" aria-hidden="true">${cover(w)}</div>
+      <div class="wbody">
+        <h3>${esc(w.title)}<small>${esc(w.en)}</small></h3>
+        <div class="genres">${w.genres.map(g=>`<span>${esc(g)}</span>`).join('')}</div>
+        <p class="line">「${esc(w.line)}」</p>
+        <div class="wfoot"><span class="status${live?'':' soon'}">${esc(w.status)}</span><span class="links-w">${link}${w.play?`<a class="play" href="${esc(w.play)}" target="_blank" rel="noopener">點此遊玩 ↗<span style="position:absolute;left:-9999px">（另開新分頁，前往 cheliz 遊玩）</span></a>`:''}</span></div>
+      </div>
+    </article>`;
+  }
+  $('#home-worlds').innerHTML = WORLDS.slice(0,3).map(worldCard).join('');
+  $('#all-worlds').innerHTML = WORLDS.map(worldCard).join('');
+  $('#random-world').addEventListener('click', ()=>{
+    const live = WORLDS.filter(w=>w.url);
+    if(!live.length) return;
+    const w = live[Math.floor(Math.random()*live.length)];
+    const a = document.createElement('a'); a.href=w.url; a.target='_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove();
+    toast('翻開了：' + w.title);
+  });
+
+  /* ---------- recent ---------- */
+  $('#recent').innerHTML = UPDATES.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(u=>{
+    const ext = /^https?:/.test(u.link);
+    return `<li><time datetime="${esc(u.date)}">${fmtDate(u.date)}</time><span class="kind">${esc(u.kind)}</span>
+      <span class="ttl">${esc(u.title)}<small>${esc(u.note||'')}</small></span>
+      ${u.link?`<a href="${esc(u.link)}"${ext?' target="_blank" rel="noopener"':''}>${ext?'前往 ↗':'翻到這頁 →'}</a>`:'<span></span>'}</li>`;
+  }).join('');
+
+
+  /* ---------- 公告橫幅＋小鈴鐺 ---------- */
+  (function(){
+    const list = UPDATES.slice().sort((a,b)=>b.date.localeCompare(a.date));
+    const top = list[0]; if(!top) return;
+    const uid = u => u.date+'|'+u.title;
+    const get = k => { try{ return localStorage.getItem(k); }catch(e){ return null; } };
+    const set = (k,v) => { try{ localStorage.setItem(k,v); }catch(e){} };
+    const ext = u => /^https?:/.test(u.link||'');
+    const attrs = u => `href="${esc(u.link||'./')}"${ext(u)?' target="_blank" rel="noopener"':''}`;
+
+    // 橫幅：打叉後記住這一則；發新公告就會再出現
+    const box = $('#notice');
+    if (get('offpage-notice-closed') !== uid(top)) {
+      const a = $('#notice-link');
+      a.href = top.link || './';
+      if (ext(top)) { a.target='_blank'; a.rel='noopener'; }
+      $('#notice-date').textContent = fmtDate(top.date).slice(5);
+      $('#notice-title').textContent = top.title;
+      box.hidden = false;
+    }
+    $('#notice-close').addEventListener('click', ()=>{ box.hidden = true; set('offpage-notice-closed', uid(top)); });
+
+    // 小鈴鐺：有沒看過的新公告就亮小紅點
+    const bell = $('#bell'), panel = $('#bell-panel'), dot = $('#bell-dot');
+    if (get('offpage-bell-seen') !== uid(top)) dot.hidden = false;
+    $('#bell-list').innerHTML = list.slice(0,6).map(u=>`<li><a ${attrs(u)}><time>${fmtDate(u.date)}</time><span class="k">${esc(u.kind)}</span><span class="t">${esc(u.title)}${ext(u)?' ↗':''}</span></a></li>`).join('');
+    const place = ()=>{ const r = bell.getBoundingClientRect(); panel.style.top = (r.bottom+8)+'px'; const w = panel.offsetWidth; panel.style.left = Math.min(Math.max(12, r.right - w), innerWidth - w - 12)+'px'; };
+    const open = v => { panel.hidden = !v; bell.setAttribute('aria-expanded', v); if(v){ place(); dot.hidden = true; set('offpage-bell-seen', uid(top)); } };
+    bell.addEventListener('click', e=>{ e.stopPropagation(); open(panel.hidden); });
+    panel.addEventListener('click', e=>{ if(e.target.closest('a')) open(false); });
+    document.addEventListener('click', e=>{ if(!panel.hidden && !panel.contains(e.target)) open(false); });
+    addEventListener('keydown', e=>{ if(e.key==='Escape' && !panel.hidden){ open(false); bell.focus(); } });
+    addEventListener('resize', ()=>{ if(!panel.hidden) place(); });
+  })();
+
+  /* ---------- random draw ---------- */
+  let lastId = null;
+  function pick(){
+    if(!SPELLS.length) return null;
+    if(SPELLS.length===1) return SPELLS[0];
+    let s; do { s = SPELLS[Math.floor(Math.random()*SPELLS.length)]; } while (s.id===lastId);
+    lastId = s.id; return s;
+  }
+  const tagsHtml = s => s.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('') + (s.parts?`<span class="tag">共 ${s.parts.length} 回</span>`:'');
+  const partsOf = s => s.parts || [{label:'',text:s.text}];
+  const copyFirst = s => copyText(partsOf(s)[0].text, s.parts ? '已複製第 1 回 ♡' : '已複製 ♡');
+  const sampleHtml = s => s.sample ? '<span class="sample">範例</span>' : '';
+  let current = null;
+  function fillCard(s){
+    current = s;
+    const c = $('#scard');
+    c.classList.remove('blank');
+    c.innerHTML = `<span class="pg">${no(s)}</span>
+      <h3>${esc(s.title)}${sampleHtml(s)}</h3>
+      <p class="intro">${esc(s.intro)}</p>
+      <div class="tags">${tagsHtml(s)}</div>
+      <div class="row">
+        <a class="btn quiet" href="spells/${esc(s.id)}.html">閱讀完整咒語</a>
+        <button class="btn quiet" type="button" data-copy>${s.parts?'複製第 1 回':'複製咒語'}</button>
+        <button class="btn quiet" type="button" data-again>再抽一次</button>
+      </div>`;
+  }
+  function draw(){
+    const s = pick(); if(!s) return;
+    const c = $('#scard');
+    if (reduce.matches) { fillCard(s); return; }
+    c.classList.remove('turning'); void c.offsetWidth; c.classList.add('turning');
+    setTimeout(()=>fillCard(s), 190);
+    setTimeout(()=>c.classList.remove('turning'), 440);
+  }
+  $('#draw-btn').addEventListener('click', draw);
+  $('#scard').addEventListener('click', e=>{
+    if (e.target.closest('[data-copy]') && current) copyFirst(current);
+    if (e.target.closest('[data-again]')) draw();
+  });
+  $('#draw-count').textContent = `收藏室裡目前有 ${SPELLS.length} 則咒語`;
+  $('#hero-draw').addEventListener('click', ()=>{ setTimeout(draw, 350); });
+
+  /* ---------- library ---------- */
+  const ALL_TAGS = ['戀愛日常','吃醋與曖昧','關係試探','衝突與和解','劇情事件','平行世界','隨機挑戰'];
+  SPELLS.forEach(s=>s.tags.forEach(t=>{ if(!ALL_TAGS.includes(t)) ALL_TAGS.push(t); }));
+  const chosen = new Set();
+  $('#chips').innerHTML = ALL_TAGS.map(t=>{
+    const n = SPELLS.filter(s=>s.tags.includes(t)).length;
+    return `<button class="chip" type="button" aria-pressed="false" data-tag="${esc(t)}">${esc(t)}<span class="n">${n}</span></button>`;
+  }).join('');
+  $('#chips').addEventListener('click', e=>{
+    const b = e.target.closest('.chip'); if(!b) return;
+    const t = b.dataset.tag;
+    chosen.has(t) ? chosen.delete(t) : chosen.add(t);
+    b.setAttribute('aria-pressed', chosen.has(t));
+    renderLib();
+  });
+  $('#q').addEventListener('input', renderLib);
+  $('#clear').addEventListener('click', ()=>{
+    chosen.clear(); $('#q').value='';
+    document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));
+    renderLib();
+  });
+  function renderLib(){
+    const q = $('#q').value.trim().toLowerCase();
+    const list = SPELLS.filter(s=>{
+      const tagOk = !chosen.size || [...chosen].some(t=>s.tags.includes(t));
+      const hay = [s.title, s.intro, s.note||'', ...s.tags, ...(s.keywords||[]), ...(s.parts||[]).map(p=>p.label)].join(' ').toLowerCase();
+      return tagOk && (!q || hay.includes(q));
+    });
+    $('#clear').hidden = !(chosen.size || q);
+    $('#result-n').textContent = (chosen.size || q) ? `找到 ${list.length} 則` : `共 ${list.length} 則`;
+    $('#sgrid').innerHTML = list.length ? list.map(s=>`
+      <a class="sitem" href="spells/${esc(s.id)}.html">
+        <span class="pg">${no(s)}</span>
+        <h3>${esc(s.title)}${sampleHtml(s)}</h3>
+        <p>${esc(s.intro)}</p>
+        <div class="tags">${tagsHtml(s)}</div>
+      </a>`).join('')
+      : `<div class="empty" style="grid-column:1/-1"><b>這一頁還是空白的。</b>換個關鍵字，或清除篩選再翻翻看。</div>`;
+  }
+  renderLib();
+  const goRandom = ()=>{ const s=pick(); if(s) location.assign(spellUrl(s.id)); };
+  $('#lib-random').addEventListener('click', goRandom);
+
+  /* ---------- detail ---------- */
+  let detail = null;
+  function showDetail(s){
+    detail = s;
+    $('#d-pg').textContent = 'PAGE 002 / ' + no(s);
+    $('#d-title').innerHTML = esc(s.title) + sampleHtml(s);
+    $('#d-intro').textContent = s.intro;
+    $('#d-tags').innerHTML = tagsHtml(s);
+    const parts = partsOf(s);
+    $('#d-note').hidden = !s.note; $('#d-note').textContent = s.note || '';
+    $('#d-parts').innerHTML = parts.length > 1
+      ? parts.map((p,i)=>`<section class="part"><div class="part-head"><b><span class="no">PART ${String(i+1).padStart(2,'0')} / ${String(parts.length).padStart(2,'0')}</span>${esc(p.label)}</b><button class="btn quiet sm" type="button" data-part="${i}">複製這一回</button></div><div class="incant">${esc(p.text)}</div></section>`).join('')
+      : `<div class="incant">${esc(parts[0].text)}</div>`;
+    $('#d-copy').hidden = parts.length > 1;
+    $('#d-dates').innerHTML = `建立　${fmtDate(s.created)}<br>更新　${fmtDate(s.updated)}`;
+    document.title = s.title + '｜小咒語｜岔頁 OFF PAGE';
+  }
+  document.addEventListener('click', e=>{ const b=e.target.closest('[data-copy]'); if(b){ const el=document.getElementById(b.dataset.copy); if(el) copyText(el.textContent, '已複製 ♡'); } });
+  $('#d-copy').addEventListener('click', ()=> detail && copyText(partsOf(detail)[0].text, '已複製 ♡'));
+  $('#d-parts').addEventListener('click', e=>{ const b=e.target.closest('[data-part]'); if(b && detail) copyText(partsOf(detail)[+b.dataset.part].text, `已複製第 ${+b.dataset.part+1} 回 ♡`); });
+  $('#d-next').addEventListener('click', ()=>{ lastId = detail ? detail.id : lastId; goRandom(); });
+  $('#d-share').addEventListener('click', ()=>{
+    const url = detail ? spellUrl(detail.id) : location.href;
+    copyText(url, '分享連結已複製 ♡');
+  });
+
+
+  /* ---------- tools：小工具試玩 ---------- */
+  const WIMG = {normal:'normal',smile:'smile',blush:'blush',closed:'closed',sleepy:'sleepy',photo:'photo',stand:'stand'};
+  const LOOKS = [['normal','平常'],['smile','微笑'],['blush','臉紅'],['closed','閉眼'],['sleepy','打哈欠'],['photo','舉相機'],['stand','站著']];
+  $('#sheet').innerHTML = LOOKS.map(([k,n])=>`<figure><div class="fr"><img src="assets/wen/${k}.webp" alt="聞止水・${n}" loading="lazy"></div><figcaption>${n}</figcaption></figure>`).join('');
+  const TOUCH = {
+    ear:[['戴很多年了。','normal'],['那個不能拔。','closed'],['……耳朵不要。','blush']],
+    hand:[['嗯。','smile'],['手怎麼這麼冰。','normal'],['走吧。','stand'],['……沒要放。','blush'],['握著就好，不用講話。','closed']],
+    cam:[['要拍嗎。站好。','photo'],['別動。……好了。','photo'],['光很好。','photo'],['妳剛剛笑了。拍到了。','photo'],['等洗出來再給妳。','photo']],
+    body:[['怎麼了。','normal'],['我在。','normal'],['……要。','blush'],['妳今天很黏。','smile'],['沒有要走。','closed']]
+  };
+  const pad = n => String(n).padStart(2,'0');
+  function timeLine(d){
+    const m = d.getHours()*60 + d.getMinutes(), mon = d.getMonth()+1;
+    if (m >= 90 && m < 510) return ['……睡了。','sleepy'];
+    if (m < 90) return ['嗯。','closed'];
+    if (m < 660) return d.getDay()===1 ? ['星期一。撐住。','normal'] : ['醒了？','normal'];
+    if (m < 840) return ['吃。','normal'];
+    if (m >= 1020 && m < 1230) return ['我在樓下。','stand'];
+    if (mon===12 || mon<=2) return ['很冷。手給我。','normal'];
+    return ['嗯。','normal'];
+  }
+  let holdUntil = 0, lastLine = {};
+  function setWidget(line, look){
+    const img = $('#w-img');
+    if (!img) return;
+    img.src = 'assets/wen/' + (WIMG[look]||'normal') + '.webp';
+    $('#w-line').textContent = line;
+  }
+  function tick(){
+    const d = new Date();
+    $('#w-meta').textContent = `現在 ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    if (Date.now() > holdUntil) { const [l,f] = timeLine(d); setWidget(l,f); }
+  }
+  tick(); setInterval(tick, 20000);
+  let pokes = [];
+  document.querySelectorAll('.touches [data-z]').forEach(b=>b.addEventListener('click', ()=>{
+    const n = Date.now(); pokes = pokes.filter(t=>n-t<4000); pokes.push(n);
+    holdUntil = n + 3200; setTimeout(tick, 3300);
+    if (pokes.length >= 7) { pokes = []; setWidget(Math.random()<.5 ? '妳到底要戳幾下。' : '……講完了？','normal'); return; }
+    const arr = TOUCH[b.dataset.z]; let p;
+    do { p = arr[Math.floor(Math.random()*arr.length)]; } while (arr.length>1 && p[0]===lastLine[b.dataset.z]);
+    lastLine[b.dataset.z] = p[0]; setWidget(p[0], p[1]);
+  }));
+
+  /* ---------- 戀人入住申請單 ---------- */
+  (function(){
+    const f = document.getElementById('of'); if (!f) return;
+    const KEY = 'offpage-residency-draft';
+    const $id = id => document.getElementById(id);
+    const v = id => ($id(id) && $id(id).value || '').trim();
+    const fields = [...f.querySelectorAll('input:not([type=checkbox]),textarea,select')];
+    const boxes = [...f.querySelectorAll('input[type=checkbox]:not([disabled])')];
+    const addons = [...f.querySelectorAll('#o-feats input:not([disabled])')];
+    const shown = el => !el.closest('[hidden]');
+    function syncCond(){
+      const show = new Set(addons.filter(b=>b.checked && b.dataset.show).map(b=>b.dataset.show));
+      f.querySelectorAll('[data-for]').forEach(l=>{
+        if (l.dataset.for==='o-own') l.hidden = v('o-imgs') !== '我自己準備';
+        else l.hidden = !show.has(l.dataset.for);
+      });
+      const rights = f.querySelector('[data-for2="o-rights"]'); rights.hidden = v('o-imgs') !== '我自己準備';
+    }
+    function price(){
+      let lo = 300, hi = 300;
+      addons.forEach(b=>{ if(!b.checked || b.dataset.rush) return; let p=+b.dataset.price, m=+(b.dataset.max||b.dataset.price);
+        if (b.value==='額外 Q 版表情'){ const n=Math.max(1,Math.min(20,parseInt(v('o-extra'))||1)); p*=n; m*=n; }
+        lo+=p; hi+=m; });
+      if (v('o-imgs').includes('6 張')){ lo+=300; hi+=300; }
+      if (v('o-imgs').includes('12 張')){ lo+=500; hi+=500; }
+      if (f.querySelector('[data-rush]').checked){ lo=Math.round(lo*1.5); hi=Math.round(hi*1.5); }
+      return lo===hi ? `NT$${lo}` : `NT$${lo}–${hi}`;
+    }
+    function build(){
+      const sec = (t, rows) => { rows = rows.filter(Boolean); return rows.length ? '■ '+t+'\n'+rows.join('\n') : ''; };
+      const picked = addons.filter(b=>b.checked).map(b=> b.value==='額外 Q 版表情' ? `☑ 額外 Q 版表情 × ${Math.max(1,parseInt(v('o-extra'))||1)}` : '☑ '+b.value);
+      const own = v('o-imgs')==='我自己準備';
+      return ['【戀人入住申請單】',
+        sec('聯絡', [`稱呼：${v('o-name')||'（未填）'}`, `聯絡方式：${v('o-contact')||'（未填）'}`]),
+        sec('角色', [`角色名：${v('o-char')||'（未填）'}`, v('o-source')&&`出處：${v('o-source')}`, v('o-basic')&&`性別／年齡／職業：${v('o-basic')}`,
+          `個性與說話方式：${v('o-persona')||'（未填）'}`, v('o-rel')&&`關係：${v('o-rel')}`, v('o-callme')&&`她怎麼叫我：${v('o-callme')}`,
+          `確認是角色、不是真人：${$id('o-real').checked?'是':'（未確認）'}`, $id('o-oc').checked&&'別人家的角色：已取得親媽同意']),
+        sec('圖片', [`準備方式：${v('o-imgs')}`, own&&`去背 PNG：${v('o-own')}`, own&&`使用權：${$id('o-rights').checked?'已確認':'（未確認）'}`]),
+        sec('方案', ['☑ 基本入住費 NT$300', ...picked]),
+        sec('設定', [shown($id('o-city'))&&v('o-city')&&`天氣城市：${v('o-city')}`, shown($id('o-diary'))&&v('o-diary')&&`角色日記：${v('o-diary')}`,
+          v('o-bday')&&`我的生日：${v('o-bday')}`, v('o-met')&&`相遇日：${v('o-met')}`, `配色：${v('o-pal')}`, `聊天入口：${v('o-chat')}`]),
+        sec('其他', [`可放作品集：${$id('o-folio').checked?'可以':'不要'}`, v('o-more')]),
+        `預估金額：${price()}（以確認後報價為準）`,
+      ].filter(Boolean).join('\n\n');
+    }
+    function save(){ const d={}; fields.forEach(el=>d[el.id]=el.value); boxes.forEach(b=>d['ck:'+(b.id||b.value)]=b.checked);
+      try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){} }
+    function load(){ let d=null; try{ d=JSON.parse(localStorage.getItem(KEY)||'null'); }catch(e){} if(!d) return;
+      fields.forEach(el=>{ if(d[el.id]!=null) el.value=d[el.id]; }); boxes.forEach(b=>{ const k='ck:'+(b.id||b.value); if(k in d) b.checked=d[k]; }); }
+    function render(){ syncCond(); $id('o-total').textContent = price(); $id('o-preview').textContent = build(); }
+    f.addEventListener('input', ()=>{ render(); save(); });
+    f.addEventListener('change', ()=>{ render(); save(); });
+    f.addEventListener('submit', e=>{
+      e.preventDefault();
+      const err = $id('o-err');
+      const miss = [['o-name','怎麼稱呼你'],['o-contact','聯絡方式'],['o-char','角色名'],['o-persona','個性與說話方式']].filter(([id])=>!v(id)).map(x=>x[1]);
+      if (!$id('o-real').checked) miss.push('確認是角色不是真人');
+      if (v('o-imgs')==='我自己準備' && !$id('o-rights').checked) miss.push('圖片使用權確認');
+      if (miss.length){ err.textContent='還差：'+miss.join('、')+'。'; err.hidden=false; return; }
+      err.hidden=true; copyText(build(), '已複製申請單 ♡ 到 Threads 私訊貼給我');
+    });
+    $id('o-reset').addEventListener('click', ()=>{ f.reset(); try{ localStorage.removeItem(KEY); }catch(e){} $id('o-err').hidden=true; render(); });
+    document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); $id(a.dataset.jump).scrollIntoView({behavior:'smooth'}); }));
+    load(); render();
+  })();
+
+  /* ---------- router：每一頁都有自己的網址（舊的 #tools、#spell-xxx 連結也照樣能用） ---------- */
+  const views = [...document.querySelectorAll('.view')];
+  const PAGES = {home:'./', worlds:'worlds.html', spells:'spells.html', tools:'tools.html', order:'order.html', about:'about.html'};
+  const TITLES = {home:'岔頁 OFF PAGE｜Xia mumu 的原創互動敘事、角色故事與小咒語', worlds:'世界觀收藏｜岔頁 OFF PAGE', spells:'小咒語收藏室｜岔頁 OFF PAGE', tools:'角色主畫面小工具｜岔頁 OFF PAGE', order:'戀人入住申請所｜岔頁 OFF PAGE', about:'關於 Xia mumu｜岔頁 OFF PAGE', lost:'找不到這一頁｜岔頁 OFF PAGE'};
+  const ON_SPELL_PAGE = document.documentElement.dataset.route === 'spell';
+  const isRouteHash = h => !!PAGES[h] || h==='draw' || h==='lost' || h.startsWith('spell-');
+  function resolve(href){
+    const u = new URL(href, document.baseURI);
+    if (u.origin !== SITE.origin || !u.pathname.startsWith(SITE.pathname)) return null;
+    let rel, h;
+    try { rel = decodeURIComponent(u.pathname.slice(SITE.pathname.length)); h = decodeURIComponent(u.hash.slice(1)); } catch(e){ return null; }
+    const m = rel.match(/^spells\/(.+)\.html$/);
+    if (m) return {name:'spell', spell:m[1]};
+    if (rel === '' || rel === 'index.html') {
+      if (h.startsWith('spell-')) return {name:'spell', spell:h.slice(6)};
+      if (h === 'draw') return {name:'home', anchor:'draw'};
+      if (PAGES[h] || h === 'lost') return {name:h};
+      return {name:'home', anchor:h};
+    }
+    for (const k in PAGES) if (PAGES[k] === rel) return {name:k, anchor:h};
+    return null;
+  }
+  const urlOf = r => r.name==='spell' ? spellUrl(r.spell)
+    : r.name==='lost' ? location.href
+    : new URL(PAGES[r.name], SITE).href + (r.anchor ? '#'+r.anchor : '');
+  function scrollToAnchor(id, smooth){
+    const el = id && document.getElementById(id);
+    if (!el) return false;
+    requestAnimationFrame(()=>el.scrollIntoView({behavior: smooth && !reduce.matches ? 'smooth' : 'auto'}));
+    return true;
+  }
+  function show(r, smooth){
+    let name = r.name;
+    if (name === 'spell') {
+      const s = SPELLS.find(x=>x.id===r.spell);
+      if (s) showDetail(s); else name = 'lost';
+    }
+    if (!views.some(v=>v.dataset.view===name)) name = 'lost';
+    if (name !== 'spell') document.title = TITLES[name] || TITLES.home;
+    views.forEach(v=>{ v.hidden = v.dataset.view !== name; });
+    const navKey = name==='spell' ? 'spells' : name==='order' ? 'tools' : name;
+    document.querySelectorAll('[data-nav]').forEach(a=>{
+      a.dataset.nav===navKey ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current');
+    });
+    if (!scrollToAnchor(r.anchor, smooth)) window.scrollTo(0,0);
+  }
+  function go(r){
+    // 小咒語頁是獨立的檔案，進出都整頁載入；其他頁面之間不重新載入
+    if (r.name === 'spell' || ON_SPELL_PAGE) {
+      const cur = resolve(location.href);
+      if (cur && cur.name==='spell' && r.name==='spell' && cur.spell===r.spell) { window.scrollTo(0,0); return; }
+      if (!(r.name==='spell' && !SPELLS.some(x=>x.id===r.spell))) { location.assign(urlOf(r)); return; }
+    }
+    const u = urlOf(r);
+    if (u !== location.href) history.pushState(null, '', u);
+    show(r, true);
+  }
+  document.addEventListener('click', e=>{
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest('a[href]');
+    if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+    const raw = a.getAttribute('href');
+    if (raw.startsWith('#') && !isRouteHash(raw.slice(1))) {      // 頁內錨點，例如「跳到主要內容」
+      const el = document.getElementById(raw.slice(1));
+      if (el) { e.preventDefault(); scrollToAnchor(el.id, true); if (el.tabIndex >= 0 || el.hasAttribute('tabindex')) el.focus({preventScroll:true}); }
+      return;
+    }
+    const r = resolve(a.href);
+    if (!r) return;
+    e.preventDefault();
+    go(r);
+  });
+  addEventListener('popstate', ()=> show(resolve(location.href) || {name:'lost'}));
+  addEventListener('hashchange', ()=>{
+    const h = location.hash.slice(1);
+    if (!isRouteHash(h)) { scrollToAnchor(h, true); return; }
+    const r = resolve(location.href);
+    if (r) { if (r.name==='spell' && !ON_SPELL_PAGE) { location.replace(spellUrl(r.spell)); return; } if (r.name!=='lost') history.replaceState(null,'',urlOf(r)); show(r); }
+  });
+  (function start(){
+    const r = resolve(location.href) || {name: document.documentElement.dataset.route || 'home'};
+    if (r.name === 'spell' && !ON_SPELL_PAGE && SPELLS.some(x=>x.id===r.spell)) { location.replace(spellUrl(r.spell)); return; }
+    if (r.name !== 'lost' && r.name !== 'spell' && urlOf(r) !== location.href) history.replaceState(null, '', urlOf(r));
+    show(r);
+  })();
+})();
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"9ad11b4dc9bb4b59812cd5f4b4985067"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
