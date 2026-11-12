@@ -264,6 +264,8 @@ main{min-height:60vh}
 .shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
 .shelf a{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:center;background:var(--paper);border:1px solid var(--rule);padding:22px 24px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
 .shelf a:hover{border-color:var(--berry);transform:translateY(-2px)}
+.shelf a[aria-selected="true"]{border-color:var(--berry);box-shadow:inset 0 -3px 0 var(--berry);background:#fffaf8}
+.shelf a[aria-selected="false"]{opacity:.78}
 .shelf img{width:72px;height:72px;aspect-ratio:1;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--rule)}
 .shelf .no{display:block;font-size:12px;letter-spacing:.14em;color:var(--violet)}
 .shelf b{display:block;font-size:20px;margin:2px 0 4px}
@@ -1952,17 +1954,18 @@ main{min-height:60vh}
 
   <!-- ===== TOOLS ===== -->
   <div class="view" id="v-tools" data-view="tools" hidden>
-    <section class="wrap sec" aria-labelledby="h-shelf" style="padding-bottom:48px">
+    <section class="wrap sec" id="toolbox" aria-labelledby="h-shelf" style="padding-bottom:48px">
       <div class="sec-head">
         <span class="label">PAGE 003 / TOOLS</span>
-        <div><h2 id="h-shelf">小工具架<em>Toolbox</em></h2><p>讓角色多陪你一點的小東西。</p></div>
+        <div><h2 id="h-shelf">小工具架<em>Toolbox</em></h2><p>讓角色多陪你一點的小東西。點一下，切換要看哪一個。</p></div>
       </div>
-      <div class="shelf">
-        <a href="tools.html#tool-widget"><img src="assets/wen/normal.webp" alt="" loading="lazy"><span><span class="no">TOOL 01</span><b>角色主畫面小工具</b><span class="d">讓角色住進 iPhone 主畫面，看時間跟你說話。</span></span></a>
-        <a href="tools.html#little-days"><img src="assets/little-days/icon.webp" alt="" loading="lazy"><span><span class="no">TOOL 02・NEW</span><b>上次什麼時候？</b><span class="d">生活提醒手帳 APP，讓角色陪你記住生活小事。</span></span></a>
+      <div class="shelf" role="tablist" aria-label="選擇小工具">
+        <a href="tools.html#tool-widget" data-tool="widget"><img src="assets/wen/normal.webp" alt="" loading="lazy"><span><span class="no">TOOL 01</span><b>角色主畫面小工具</b><span class="d">讓角色住進 iPhone 主畫面，看時間跟你說話。</span></span></a>
+        <a href="tools.html#little-days" data-tool="little-days"><img src="assets/little-days/icon.webp" alt="" loading="lazy"><span><span class="no">TOOL 02・NEW</span><b>上次什麼時候？</b><span class="d">生活提醒手帳 APP，讓角色陪你記住生活小事。</span></span></a>
       </div>
     </section>
 
+    <div class="tool-panel" data-tool="widget">
     <section class="wrap t-hero" id="tool-widget" aria-labelledby="h-tools">
       <div>
         <span class="label">TOOL 01 / HOME SCREEN WIDGET</span>
@@ -2209,6 +2212,9 @@ main{min-height:60vh}
       <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
     </section>
 
+    </div>
+
+    <div class="tool-panel" data-tool="little-days" hidden>
     <section class="wrap sec ld" id="little-days" aria-labelledby="h-ld">
       <div class="sec-head">
         <span class="label">TOOL 02 / LIFE JOURNAL APP</span>
@@ -2270,6 +2276,7 @@ main{min-height:60vh}
       </div>
       <p class="fine">資料只存在你自己的手機裡，不會上傳紀錄和角色圖片。也因為這樣，換手機或清除瀏覽器資料前，記得先到「設定與備份」匯出備份。iPhone 上 Safari 和主畫面的 APP 資料是分開的，建議一開始就加到主畫面再使用。</p>
     </section>
+    </div>
   </div>
 
 
@@ -3189,6 +3196,19 @@ main{min-height:60vh}
     load(); render();
   })();
 
+  /* ---------- tools：小工具分頁，一次只顯示一個工具 ---------- */
+  function selectTool(anchor){
+    const panels = [...document.querySelectorAll('.tool-panel')];
+    if (!panels.length) return;
+    const target = anchor && document.getElementById(anchor);
+    const inPanel = target && target.closest('.tool-panel');
+    // 錨點在某個工具裡就切到那個工具；沒有指定錨點時回到第一個
+    const key = inPanel ? inPanel.dataset.tool : (anchor ? null : panels[0].dataset.tool);
+    if (!key) return;
+    panels.forEach(p => { p.hidden = p.dataset.tool !== key; });
+    document.querySelectorAll('.shelf a[data-tool]').forEach(a => a.setAttribute('aria-selected', a.dataset.tool === key ? 'true' : 'false'));
+  }
+
   /* ---------- router：每一頁都有自己的網址（舊的 #tools、#spell-xxx 連結也照樣能用） ---------- */
   const views = [...document.querySelectorAll('.view')];
   const PAGES = {home:'./', worlds:'worlds.html', spells:'spells.html', tools:'tools.html', order:'order.html', about:'about.html'};
@@ -3233,7 +3253,10 @@ main{min-height:60vh}
     document.querySelectorAll('[data-nav]').forEach(a=>{
       a.dataset.nav===navKey ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current');
     });
-    if (!scrollToAnchor(r.anchor, smooth)) window.scrollTo(0,0);
+    if (name === 'tools') selectTool(r.anchor);
+    // 切換工具時停在小工具架，讓切換的卡片和內容開頭一起出現
+    const anchor = name === 'tools' && (r.anchor === 'tool-widget' || r.anchor === 'little-days') ? 'toolbox' : r.anchor;
+    if (!scrollToAnchor(anchor, smooth)) window.scrollTo(0,0);
   }
   function go(r){
     // 小咒語頁是獨立的檔案，進出都整頁載入；其他頁面之間不重新載入
