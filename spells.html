@@ -263,7 +263,7 @@ main{min-height:60vh}
 .shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
 .shelf a{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:center;background:var(--paper);border:1px solid var(--rule);padding:22px 24px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
 .shelf a:hover{border-color:var(--berry);transform:translateY(-2px)}
-.shelf img{width:72px;height:72px;object-fit:cover;border-radius:16px;border:1px solid var(--rule)}
+.shelf img{width:72px;height:72px;aspect-ratio:1;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--rule)}
 .shelf .no{display:block;font-size:12px;letter-spacing:.14em;color:var(--violet)}
 .shelf b{display:block;font-size:20px;margin:2px 0 4px}
 .shelf span.d{font-size:14px;color:#57525d}
@@ -272,12 +272,12 @@ main{min-height:60vh}
 .ld-hero .lede{font-size:18px;color:#4a4650;margin:0 0 20px;max-width:28em}
 .ld-hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
 .ld-hero .meta span{font-size:13px;padding:4px 12px;border:1px solid var(--rule);background:var(--paper);border-radius:999px}
-.ld-cover{width:100%;max-width:420px;justify-self:center;border:1px solid var(--rule);box-shadow:0 24px 50px -30px rgba(41,39,43,.45);transform:rotate(1.5deg)}
+.ld-cover{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;max-width:420px;justify-self:center;border:1px solid var(--rule);box-shadow:0 24px 50px -30px rgba(41,39,43,.45);transform:rotate(1.5deg)}
 .ld .btn.sage{background:var(--ld-sage);border-color:var(--ld-sage)}
 .ld .btn.sage:hover{background:var(--ld-ink);border-color:var(--ld-ink)}
 .ld-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:36px 0 28px}
 .ld-gallery figure{margin:0}
-.ld-gallery img{width:100%;display:block;border:1px solid var(--rule)}
+.ld-gallery img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid var(--rule)}
 .ld-gallery figcaption{font-size:14px;color:#57525d;margin-top:8px;text-align:center}
 .ld-steps{margin:28px 0 0;padding:22px 26px;background:var(--paper);border:1px dashed var(--rule);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .ld-steps div b{display:block;color:var(--ld-sage);font-size:13px;letter-spacing:.12em}
