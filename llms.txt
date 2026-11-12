@@ -67,6 +67,7 @@
 ## 角色主畫面小工具
 
 - [小工具介紹與自製教學](https://xia-mumu.github.io/Off-Page/tools.html)：用 Scriptable 讓角色住進 iPhone 主畫面，範例角色為聞止水。附可直接複製給 Claude、ChatGPT 或 Gemini 的指令；只支援 iPhone。
+- [上次什麼時候？](https://xia-mumu.github.io/Off-Page/tools.html#little-days)：免費的生活提醒手帳 APP（PWA），記錄上次完成某件事的日期並自動算出下一次；可上傳自己的角色當陪伴者、收到便條紙、有小房間與月度回顧；資料只存在使用者的手機。直接使用：https://little-days-793.pages.dev/
 - [戀人入住申請所（客製委託）](https://xia-mumu.github.io/Off-Page/order.html)：基本入住費 NT$300，可加購台詞包、進階互動與 Q 版素材；LINE Pay 或銀行轉帳；每月限 10 位；只接角色、不接真人。
 
 ## 常見問題

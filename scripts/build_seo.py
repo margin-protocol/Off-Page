@@ -72,8 +72,8 @@ PAGES = {
             "Xia mumu 的原創互動敘事世界觀：" + "、".join("%s《%s》" % (w["genres"][0], w["title"]) for w in worlds) + "。每個世界都有自己的入口。"),
  "spells": ("spells.html", "小咒語收藏室｜岔頁 OFF PAGE",
             "小咒語收藏室：%d 則可以直接複製、貼給角色的 AI 角色扮演情境提示，依戀愛日常、吃醋與曖昧、衝突與和解等標籤分類，也能隨機抽一則。" % len(spells)),
- "tools":  ("tools.html",  "角色主畫面小工具｜岔頁 OFF PAGE",
-            "讓角色住進 iPhone 主畫面：Scriptable 角色小工具介紹與自製教學。不用寫程式，用自己的 Claude 帳號就能做，附可以直接複製的指令。範例角色聞止水。"),
+ "tools":  ("tools.html",  "小工具｜角色主畫面小工具・上次什麼時候？｜岔頁 OFF PAGE",
+            "岔頁的小工具：讓角色住進 iPhone 主畫面的 Scriptable 小工具（介紹與自製教學，範例角色聞止水），以及生活提醒手帳 APP《上次什麼時候？》——記住換貓砂、洗床單這些小事，讓你的角色陪你一起記。"),
  "order":  ("order.html",  "戀人入住申請所｜岔頁 OFF PAGE",
             "岔頁｜戀人入住申請所：iPhone Scriptable 角色主畫面小工具客製委託。基本入住費 NT$300 起，12 組配色可選，可加購台詞包與 Q 版素材；只接角色，不接真人。"),
  "about":  ("about.html",  "關於 Xia mumu｜岔頁 OFF PAGE",
@@ -185,6 +185,7 @@ ns += ['</ul>', '<h2>更多頁面</h2>', '<ul>',
        '<li><a href="spells.html">小咒語收藏室</a>：可以直接複製、貼給角色的 AI 角色扮演情境提示。</li>',
        '<li><a href="./stories.html">角色故事館</a>：《棲川市》與《NULL》的角色短篇。</li>',
        '<li><a href="tools.html">角色主畫面小工具</a>：讓角色住進 iPhone 主畫面的教學。</li>',
+       '<li><a href="tools.html#little-days">上次什麼時候？</a>：生活提醒手帳 APP，讓角色陪你記住生活小事。</li>',
        '<li><a href="order.html">戀人入住申請所</a>：角色小工具客製委託。</li>',
        '<li><a href="about.html">關於 Xia mumu</a>與常見問題。</li>',
        '</ul>', '</section>', '</noscript>', '<!-- SEO:NOSCRIPT:END -->']
@@ -304,6 +305,7 @@ for s in spells:
     L.append("- [%s](%s)：%s（%s）" % (s["title"], spell_url(s), s["intro"], "、".join(s["tags"])))
 L += ["", "## 角色主畫面小工具", "",
       "- [小工具介紹與自製教學](%stools.html)：用 Scriptable 讓角色住進 iPhone 主畫面，範例角色為聞止水。附可直接複製給 Claude、ChatGPT 或 Gemini 的指令；只支援 iPhone。" % BASE,
+      "- [上次什麼時候？](%stools.html#little-days)：免費的生活提醒手帳 APP（PWA），記錄上次完成某件事的日期並自動算出下一次；可上傳自己的角色當陪伴者、收到便條紙、有小房間與月度回顧；資料只存在使用者的手機。直接使用：https://little-days-793.pages.dev/" % BASE,
       "- [戀人入住申請所（客製委託）](%sorder.html)：基本入住費 NT$300，可加購台詞包、進階互動與 Q 版素材；LINE Pay 或銀行轉帳；每月限 10 位；只接角色、不接真人。" % BASE,
       "", "## 常見問題", ""]
 for _, q, a in FAQ:
