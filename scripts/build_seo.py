@@ -6,7 +6,7 @@
 import json, re, html, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = "https://xia-mumu.github.io/off-page/"
+BASE = "https://xia-mumu.github.io/Off-Page/"
 TODAY = datetime.date.today().isoformat()
 esc = lambda s: html.escape(str(s), quote=True)
 
