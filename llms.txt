@@ -21,7 +21,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://xia-mumu.github.io/Off-Page/spells.html)，目前公開 34 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://xia-mumu.github.io/Off-Page/spells.html)，目前公開 35 則，每則都有自己的頁面：
 
 - [安靜](https://xia-mumu.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://xia-mumu.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -57,6 +57,7 @@
 - [你的遺物拍賣會🕯️](https://xia-mumu.github.io/Off-Page/spells/your-estate-auction.html)：一張來自未來的邀請函，拍賣品全是PC離世後留下的東西。（虐心、劇情事件）
 - [戀愛法庭開庭⚖️](https://xia-mumu.github.io/Off-Page/spells/love-court.html)：被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。（隨機挑戰、戀愛日常）
 - [聽不懂的情話🌐](https://xia-mumu.github.io/Off-Page/spells/untranslated-whispers.html)：他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。（成人向、戀愛日常）
+- [戀愛腦受害者協會📢](https://xia-mumu.github.io/Off-Page/spells/lovebrain-victims-club.html)：朋友們開了群組匿名爆料他的戀愛腦行徑，偏偏你也被拉進來了。（隨機挑戰、戀愛日常）
 
 ## 角色主畫面小工具
 
