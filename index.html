@@ -534,6 +534,34 @@ main{min-height:60vh}
 .bell-panel .k{font-size:12px;color:var(--berry)}
 .bell-panel .t{display:block;font-size:15px;line-height:1.5;margin-top:2px}
 @media (max-width:560px){.annc .nt-tag time{display:none}.annc .nt-go{display:none}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:880px;margin-left:232px;border-top:1px solid var(--berry)}
+.faq-item{border-bottom:1px solid var(--rule);background:transparent;transition:background .3s ease}
+.faq-item[open]{background:var(--paper)}
+.faq-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px minmax(0,1fr) 32px;align-items:center;gap:16px;padding:22px 20px 22px 4px;-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:focus-visible{outline:2px solid var(--berry);outline-offset:-2px}
+.faq-no{font-family:var(--ui);font-size:13px;letter-spacing:.14em;color:var(--violet);padding-left:16px}
+.faq-q{font-family:var(--serif-tc);font-weight:700;font-size:clamp(17px,1.8vw,19px);line-height:1.6;color:var(--ink);transition:color .2s ease}
+.faq-item summary:hover .faq-q,.faq-item[open] .faq-q{color:var(--berry)}
+.faq-ic{position:relative;width:32px;height:32px;border:1px solid var(--rule);border-radius:50%;transition:background .25s ease,border-color .25s ease,transform .35s ease}
+.faq-ic::before,.faq-ic::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--berry);transform:translate(-50%,-50%);transition:transform .35s ease,background .25s ease}
+.faq-ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-item summary:hover .faq-ic{border-color:var(--berry)}
+.faq-item[open] .faq-ic{background:var(--berry);border-color:var(--berry);transform:rotate(180deg)}
+.faq-item[open] .faq-ic::before,.faq-item[open] .faq-ic::after{background:var(--paper)}
+.faq-item[open] .faq-ic::after{transform:translate(-50%,-50%) rotate(0deg)}
+.faq-a{padding:0 64px 26px 84px}
+.faq-a p{margin:0;padding-left:18px;border-left:2px solid var(--mist);font-size:15.5px;line-height:1.95;color:#4d4952;max-width:40em}
+.faq-a b{color:var(--ink)}
+.faq-a a{color:var(--berry);text-decoration:underline;text-decoration-color:var(--mist);text-underline-offset:4px;text-decoration-thickness:2px;transition:text-decoration-color .2s}
+.faq-a a:hover{text-decoration-color:var(--berry)}
+.faq-item[open] .faq-a{animation:faq-in .4s ease both}
+@keyframes faq-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.faq-item,.faq-ic,.faq-ic::before,.faq-ic::after{transition:none}.faq-item[open] .faq-a{animation:none}}
+@media (max-width:900px){.faq-list{margin-left:0}}
+@media (max-width:560px){.faq-item summary{grid-template-columns:minmax(0,1fr) 28px;gap:12px;padding:18px 12px 18px 0}.faq-no{grid-column:1/-1;padding-left:0;margin-bottom:-8px;font-size:12px}.faq-ic{width:28px;height:28px}.faq-a{padding:0 12px 22px 0}}
 </style>
 <!-- SEO:LD:START -->
 <script type="application/ld+json">
@@ -678,7 +706,7 @@ main{min-height:60vh}
      "name": "岔頁 OFF PAGE 是什麼？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站，收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及 iPhone 角色主畫面小工具的教學與客製委託。"
+      "text": "岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及讓角色住進 iPhone 主畫面的小工具。"
      }
     },
     {
@@ -686,47 +714,79 @@ main{min-height:60vh}
      "name": "小咒語是什麼？怎麼用？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "小咒語是寫給 AI 角色扮演用的情境提示，每一則設定一個會讓故事轉向的狀況。在岔頁的小咒語收藏室挑一則、按複製，貼進你和角色的對話裡就能使用；連載型的咒語可以一回一回分開複製。"
+      "text": "小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到小咒語收藏室挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。"
      }
     },
     {
      "@type": "Question",
-     "name": "角色主畫面小工具是什麼？Android 可以用嗎？",
+     "name": "角色故事在哪裡看？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "它是用 Scriptable 做的 iPhone 主畫面小工具：角色會待在主畫面上，依時間、天氣、電量和紀念日換台詞，點進去還能和她互動。目前只支援 iPhone，因為 Scriptable 沒有 Android 版。"
+      "text": "在角色故事館。目前有《棲川市》與《NULL》兩本刊物，翻開刊物、選一個角色，就能讀到他們各自的故事。"
      }
     },
     {
      "@type": "Question",
-     "name": "可以自己做角色小工具嗎？需要花錢嗎？",
+     "name": "可以自己做角色主畫面小工具嗎？要花錢嗎？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "可以。岔頁的小工具頁有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式也不用申請 API 金鑰。如果只要小工具、不需要 AI 聊天，用事先寫好的台詞就能完全免費。"
+      "text": "可以。小工具頁有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式，也不用申請 API 金鑰。如果只要小工具、不需要和她聊天，用事先寫好的台詞就能完全免費。"
      }
     },
     {
      "@type": "Question",
-     "name": "戀人入住申請所的委託費用是多少？",
+     "name": "Android 可以用嗎？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "基本入住費是 NT$300（固定模板客製化，含角色名稱、稱呼、重要日期、配色、Scriptable JS 檔與圖文安裝教學）。可加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。"
+      "text": "目前只支援 iPhone。小工具是用 Scriptable 做的，而 Scriptable 沒有 Android 版。"
      }
     },
     {
      "@type": "Question",
-     "name": "委託的交期和付款方式？",
+     "name": "委託費用是多少？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "基本方案在資料齊全後 7 個工作天交付，有加購為 10–14 個工作天；急件加收 50%。付款方式為 LINE Pay 或銀行轉帳，全額預付，NT$1,000 以上可先付五成。每月限 10 位。"
+      "text": "基本入住費 NT$300：固定模板客製化，含角色名稱、對你的稱呼、重要日期、配色，以及完整 Scriptable JS 檔與圖文安裝教學。另外可以加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。"
      }
     },
     {
      "@type": "Question",
-     "name": "可以委託真人或別人的角色嗎？",
+     "name": "多久可以拿到？怎麼付款？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "只接角色，不接真人（包含真人照片與以真人為原型的改畫）。原創或二創角色都可以；如果是別人家的角色，需要先取得原作者同意，並確認對方能接受的二創範圍。"
+      "text": "資料齊全後，基本方案 7 個工作天，有加購為 10–14 個工作天；急件加收 50%。付款方式為 LINE Pay 或銀行轉帳，全額預付，NT$1,000 以上可以先付五成。每月限 10 位。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "可以委託真人，或是別人家的角色嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "只接角色，不接真人（包含真人照片與以真人為原型的改畫）。原創或二創角色都可以；如果是別人家的角色，請先取得親媽同意，並確認對方可以接受的二創範圍。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "我沒有角色圖，或想用繪師畫的圖可以嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "沒有圖可以加購 Q 版角色素材（AI 生成，我會整理去背、統一大小與位置）。想用繪師的圖也歡迎，請先跟繪師確認圖可以交給第三方裁切、去背、放進小工具，最好請繪師提供去背 PNG。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "小工具裡可以跟角色聊天嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "觸摸互動和預設台詞不需要 AI。想和角色自由聊天，需要自己準備聊天頁（例如用自己的 Claude 帳號做一個），我再幫你把小工具的聊天入口連過去。點聊天按鈕會開啟那個頁面，不是在小工具裡直接對話。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "裝好之後出問題怎麼辦？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "交付後 7 天內，可重現的程式錯誤免費修。不過本服務不提供遠端操作、一對一安裝指導或手機設定協助，安裝需要依照教學自己完成。"
      }
     },
     {
@@ -734,7 +794,7 @@ main{min-height:60vh}
      "name": "要怎麼委託？",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "在岔頁的戀人入住申請所填寫入住申請單，再到 Threads 私訊 @xiaxia_7575。確認內容與報價後付款排單，完成後會先給預覽截圖，確認後交付 JS 檔、素材與安裝教學。"
+      "text": "在下面填好入住申請單，再到 Threads @xiaxia_7575 私訊給我。我確認內容、回覆報價，付款後開始排單；完成後先給你預覽截圖，確認後交付 JS 檔、素材與安裝教學。"
      }
     }
    ]
@@ -2257,6 +2317,41 @@ main{min-height:60vh}
       </div>
     </section>
 
+<!-- SEO:FAQ-ORDER:START -->
+    <section class="wrap sec faq" aria-labelledby="h-faq-order">
+      <div class="sec-head"><span class="label">QUESTIONS</span><div><h2 id="h-faq-order">委託常見問題<em>FAQ</em></h2><p>還有其他想問的，歡迎直接到 Threads 私訊。</p></div></div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-no">Q.01</span><span class="faq-q">委託費用是多少？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>基本入住費 <b>NT$300</b>：固定模板客製化，含角色名稱、對你的稱呼、重要日期、配色，以及完整 Scriptable JS 檔與圖文安裝教學。另外可以加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.02</span><span class="faq-q">多久可以拿到？怎麼付款？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>資料齊全後，基本方案 <b>7 個工作天</b>，有加購為 10–14 個工作天；急件加收 50%。付款方式為 LINE Pay 或銀行轉帳，全額預付，NT$1,000 以上可以先付五成。每月限 10 位。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.03</span><span class="faq-q">可以委託真人，或是別人家的角色嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>只接角色，<b>不接真人</b>（包含真人照片與以真人為原型的改畫）。原創或二創角色都可以；如果是別人家的角色，請先取得親媽同意，並確認對方可以接受的二創範圍。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.04</span><span class="faq-q">我沒有角色圖，或想用繪師畫的圖可以嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>沒有圖可以加購 Q 版角色素材（AI 生成，我會整理去背、統一大小與位置）。想用繪師的圖也歡迎，請先跟繪師確認圖可以交給第三方裁切、去背、放進小工具，最好請繪師提供去背 PNG。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.05</span><span class="faq-q">小工具裡可以跟角色聊天嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>觸摸互動和預設台詞不需要 AI。想和角色自由聊天，需要自己準備聊天頁（例如用自己的 Claude 帳號做一個），我再幫你把小工具的聊天入口連過去。點聊天按鈕會開啟那個頁面，不是在小工具裡直接對話。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.06</span><span class="faq-q">裝好之後出問題怎麼辦？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>交付後 7 天內，可重現的程式錯誤免費修。不過本服務不提供遠端操作、一對一安裝指導或手機設定協助，安裝需要依照教學自己完成。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.07</span><span class="faq-q">要怎麼委託？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>在下面填好入住申請單，再到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊給我。我確認內容、回覆報價，付款後開始排單；完成後先給你預覽截圖，確認後交付 JS 檔、素材與安裝教學。</p></div>
+        </details>
+      </div>
+    </section>
+<!-- SEO:FAQ-ORDER:END -->
     <section class="wrap sec order" id="rs-form" aria-labelledby="h-form">
       <div class="sec-head"><span class="label">APPLY</span><div><h2 id="h-form">入住申請單<em>Apply</em></h2><p>照下面填好，按「複製申請單」，到 <a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a> 私訊貼給我。我看完會跟你確認細節和報價。</p></div></div>
 
@@ -2362,6 +2457,33 @@ main{min-height:60vh}
         </ul>
       </div>
     </section>
+<!-- SEO:FAQ-SITE:START -->
+    <section class="wrap sec faq" aria-labelledby="h-faq-site">
+      <div class="sec-head"><span class="label">QUESTIONS</span><div><h2 id="h-faq-site">常見問題<em>FAQ</em></h2><p>第一次翻開岔頁？先從這裡開始。</p></div></div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-no">Q.01</span><span class="faq-q">岔頁 OFF PAGE 是什麼？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href="./stories.html">角色故事</a>、<a href="#spells">小咒語收藏室</a>，以及讓角色住進 iPhone 主畫面的<a href="#tools">小工具</a>。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.02</span><span class="faq-q">小咒語是什麼？怎麼用？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到<a href="#spells">小咒語收藏室</a>挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.03</span><span class="faq-q">角色故事在哪裡看？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>在<a href="./stories.html">角色故事館</a>。目前有《棲川市》與《NULL》兩本刊物，翻開刊物、選一個角色，就能讀到他們各自的故事。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.04</span><span class="faq-q">可以自己做角色主畫面小工具嗎？要花錢嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>可以。<a href="#tools">小工具頁</a>有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式，也不用申請 API 金鑰。如果只要小工具、不需要和她聊天，用事先寫好的台詞就能<b>完全免費</b>。</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-no">Q.05</span><span class="faq-q">Android 可以用嗎？</span><span class="faq-ic" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>目前只支援 iPhone。小工具是用 Scriptable 做的，而 Scriptable 沒有 Android 版。</p></div>
+        </details>
+      </div>
+    </section>
+<!-- SEO:FAQ-SITE:END -->
   </div>
 
   <!-- ===== 404 ===== -->
@@ -2424,16 +2546,6 @@ main{min-height:60vh}
 <li><a href="#spell-love-court">戀愛法庭開庭⚖️</a>：被告涉嫌長期對PC美色誘惑、不當撒嬌，唯一證人竟是PC本人。（隨機挑戰、戀愛日常）</li>
 <li><a href="#spell-untranslated-whispers">聽不懂的情話🌐</a>：他會很多種語言，偏偏挑你聽不懂的那一種，在耳邊說個不停。（成人向、戀愛日常）</li>
 </ul>
-<h2>常見問題</h2>
-<dl>
-<dt>岔頁 OFF PAGE 是什麼？</dt><dd>岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站，收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及 iPhone 角色主畫面小工具的教學與客製委託。</dd>
-<dt>小咒語是什麼？怎麼用？</dt><dd>小咒語是寫給 AI 角色扮演用的情境提示，每一則設定一個會讓故事轉向的狀況。在岔頁的小咒語收藏室挑一則、按複製，貼進你和角色的對話裡就能使用；連載型的咒語可以一回一回分開複製。</dd>
-<dt>角色主畫面小工具是什麼？Android 可以用嗎？</dt><dd>它是用 Scriptable 做的 iPhone 主畫面小工具：角色會待在主畫面上，依時間、天氣、電量和紀念日換台詞，點進去還能和她互動。目前只支援 iPhone，因為 Scriptable 沒有 Android 版。</dd>
-<dt>可以自己做角色小工具嗎？需要花錢嗎？</dt><dd>可以。岔頁的小工具頁有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式也不用申請 API 金鑰。如果只要小工具、不需要 AI 聊天，用事先寫好的台詞就能完全免費。</dd>
-<dt>戀人入住申請所的委託費用是多少？</dt><dd>基本入住費是 NT$300（固定模板客製化，含角色名稱、稱呼、重要日期、配色、Scriptable JS 檔與圖文安裝教學）。可加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。</dd>
-<dt>委託的交期和付款方式？</dt><dd>基本方案在資料齊全後 7 個工作天交付，有加購為 10–14 個工作天；急件加收 50%。付款方式為 LINE Pay 或銀行轉帳，全額預付，NT$1,000 以上可先付五成。每月限 10 位。</dd>
-<dt>可以委託真人或別人的角色嗎？</dt><dd>只接角色，不接真人（包含真人照片與以真人為原型的改畫）。原創或二創角色都可以；如果是別人家的角色，需要先取得原作者同意，並確認對方能接受的二創範圍。</dd>
-<dt>要怎麼委託？</dt><dd>在岔頁的戀人入住申請所填寫入住申請單，再到 Threads 私訊 @xiaxia_7575。確認內容與報價後付款排單，完成後會先給預覽截圖，確認後交付 JS 檔、素材與安裝教學。</dd>
 </dl>
 </section>
 </noscript>
