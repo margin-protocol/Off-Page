@@ -36,7 +36,7 @@ fmt = lambda d: (d or "").replace("-", ".")
 THREADS = '<a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a>'
 FAQ = [
  ("site", "岔頁 OFF PAGE 是什麼？",
-  "岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及讓角色住進 iPhone 主畫面的<a href=\"tools.html\">小工具</a>。"),
+  "岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及<a href=\"tools.html\">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href=\"tools.html#little-days\">《上次什麼時候？》</a>。"),
  ("site", "小咒語是什麼？怎麼用？",
   "小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到<a href=\"spells.html\">小咒語收藏室</a>挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。"),
  ("site", "角色故事在哪裡看？",
@@ -44,7 +44,11 @@ FAQ = [
  ("site", "可以自己做角色主畫面小工具嗎？要花錢嗎？",
   "可以。<a href=\"tools.html\">小工具頁</a>有一步一步的教學和可以直接複製的指令，用自己的 Claude 帳號請 Claude 幫你做，不用寫程式，也不用申請 API 金鑰。如果只要小工具、不需要和她聊天，用事先寫好的台詞就能<b>完全免費</b>。"),
  ("site", "Android 可以用嗎？",
-  "目前只支援 iPhone。小工具是用 Scriptable 做的，而 Scriptable 沒有 Android 版。"),
+  "角色主畫面小工具目前只支援 iPhone，因為它是用 Scriptable 做的，而 Scriptable 沒有 Android 版。<a href=\"tools.html#little-days\">《上次什麼時候？》</a>則是網頁 APP，iPhone 和 Android 都能用。"),
+ ("site", "《上次什麼時候？》是什麼？要錢嗎？",
+  "<a href=\"tools.html#little-days\">《上次什麼時候？》</a>是一個<b>免費</b>的生活提醒手帳 APP，不用註冊。記下上次換貓砂、洗床單、換牙刷是什麼時候，它會自動算好下一次；也可以上傳自己的角色或 OC，讓角色提醒你、留便條紙給你。打開網址後加到手機主畫面就能使用，台詞可以自己寫，也能複製 APP 準備好的指令，請 AI 用角色的口吻幫你寫。"),
+ ("site", "《上次什麼時候？》的資料存在哪裡？",
+  "全部只存在你自己的手機裡，不會上傳你的紀錄和角色圖片，也不需要帳號。也因為這樣，換手機或清除瀏覽器資料前，請先在 APP 的「設定與備份」匯出備份。"),
  ("order", "委託費用是多少？",
   "基本入住費 <b>NT$300</b>：固定模板客製化，含角色名稱、對你的稱呼、重要日期、配色，以及完整 Scriptable JS 檔與圖文安裝教學。另外可以加購完整台詞包（+NT$400–600）、進階互動功能包（+NT$300）、Q 版角色素材（6 張 +NT$300、12 張 +NT$500）等項目。"),
  ("order", "多久可以拿到？怎麼付款？",
@@ -121,13 +125,21 @@ def page_ld(key):
                     {"@type": "ListItem", "position": i, "url": spell_url(s), "name": s["title"]} for i, s in enumerate(spells, 1)]}),
                 crumbs(home, ("小咒語收藏室", url))]
     if key == "tools":
-        return [web(about={"@type": "Thing", "name": "iPhone Scriptable 角色主畫面小工具"}), crumbs(home, ("角色主畫面小工具", url))]
+        app = {"@type": "WebApplication", "@id": url + "#little-days", "name": "上次什麼時候？",
+               "alternateName": "Little Days", "url": "https://little-days-793.pages.dev/", "applicationCategory": "LifestyleApplication",
+               "operatingSystem": "iOS, Android, Web", "inLanguage": "zh-Hant", "isAccessibleForFree": True,
+               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TWD"},
+               "image": BASE + "assets/little-days/cover.webp", "author": {"@id": PERSON["@id"]},
+               "description": "生活提醒手帳 APP：記錄上次完成某件事的日期並自動算出下一次，可上傳自己的角色當陪伴者、收到便條紙，有小房間、庫存提醒與月度回顧。資料只存在使用者的手機。"}
+        widget = {"@type": "CreativeWork", "@id": url + "#tool-widget", "name": "角色主畫面小工具",
+                  "about": "iPhone Scriptable 角色主畫面小工具", "url": url + "#tool-widget", "author": {"@id": PERSON["@id"]}}
+        return [web(hasPart=[{"@id": widget["@id"]}, {"@id": app["@id"]}]), widget, app, crumbs(home, ("小工具", url))]
     if key == "order":
         return [web(), {"@type": "Service", "@id": url + "#service", "name": "岔頁｜戀人入住申請所",
                         "serviceType": "iPhone Scriptable 角色主畫面小工具客製化", "url": url, "provider": PERSON,
                         "description": "把喜歡的角色做成 iPhone 主畫面小工具：含客製化 Scriptable JS 檔與圖文安裝教學。只接角色，不接真人。",
                         "offers": {"@type": "Offer", "price": "300", "priceCurrency": "TWD", "name": "基本入住費・固定模板客製化", "url": url}},
-                faq_ld("order"), crumbs(home, ("角色主畫面小工具", BASE + "tools.html"), ("戀人入住申請所", url))]
+                faq_ld("order"), crumbs(home, ("小工具", BASE + "tools.html"), ("戀人入住申請所", url))]
     if key == "about":
         return [web("ProfilePage", mainEntity=PERSON), faq_ld("site"), crumbs(home, ("關於 Xia mumu", url))]
 
