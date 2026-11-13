@@ -14,7 +14,7 @@ index.html 是唯一的原稿（首頁＋所有資料）。這支腳本會：
 import json, re, html, datetime, pathlib, shutil
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = "https://xia-mumu.github.io/Off-Page/"
+BASE = "https://margin-protocol.github.io/Off-Page/"
 TODAY = datetime.date.today().isoformat()
 esc = lambda s: html.escape(str(s), quote=True)
 jsesc = lambda s: esc(s).replace("&#x27;", "&#39;")   # 跟網頁裡 JS 的 esc() 輸出一致
@@ -88,7 +88,7 @@ PAGES = {
 AUTHOR = {"@id": BASE + "#xia-mumu"}
 PERSON = {"@type": "Person", "@id": BASE + "#xia-mumu", "name": "Xia mumu", "url": BASE + "about.html",
           "description": "原創角色、世界觀與互動敘事創作者。",
-          "sameAs": ["https://www.threads.com/@xiaxia_7575", "https://github.com/xia-mumu"]}
+          "sameAs": ["https://www.threads.com/@xiaxia_7575", "https://github.com/margin-protocol"]}
 WEBSITE = {"@type": "WebSite", "@id": BASE + "#website", "url": BASE, "name": "岔頁 OFF PAGE",
            "alternateName": ["岔頁", "OFF PAGE", "Off Page by Xia mumu"], "inLanguage": "zh-Hant",
            "description": "Xia mumu 的原創互動敘事作品入口、角色故事與小咒語收藏室。", "publisher": AUTHOR}
@@ -305,7 +305,7 @@ urls = [(BASE + PAGES[k][0], TODAY) for k in PAGES] + [(BASE + "stories.html", T
 # ---------- llms.txt ----------
 L = ["# 岔頁 OFF PAGE", "",
      "> 岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。",
-     "", "- 網址：" + BASE, "- 作者：[Xia mumu](%sabout.html)（Threads：@xiaxia_7575，GitHub：xia-mumu）" % BASE,
+     "", "- 網址：" + BASE, "- 作者：[Xia mumu](%sabout.html)（Threads：@xiaxia_7575，GitHub：margin-protocol）" % BASE,
      "- 語言：繁體中文（台灣）", "- 最後更新：" + TODAY, "",
      "## 世界觀", "", "總覽：[世界觀收藏](%sworlds.html)" % BASE, ""]
 for w in worlds:
