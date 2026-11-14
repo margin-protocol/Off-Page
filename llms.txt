@@ -1,9 +1,9 @@
 # 岔頁 OFF PAGE
 
-> 岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。
+> 岔頁 OFF PAGE 是 MARGIN PROTOCOL 的創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。
 
 - 網址：https://margin-protocol.github.io/Off-Page/
-- 作者：[Xia mumu](https://margin-protocol.github.io/Off-Page/about.html)（Threads：@xiaxia_7575，GitHub：margin-protocol）
+- 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
 - 最後更新：2026-11-14
 
@@ -73,7 +73,7 @@
 ## 常見問題
 
 ### 岔頁 OFF PAGE 是什麼？
-岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及小工具：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP《上次什麼時候？》。
+岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及小工具：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP《上次什麼時候？》。
 
 ### 小咒語是什麼？怎麼用？
 小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到小咒語收藏室挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。

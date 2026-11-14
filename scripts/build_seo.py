@@ -36,7 +36,7 @@ fmt = lambda d: (d or "").replace("-", ".")
 THREADS = '<a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a>'
 FAQ = [
  ("site", "岔頁 OFF PAGE 是什麼？",
-  "岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及<a href=\"tools.html\">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href=\"tools.html#little-days\">《上次什麼時候？》</a>。"),
+  "岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及<a href=\"tools.html\">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href=\"tools.html#little-days\">《上次什麼時候？》</a>。"),
  ("site", "小咒語是什麼？怎麼用？",
   "小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到<a href=\"spells.html\">小咒語收藏室</a>挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。"),
  ("site", "角色故事在哪裡看？",
@@ -70,28 +70,28 @@ WORLD_DESC = {w["id"]: "、".join(w["genres"]) + "。" + w["line"] for w in worl
 
 # ---------- 各分頁的標題與描述（標題要跟 index.html 裡 router 的 TITLES 一致） ----------
 PAGES = {
- "home":   ("",            "岔頁 OFF PAGE｜Xia mumu 的原創互動敘事、角色故事與小咒語",
-            "岔頁 OFF PAGE 是 Xia mumu 的創作入口：原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、可直接複製的 AI 角色扮演小咒語，以及 iPhone Scriptable 角色主畫面小工具教學與客製委託。"),
+ "home":   ("",            "岔頁 OFF PAGE｜原創互動敘事、角色故事與小咒語",
+            "岔頁 OFF PAGE 是 MARGIN PROTOCOL 的創作入口：原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、可直接複製的 AI 角色扮演小咒語，以及 iPhone Scriptable 角色主畫面小工具教學與客製委託。"),
  "worlds": ("worlds.html", "世界觀收藏｜岔頁 OFF PAGE",
-            "Xia mumu 的原創互動敘事世界觀：" + "、".join("%s《%s》" % (w["genres"][0], w["title"]) for w in worlds) + "。每個世界都有自己的入口。"),
+            "岔頁的原創互動敘事世界觀：" + "、".join("%s《%s》" % (w["genres"][0], w["title"]) for w in worlds) + "。每個世界都有自己的入口。"),
  "spells": ("spells.html", "小咒語收藏室｜岔頁 OFF PAGE",
             "小咒語收藏室：%d 則可以直接複製、貼給角色的 AI 角色扮演情境提示，依戀愛日常、吃醋與曖昧、衝突與和解等標籤分類，也能隨機抽一則。" % len(spells)),
  "tools":  ("tools.html",  "小工具｜角色主畫面小工具・上次什麼時候？｜岔頁 OFF PAGE",
             "岔頁的小工具：讓角色住進 iPhone 主畫面的 Scriptable 小工具（介紹與自製教學，範例角色聞止水），以及生活提醒手帳 APP《上次什麼時候？》——記住換貓砂、洗床單這些小事，讓你的角色陪你一起記。"),
  "order":  ("order.html",  "戀人入住申請所｜岔頁 OFF PAGE",
             "岔頁｜戀人入住申請所：iPhone Scriptable 角色主畫面小工具客製委託。基本入住費 NT$300 起，12 組配色可選，可加購台詞包與 Q 版素材；只接角色，不接真人。"),
- "about":  ("about.html",  "關於 Xia mumu｜岔頁 OFF PAGE",
-            "關於 Xia mumu：寫角色、建立世界、設計互動敘事的創作者。岔頁 OFF PAGE 的常見問題也在這裡。"),
+ "about":  ("about.html",  "關於岔頁｜岔頁 OFF PAGE",
+            "關於岔頁：寫角色、建立世界、設計互動敘事的創作收藏室。岔頁 OFF PAGE 的常見問題也在這裡。"),
 }
 
 # ---------- 結構化資料 ----------
-AUTHOR = {"@id": BASE + "#xia-mumu"}
-PERSON = {"@type": "Person", "@id": BASE + "#xia-mumu", "name": "Xia mumu", "url": BASE + "about.html",
-          "description": "原創角色、世界觀與互動敘事創作者。",
+AUTHOR = {"@id": BASE + "#margin-protocol"}
+PERSON = {"@type": "Organization", "@id": BASE + "#margin-protocol", "name": "MARGIN PROTOCOL", "alternateName": "頁邊協定", "url": "https://margin-protocol.github.io/studio/",
+          "description": "獨立創作工作室：文學、互動敘事、創意程式與數位作品。",
           "sameAs": ["https://www.threads.com/@xiaxia_7575", "https://github.com/margin-protocol"]}
 WEBSITE = {"@type": "WebSite", "@id": BASE + "#website", "url": BASE, "name": "岔頁 OFF PAGE",
-           "alternateName": ["岔頁", "OFF PAGE", "Off Page by Xia mumu"], "inLanguage": "zh-Hant",
-           "description": "Xia mumu 的原創互動敘事作品入口、角色故事與小咒語收藏室。", "publisher": AUTHOR}
+           "alternateName": ["岔頁", "OFF PAGE"], "inLanguage": "zh-Hant",
+           "description": "原創互動敘事作品入口、角色故事與小咒語收藏室。", "publisher": AUTHOR}
 
 def faq_ld(group):
     return {"@type": "FAQPage", "inLanguage": "zh-Hant",
@@ -141,7 +141,7 @@ def page_ld(key):
                         "offers": {"@type": "Offer", "price": "300", "priceCurrency": "TWD", "name": "基本入住費・固定模板客製化", "url": url}},
                 faq_ld("order"), crumbs(home, ("小工具", BASE + "tools.html"), ("戀人入住申請所", url))]
     if key == "about":
-        return [web("ProfilePage", mainEntity=PERSON), faq_ld("site"), crumbs(home, ("關於 Xia mumu", url))]
+        return [web("ProfilePage", mainEntity=PERSON), faq_ld("site"), crumbs(home, ("關於岔頁", url))]
 
 def spell_ld(s):
     url = spell_url(s)
@@ -199,7 +199,7 @@ ns += ['</ul>', '<h2>更多頁面</h2>', '<ul>',
        '<li><a href="tools.html">角色主畫面小工具</a>：讓角色住進 iPhone 主畫面的教學。</li>',
        '<li><a href="tools.html#little-days">上次什麼時候？</a>：生活提醒手帳 APP，讓角色陪你記住生活小事。</li>',
        '<li><a href="order.html">戀人入住申請所</a>：角色小工具客製委託。</li>',
-       '<li><a href="about.html">關於 Xia mumu</a>與常見問題。</li>',
+       '<li><a href="about.html">關於岔頁</a>與常見問題。</li>',
        '</ul>', '</section>', '</noscript>', '<!-- SEO:NOSCRIPT:END -->']
 
 def put(text, name, block, anchor):
@@ -304,8 +304,8 @@ urls = [(BASE + PAGES[k][0], TODAY) for k in PAGES] + [(BASE + "stories.html", T
 
 # ---------- llms.txt ----------
 L = ["# 岔頁 OFF PAGE", "",
-     "> 岔頁 OFF PAGE 是創作者 Xia mumu 的個人創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。",
-     "", "- 網址：" + BASE, "- 作者：[Xia mumu](%sabout.html)（Threads：@xiaxia_7575，GitHub：margin-protocol）" % BASE,
+     "> 岔頁 OFF PAGE 是 MARGIN PROTOCOL 的創作入口網站（繁體中文）：收錄原創互動敘事世界觀、角色故事、可直接複製的 AI 角色扮演「小咒語」，以及 iPhone Scriptable 角色主畫面小工具的教學與客製委託服務「戀人入住申請所」。",
+     "", "- 網址：" + BASE, "- 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）",
      "- 語言：繁體中文（台灣）", "- 最後更新：" + TODAY, "",
      "## 世界觀", "", "總覽：[世界觀收藏](%sworlds.html)" % BASE, ""]
 for w in worlds:
