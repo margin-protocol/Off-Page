@@ -14,6 +14,7 @@
 - [NULL（PREDICT）](https://margin-protocol.github.io/null/)：心理科幻、制度懸疑、互動敘事。當所有人都能被預測，只有你無法被分類。
 - [棲川市（Qichuan City）](https://qichuan-city.neocities.org/)：現代都市、角色互動、開放敘事。一座不存在的城市，住著一些有自己生活的人。
 - [第七婚籍管理處（The Seventh Registry）](https://margin-protocol.github.io/seventh-marriage-registry/)：冥府奇幻、婚籍調查、跨世敘事。系統顯示已婚，但原始婚契查無紀錄。
+- [愛的未完成式（The Unfinished Love）](https://margin-protocol.github.io/the-unfinished-love/)：婚姻敘事、離婚協商、AI 互動敘事。離婚協議書已經放在桌上，但還沒有人簽名。
 
 ## 角色故事
 
@@ -74,7 +75,7 @@
 ## 常見問題
 
 ### 岔頁 OFF PAGE 是什麼？
-岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、小咒語收藏室，以及小工具：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP《上次什麼時候？》。
+岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》《愛的未完成式》、角色故事、小咒語收藏室，以及小工具：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP《上次什麼時候？》。
 
 ### 小咒語是什麼？怎麼用？
 小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到小咒語收藏室挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。

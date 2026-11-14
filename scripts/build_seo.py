@@ -36,7 +36,7 @@ fmt = lambda d: (d or "").replace("-", ".")
 THREADS = '<a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">Threads @xiaxia_7575</a>'
 FAQ = [
  ("site", "岔頁 OFF PAGE 是什麼？",
-  "岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及<a href=\"tools.html\">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href=\"tools.html#little-days\">《上次什麼時候？》</a>。"),
+  "岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》《愛的未完成式》</b>、<a href=\"./stories.html\">角色故事</a>、<a href=\"spells.html\">小咒語收藏室</a>，以及<a href=\"tools.html\">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href=\"tools.html#little-days\">《上次什麼時候？》</a>。"),
  ("site", "小咒語是什麼？怎麼用？",
   "小咒語是寫給 AI 角色扮演用的情境提示，每一則都設定一個會讓故事轉向的狀況。到<a href=\"spells.html\">小咒語收藏室</a>挑一則、按複製，貼進你和角色的對話裡就能用；連載型的咒語可以一回一回分開複製。"),
  ("site", "角色故事在哪裡看？",
@@ -71,7 +71,7 @@ WORLD_DESC = {w["id"]: "、".join(w["genres"]) + "。" + w["line"] for w in worl
 # ---------- 各分頁的標題與描述（標題要跟 index.html 裡 router 的 TITLES 一致） ----------
 PAGES = {
  "home":   ("",            "岔頁 OFF PAGE｜原創互動敘事、角色故事與小咒語",
-            "岔頁 OFF PAGE 是 MARGIN PROTOCOL 的創作入口：原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》、角色故事、可直接複製的 AI 角色扮演小咒語，以及 iPhone Scriptable 角色主畫面小工具教學與客製委託。"),
+            "岔頁 OFF PAGE 是 MARGIN PROTOCOL 的創作入口：原創互動敘事世界觀《NULL》《棲川市》《第七婚籍管理處》《愛的未完成式》、角色故事、可直接複製的 AI 角色扮演小咒語，以及 iPhone Scriptable 角色主畫面小工具教學與客製委託。"),
  "worlds": ("worlds.html", "世界觀收藏｜岔頁 OFF PAGE",
             "岔頁的原創互動敘事世界觀：" + "、".join("%s《%s》" % (w["genres"][0], w["title"]) for w in worlds) + "。每個世界都有自己的入口。"),
  "spells": ("spells.html", "小咒語收藏室｜岔頁 OFF PAGE",
