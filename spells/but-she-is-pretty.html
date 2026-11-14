@@ -7,7 +7,7 @@
 <title>可是她真的很好看⋯⋯｜小咒語｜岔頁 OFF PAGE</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="你最近迷上一位女實況主，每天都叫她「老婆」。——AI 角色扮演小咒語，標籤：吃醋與曖昧。可以直接複製，貼進你和角色的對話。">
-<meta name="author" content="Xia mumu">
+<meta name="author" content="MARGIN PROTOCOL">
 <meta name="google-site-verification" content="ECEqgVtPxG6RqdP7Ndf-QWlvXhX_BQ-pRo4hUQkYOXg" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://margin-protocol.github.io/Off-Page/spells/but-she-is-pretty.html">
@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://margin-protocol.github.io/Off-Page/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="岔頁 OFF PAGE — by Xia mumu">
+<meta property="og:image:alt" content="岔頁 OFF PAGE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +38,9 @@
   --ink:#29272B;     /* 墨黑：內文 */
   --violet:#6E6884;  /* 灰紫：標籤、編號（略加深以顧對比） */
   --rule:#E7DBDC;    /* 淺灰粉：分隔線 */
+  --rose:#6E6884;    /* 英文副標：同灰紫 */
+  --gold:#D9AFBC;    /* 細線裝飾：深一點的霧粉 */
+  --gold-ink:#6E6884;/* 小字：同灰紫 */
   --serif-tc:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
   --sans-tc:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
   --serif-en:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;
@@ -166,7 +169,7 @@ main{min-height:60vh}
 .machine-copy p{margin:0 0 26px;color:#4d3a44;max-width:24em}
 .machine-copy .count{font-family:var(--ui);font-size:13px;color:#6B4256;letter-spacing:.06em;margin-top:18px}
 .stage{perspective:1400px}
-.scard{position:relative;background:var(--paper);min-height:300px;padding:34px 34px 28px;box-shadow:0 1px 0 var(--rule),0 22px 40px -26px rgba(94,36,57,.45);transform-origin:left center;display:flex;flex-direction:column;gap:12px}
+.scard{position:relative;background:var(--paper);min-height:300px;padding:34px 34px 28px;box-shadow:0 1px 0 var(--rule),0 22px 40px -26px rgba(119,47,73,.45);transform-origin:left center;display:flex;flex-direction:column;gap:12px}
 .scard::after{content:"";position:absolute;right:0;top:0;width:34px;height:34px;background:linear-gradient(225deg,var(--mist) 50%,#F1DDE2 50%)}
 .scard .pg{font-family:var(--ui);font-size:12px;letter-spacing:.2em;color:var(--violet)}
 .scard h3{margin:0;font-family:var(--serif-tc);font-weight:700;font-size:clamp(24px,2.6vw,30px);line-height:1.45;text-wrap:balance}
@@ -264,7 +267,7 @@ main{min-height:60vh}
 .shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
 .shelf a{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:center;background:var(--paper);border:1px solid var(--rule);padding:22px 24px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
 .shelf a:hover{border-color:var(--berry);transform:translateY(-2px)}
-.shelf a[aria-selected="true"]{border-color:var(--berry);box-shadow:inset 0 -3px 0 var(--berry);background:#fffaf8}
+.shelf a[aria-selected="true"]{border-color:var(--berry);box-shadow:inset 0 -3px 0 var(--berry);background:var(--paper)}
 .shelf a[aria-selected="false"]{opacity:.78}
 .shelf img{width:72px;height:72px;aspect-ratio:1;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--rule)}
 .shelf .no{display:block;font-size:12px;letter-spacing:.14em;color:var(--violet)}
@@ -605,6 +608,143 @@ main{min-height:60vh}
 @media (prefers-reduced-motion:reduce){.faq-item,.faq-ic,.faq-ic::before,.faq-ic::after{transition:none}.faq-item[open] .faq-a{animation:none}}
 @media (max-width:900px){.faq-list{margin-left:0}}
 @media (max-width:560px){.faq-item summary{grid-template-columns:minmax(0,1fr) 28px;gap:12px;padding:18px 12px 18px 0}.faq-no{grid-column:1/-1;padding-left:0;margin-bottom:-8px;font-size:12px}.faq-ic{width:28px;height:28px}.faq-a{padding:0 12px 22px 0}}
+
+/* =========================================================
+   SKIN v2：文學收藏室（深莓墨・舊紙白・乾燥玫瑰・古金）
+   只改外觀，不動任何內容與功能。
+   ========================================================= */
+body{line-height:1.9;text-rendering:optimizeLegibility}
+::selection{background:var(--mist);color:var(--berry-deep)}
+h1,h2,h3{letter-spacing:.03em}
+.site-head{background:color-mix(in srgb,var(--cream) 90%,transparent);border-bottom-color:transparent;box-shadow:0 1px 0 var(--rule),0 3px 0 -2px color-mix(in srgb,var(--gold) 35%,transparent)}
+.logo span{color:var(--gold-ink);font-style:normal;letter-spacing:.18em;font-size:14px;text-transform:uppercase}
+.nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+.label{color:var(--violet)}
+.sec-head>.label::before,.about>.label::before,.detail aside>.label:first-child::before{content:"";display:block;width:28px;height:1px;background:var(--gold);margin-bottom:12px}
+.sec-head h2 em{color:var(--rose);font-style:normal;letter-spacing:.08em}
+.sec{border-bottom:0;position:relative;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent) bottom/100% 1px no-repeat}
+.sec::after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;margin-left:-4px;transform:rotate(45deg);background:var(--cream);border:1px solid var(--gold);opacity:.8}
+.spellbook .sec::after,.sec.faq::after{display:none}
+
+/* 翻頁：每次換頁像翻過一張紙 */
+.view{animation:pagein .55s cubic-bezier(.2,.7,.2,1) both;transform-origin:left center}
+@keyframes pagein{from{opacity:.001;transform:perspective(1600px) rotateY(-7deg) translateX(16px)}to{opacity:1;transform:none}}
+
+/* hero */
+.hero{border-bottom:0;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent) bottom/100% 1px no-repeat;position:relative}
+.hero-mark h1 .ye::after{background:linear-gradient(225deg,var(--cream) 50%,var(--mist) 50%)}
+.hero-mark .en{font-style:normal;color:var(--gold-ink);font-size:18px;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--gold) 55%,transparent);display:inline-block}
+.hero-mark .en b{color:var(--berry)}
+
+/* 按鈕 */
+.btn{letter-spacing:.08em;border-radius:1px}
+.btn:hover{transform:translateY(-1px)}
+.btn.quiet:hover{border-color:var(--rose)}
+
+/* 世界觀：展示櫃 */
+.worlds{gap:32px}
+.wcard{border-color:var(--rule);box-shadow:0 1px 0 rgba(119,47,73,.04),0 18px 34px -30px rgba(119,47,73,.5)}
+.wcard:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(119,47,73,.45)}
+.cover::after{content:"";position:absolute;inset:9px;border:1px solid rgba(255,255,255,.7);opacity:0;transition:opacity .35s;pointer-events:none;z-index:3}
+.wcard:hover .cover::after{opacity:.55}
+.wbody h3 small{color:var(--gold-ink);font-style:normal;letter-spacing:.12em;font-size:13px;text-transform:uppercase;margin-top:2px}
+.genres span{border-color:var(--rule);color:var(--violet);background:color-mix(in srgb,var(--cream) 60%,var(--paper))}
+.wfoot{border-top-color:color-mix(in srgb,var(--gold) 40%,transparent)}
+
+
+/* 角色故事刊物 */
+.vols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.vol{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-left:6px solid var(--berry);min-height:300px;transform-origin:left center;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;box-shadow:0 18px 34px -30px rgba(119,47,73,.5)}
+.vol:hover{transform:perspective(1400px) rotateY(-4deg);box-shadow:14px 22px 40px -26px rgba(119,47,73,.5)}
+.vol-cover{position:relative;overflow:hidden;background:var(--mist)}
+.vol-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:85% center;transition:transform .8s ease}
+.vol:hover .vol-cover img{transform:scale(1.04)}
+.vol-null .vol-cover img{object-position:center 22%}
+.vol-body{display:flex;flex-direction:column;gap:8px;padding:26px 26px 24px;min-width:0}
+.vol-no{font-size:12px;letter-spacing:.22em;color:var(--gold-ink)}
+.vol b{font-size:clamp(32px,4vw,46px);line-height:1.25;color:var(--berry);margin:10px 0 4px}
+.vol-d{font-size:15px;line-height:1.85;color:#4a4650}
+.vol-go{margin-top:auto;padding-top:14px;border-top:1px dashed var(--rule);font-size:14px;color:var(--berry)}
+.vol-null{background:#141416;border-color:#2c2d31;border-left-color:#3A3B40;color:#d6d7db}
+.vol-null b{color:#f2f2f0;letter-spacing:.08em}
+.vol-null .vol-no{color:#9a9ba1}
+.vol-null .vol-d{color:#b4b5ba}
+.vol-null .vol-go{color:#f2f2f0;border-top-color:#34353a}
+.vol-null .vol-cover{background:#000}
+
+/* 小咒語收藏室：維持原本霧粉底 */
+.spellbook .sec{background:none}
+.scard::before{content:"";position:absolute;inset:10px;border:1px solid var(--rule);pointer-events:none}
+.scard::after{z-index:1}
+.room{margin-top:64px;padding-top:26px;border-top:1px solid rgba(107,66,86,.25)}
+.room-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.room-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px}
+.room-t{display:block;font-size:18px;color:var(--ink);margin-bottom:14px;letter-spacing:.06em}
+.room-chips{display:flex;flex-wrap:wrap;gap:8px}
+.room-chips .chip{text-decoration:none;color:var(--ink)}
+.room-new{list-style:none;margin:0;padding:0;border-top:1px solid rgba(107,66,86,.25)}
+.room-new a{display:grid;grid-template-columns:78px minmax(0,1fr);gap:2px 14px;padding:12px 2px;border-bottom:1px solid rgba(107,66,86,.18);text-decoration:none;color:var(--ink);transition:background .2s,padding .2s}
+.room-new a:hover{background:rgba(255,253,249,.5);padding-left:8px}
+.room-new .pg{grid-row:1/3;font-size:12px;letter-spacing:.16em;color:#6B4256;padding-top:4px}
+.room-new .t{font-size:17px}
+.room-new .i{font-size:13.5px;color:#4d3a44;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* 目錄、收藏室卡片、詳細頁 */
+.toc{border-top-color:var(--berry)}
+.toc-more{margin-top:22px}
+
+.tag{background:color-mix(in srgb,var(--mist) 35%,var(--paper))}
+
+.search{border-bottom-color:var(--berry)}
+.sitem{box-shadow:0 14px 28px -28px rgba(119,47,73,.5)}
+.sitem:hover{border-color:var(--mist);box-shadow:0 18px 32px -24px rgba(119,47,73,.45)}
+.sitem .pg{color:var(--gold-ink)}
+.incant{background:var(--paper);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4),0 18px 36px -32px rgba(119,47,73,.5);line-height:2.05}
+
+.faq-list{border-top-color:var(--gold)}
+
+
+/* about */
+.about h1{color:var(--berry);letter-spacing:.02em}
+.about h1 small{display:block;margin-top:16px;font-size:clamp(16px,1.8vw,20px);letter-spacing:.14em;color:var(--gold-ink);line-height:1.6}
+.about h1 small a{color:var(--berry);text-decoration:none;border-bottom:1px solid var(--gold)}
+.about .body p.sign{font-style:normal;color:var(--gold-ink)}
+
+/* 紙條 */
+.slip{background:var(--paper);box-shadow:0 18px 34px -20px rgba(119,47,73,.38)}
+.slip::before{background:var(--mist)}
+.slip::after{content:"";position:absolute;inset:10px;border:1px dashed var(--mist);pointer-events:none}
+
+/* 頁尾：原本的淺色，加上母品牌一行 */
+.parent{grid-column:1/-1;display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-top:10px;padding-top:20px;border-top:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.mp-mark{width:auto;height:22px;flex:none;align-self:center;opacity:.85;transition:opacity .2s}
+.parent:hover .mp-mark{opacity:1}
+.parent span{font-size:13px;letter-spacing:.14em;color:var(--violet)}
+.parent b{font-size:15px;letter-spacing:.28em;color:var(--berry);font-weight:700}
+.parent i{font-style:normal;font-size:13px;color:var(--violet);letter-spacing:.1em}
+.parent:hover b{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+
+/* 戀人入住申請所的價格卡：同色系 */
+.addons th{border-bottom-color:var(--berry)}
+.total{border-top-color:var(--berry)}
+
+@media (max-width:900px){
+  .vols{grid-template-columns:1fr}
+  .room-grid{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .vol{grid-template-columns:120px minmax(0,1fr);min-height:0}
+  .vol-body{padding:18px 18px 16px}
+  .vol b{font-size:30px;margin:4px 0 2px}
+  .vol-d{font-size:14px}
+  .vol:hover{transform:none}
+  .room{margin-top:44px}
+  .room-new a{grid-template-columns:64px minmax(0,1fr)}
+  .worlds{gap:24px}
+  .hero-mark .en{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){.vol:hover,.wcard:hover,.btn:hover{transform:none}}
 </style>
 <!-- SEO:LD:START -->
 <script type="application/ld+json">
@@ -624,11 +764,12 @@ main{min-height:60vh}
    "dateCreated": "2026-11-06",
    "dateModified": "2026-11-06",
    "author": {
-    "@type": "Person",
-    "@id": "https://margin-protocol.github.io/Off-Page/#xia-mumu",
-    "name": "Xia mumu",
-    "url": "https://margin-protocol.github.io/Off-Page/about.html",
-    "description": "原創角色、世界觀與互動敘事創作者。",
+    "@type": "Organization",
+    "@id": "https://margin-protocol.github.io/Off-Page/#margin-protocol",
+    "name": "MARGIN PROTOCOL",
+    "alternateName": "頁邊協定",
+    "url": "https://margin-protocol.github.io/studio/",
+    "description": "獨立創作工作室：文學、互動敘事、創意程式與數位作品。",
     "sameAs": [
      "https://www.threads.com/@xiaxia_7575",
      "https://github.com/margin-protocol"
@@ -1555,7 +1696,7 @@ main{min-height:60vh}
       <div class="hero-mark">
         <span class="label pg">PAGE 000 / HOME</span>
         <h1>岔<span class="ye">頁</span></h1>
-        <div class="en"><b>OFF PAGE</b> — by Xia mumu</div>
+        <div class="en"><b>OFF PAGE</b></div>
       </div>
       <div class="hero-text">
         <h2>每一次翻頁，都是另一種可能。</h2>
@@ -1585,6 +1726,39 @@ main{min-height:60vh}
       <div class="worlds" id="home-worlds"></div>
     </section>
 
+    <section class="wrap sec" aria-labelledby="h-volumes">
+      <div class="sec-head">
+        <span class="label">PAGE 001½ / STORIES</span>
+        <div class="side">
+          <div>
+            <h2 id="h-volumes">角色故事刊物<em>Story Publications</em></h2>
+            <p>兩本刊物，兩種截然不同的世界。翻開一本，選一個角色，讀他們各自的故事。</p>
+          </div>
+          <a class="textlink" href="./stories.html#/">進入角色故事館 →</a>
+        </div>
+      </div>
+      <div class="vols">
+        <a class="vol" href="./stories.html#/volume/qichuan">
+          <span class="vol-cover"><img src="images/qichuan-cover.webp" alt="《棲川市》刊物封面" loading="lazy"></span>
+          <span class="vol-body">
+            <span class="vol-no">VOL. 01 / QICHUAN CITY</span>
+            <b>棲川市</b>
+            <span class="vol-d">那些生活在同一座城市裡的人，與尚未寫完的故事。</span>
+            <span class="vol-go">翻開刊物 →</span>
+          </span>
+        </a>
+        <a class="vol vol-null" href="./stories.html#/volume/null">
+          <span class="vol-cover"><img src="images/null-cover.webp" alt="《NULL》刊物封面" loading="lazy"></span>
+          <span class="vol-body">
+            <span class="vol-no">VOL. 02 / PREDICT</span>
+            <b>NULL</b>
+            <span class="vol-d">風險不等於犯罪，預測不等於事實。翻閱那些無法被評級定義的人。</span>
+            <span class="vol-go">開啟檔案 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
     <div class="spellbook" id="draw">
       <section class="wrap sec" aria-labelledby="h-machine">
         <div class="sec-head">
@@ -1605,6 +1779,22 @@ main{min-height:60vh}
             </article>
           </div>
         </div>
+        <div class="room">
+          <div class="room-head">
+            <span class="label">THE SPELL ROOM / 收藏室目錄</span>
+            <a class="textlink" href="spells.html">走進小咒語收藏室 →</a>
+          </div>
+          <div class="room-grid">
+            <div>
+              <b class="room-t">依分類翻找</b>
+              <div class="room-chips" id="room-chips"></div>
+            </div>
+            <div>
+              <b class="room-t">最新收錄</b>
+              <ol class="room-new" id="room-new"></ol>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -1614,6 +1804,7 @@ main{min-height:60vh}
         <div><h2 id="h-recent">最近更新<em>Recently Added</em></h2></div>
       </div>
       <ol class="toc" id="recent"></ol>
+      <button class="textlink toc-more" type="button" id="recent-more" hidden>展開全部更新紀錄 ↓</button>
     </section>
 
     <section class="wrap slip-sec" aria-labelledby="h-slip">
@@ -2206,7 +2397,7 @@ main{min-height:60vh}
         </div>
       </div>
 
-      <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是 Xia mumu 的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
+      <p class="fine">聊天頁的連結是私人的：每個人都要用自己的帳號做一份，用別人的連結會打不開，聊天紀錄也不會是你的。想加功能（摸頭有反應、她主動傳訊息），一樣直接跟 Claude 說。示範裡的聞止水是岔頁的原創角色（出自棲川市），立繪與台詞請勿另作他用。</p>
     </section>
 
     </div>
@@ -2776,14 +2967,14 @@ main{min-height:60vh}
     <section class="wrap about" aria-labelledby="h-about">
       <span class="label">PAGE 004 / ABOUT</span>
       <div class="body">
-        <h1 id="h-about"><i>Hello,</i> I'm Xia mumu.</h1>
+        <h1 id="h-about">Off-Page<small>A project of <a href="https://margin-protocol.github.io/studio/" target="_blank" rel="noopener">MARGIN PROTOCOL</a>.</small></h1>
         <p>喜歡創造不存在的人，也喜歡思考真實世界裡那些沒有標準答案的問題。</p>
         <p>我寫角色、建立世界、設計互動敘事，偶爾也寫一些讓故事突然偏離原本方向的小咒語。</p>
         <p>比起替故事決定結局，我更喜歡看不同的人如何走向不同的可能。</p>
         <p>這裡是我的創作收藏室。歡迎隨意翻閱。</p>
-        <p class="sign">— Xia mumu</p>
         <ul class="links">
           <li><span>THREADS</span><a href="https://www.threads.com/@xiaxia_7575" target="_blank" rel="noopener">@xiaxia_7575 ↗</a></li>
+          <li><span>STUDIO</span><a href="https://margin-protocol.github.io/studio/" target="_blank" rel="noopener">MARGIN PROTOCOL ↗</a></li>
           <li><span>GITHUB</span><a href="https://github.com/margin-protocol" target="_blank" rel="noopener">github.com/margin-protocol ↗</a></li>
           <li><span>NULL</span><a href="https://margin-protocol.github.io/null/" target="_blank" rel="noopener">margin-protocol.github.io/null ↗</a></li>
           <li><span>棲川市</span><a href="https://qichuan-city.neocities.org/" target="_blank" rel="noopener">qichuan-city.neocities.org ↗</a></li>
@@ -2796,7 +2987,7 @@ main{min-height:60vh}
       <div class="faq-list">
         <details class="faq-item" open>
           <summary><span class="faq-no">Q.01</span><span class="faq-q">岔頁 OFF PAGE 是什麼？</span><span class="faq-ic" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>岔頁是 Xia mumu 的個人創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href="./stories.html">角色故事</a>、<a href="spells.html">小咒語收藏室</a>，以及<a href="tools.html">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href="tools.html#little-days">《上次什麼時候？》</a>。</p></div>
+          <div class="faq-a"><p>岔頁是 MARGIN PROTOCOL 的創作收藏室。這裡收錄原創互動敘事世界觀<b>《NULL》《棲川市》《第七婚籍管理處》</b>、<a href="./stories.html">角色故事</a>、<a href="spells.html">小咒語收藏室</a>，以及<a href="tools.html">小工具</a>：讓角色住進 iPhone 主畫面的小工具，和讓角色陪你記住生活小事的手帳 APP<a href="tools.html#little-days">《上次什麼時候？》</a>。</p></div>
         </details>
         <details class="faq-item">
           <summary><span class="faq-no">Q.02</span><span class="faq-q">小咒語是什麼？怎麼用？</span><span class="faq-ic" aria-hidden="true"></span></summary>
@@ -2844,7 +3035,7 @@ main{min-height:60vh}
   <div class="wrap">
     <div>
       <div class="brand">岔頁<span>OFF PAGE</span></div>
-      <p>An independent creative archive by Xia mumu.</p>
+      <p>An independent creative archive.</p>
     </div>
     <nav aria-label="頁尾連結">
       <a href="worlds.html">WORLDS</a>
@@ -2854,6 +3045,7 @@ main{min-height:60vh}
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCM-JC5M2bLHIBaQpkWS6924nHlA_H_S5h4HKzfOp8E_5fxw/viewform" target="_blank" rel="noopener">留紙條 ✉</a>
       <a href="https://github.com/margin-protocol" target="_blank" rel="noopener">GITHUB ↗</a>
     </nav>
+    <a class="parent" href="https://margin-protocol.github.io/studio/" target="_blank" rel="noopener"><svg class="mp-mark" viewBox="70 30 420 765" aria-hidden="true"><polygon points="262,320 335,282 335,730 262,705" fill="#A99AB8" fill-opacity=".35"/><polygon points="335,276 472,200 472,780 335,730" fill="#A99AB8" fill-opacity=".85"/><polygon points="85,175 335,45 335,282 262,320 262,705 85,770" fill="#19191F"/></svg><span>A project of</span> <b>MARGIN PROTOCOL</b> <i>頁邊協定 ↗</i></a>
     <div class="egg" title="">Every page leads somewhere else. ／ 如果你讀到這行，代表你也習慣翻到最後一頁。</div>
   </div>
 </footer>
@@ -2941,6 +3133,13 @@ main{min-height:60vh}
       <span class="ttl">${esc(u.title)}<small>${esc(u.note||'')}</small></span>
       ${u.link?`<a href="${esc(u.link)}"${ext?' target="_blank" rel="noopener"':''}>${ext?'前往 ↗':'翻到這頁 →'}</a>`:'<span></span>'}</li>`;
   }).join('');
+  (function(){   // 首頁只先攤開最近 6 筆，其餘收在「展開全部」裡（紀錄不刪）
+    const items = [...document.querySelectorAll('#recent > li')], btn = $('#recent-more'), N = 6;
+    if (items.length <= N) return;
+    items.slice(N).forEach(li=>li.hidden = true);
+    btn.hidden = false;
+    btn.addEventListener('click', ()=>{ items.forEach(li=>li.hidden = false); btn.hidden = true; });
+  })();
 
 
   /* ---------- 公告橫幅＋小鈴鐺 ---------- */
@@ -3061,6 +3260,23 @@ main{min-height:60vh}
       : `<div class="empty" style="grid-column:1/-1"><b>這一頁還是空白的。</b>換個關鍵字，或清除篩選再翻翻看。</div>`;
   }
   renderLib();
+
+  /* ---------- 首頁：收藏室目錄（分類捷徑＋最新收錄） ---------- */
+  function pickTag(t){
+    chosen.clear(); chosen.add(t); $('#q').value='';
+    document.querySelectorAll('#chips .chip').forEach(c=>c.setAttribute('aria-pressed', c.dataset.tag===t));
+    renderLib();
+  }
+  $('#room-chips').innerHTML = ALL_TAGS.map(t=>{
+    const n = SPELLS.filter(s=>s.tags.includes(t)).length;
+    return n ? `<a class="chip" href="spells.html" data-room-tag="${esc(t)}">${esc(t)}<span class="n">${n}</span></a>` : '';
+  }).join('');
+  $('#room-chips').addEventListener('click', e=>{   // 先選好分類，再由全站路由切到收藏室
+    const a = e.target.closest('[data-room-tag]'); if(a) pickTag(a.dataset.roomTag);
+  });
+  const byNew = SPELLS.slice().sort((a,b)=>String(b.created||'').localeCompare(String(a.created||'')));
+  $('#room-new').innerHTML = byNew.slice(0,4).map(s=>`<li><a href="spells/${esc(s.id)}.html"><span class="pg">${no(s)}</span><span class="t">${esc(s.title)}</span><span class="i">${esc(s.intro)}</span></a></li>`).join('');
+
   const goRandom = ()=>{ const s=pick(); if(s) location.assign(spellUrl(s.id)); };
   $('#lib-random').addEventListener('click', goRandom);
 
@@ -3217,7 +3433,7 @@ main{min-height:60vh}
   /* ---------- router：每一頁都有自己的網址（舊的 #tools、#spell-xxx 連結也照樣能用） ---------- */
   const views = [...document.querySelectorAll('.view')];
   const PAGES = {home:'./', worlds:'worlds.html', spells:'spells.html', tools:'tools.html', order:'order.html', about:'about.html'};
-  const TITLES = {home:'岔頁 OFF PAGE｜Xia mumu 的原創互動敘事、角色故事與小咒語', worlds:'世界觀收藏｜岔頁 OFF PAGE', spells:'小咒語收藏室｜岔頁 OFF PAGE', tools:'小工具｜角色主畫面小工具・上次什麼時候？｜岔頁 OFF PAGE', order:'戀人入住申請所｜岔頁 OFF PAGE', about:'關於 Xia mumu｜岔頁 OFF PAGE', lost:'找不到這一頁｜岔頁 OFF PAGE'};
+  const TITLES = {home:'岔頁 OFF PAGE｜原創互動敘事、角色故事與小咒語', worlds:'世界觀收藏｜岔頁 OFF PAGE', spells:'小咒語收藏室｜岔頁 OFF PAGE', tools:'小工具｜角色主畫面小工具・上次什麼時候？｜岔頁 OFF PAGE', order:'戀人入住申請所｜岔頁 OFF PAGE', about:'關於岔頁｜岔頁 OFF PAGE', lost:'找不到這一頁｜岔頁 OFF PAGE'};
   const ON_SPELL_PAGE = document.documentElement.dataset.route === 'spell';
   const isRouteHash = h => !!PAGES[h] || h==='draw' || h==='lost' || h.startsWith('spell-');
   function resolve(href){
