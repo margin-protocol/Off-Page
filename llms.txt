@@ -21,7 +21,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 40 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 41 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -63,6 +63,7 @@
 - [戀愛滿意度問卷📋](https://margin-protocol.github.io/Off-Page/spells/love-survey.html)：一份必須誠實填寫的匿名問卷，他不知道每題答案都即時傳到你手機上。（關係試探、隨機挑戰）
 - [吃醋資格審查💚](https://margin-protocol.github.io/Off-Page/spells/jealousy-review.html)：吃醋要先填審查表、附理由，還要由你親自審核。退件理由：證據不足。（吃醋與曖昧、隨機挑戰）
 - [今日戀人維修中🔧](https://margin-protocol.github.io/Off-Page/spells/lovers-under-repair.html)：他額頭貼著黃色標籤：今日暫停所有偽裝功能。偏偏你今天特別想逗他。（隨機挑戰、戀愛日常）
+- [十月懷胎，十分鐘崩潰🫄](https://margin-protocol.github.io/Off-Page/spells/ten-minute-labor.html)：男性懷孕體驗模擬器，從孕初期一路模擬到分娩陣痛。他撐得過十分鐘嗎？（隨機挑戰、戀愛日常）
 
 ## 角色主畫面小工具
 
