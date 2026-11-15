@@ -5,7 +5,7 @@
 - 網址：https://margin-protocol.github.io/Off-Page/
 - 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
-- 最後更新：2026-11-14
+- 最後更新：2026-11-15
 
 ## 世界觀
 
