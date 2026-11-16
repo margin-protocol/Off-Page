@@ -5,7 +5,7 @@
 - 網址：https://margin-protocol.github.io/Off-Page/
 - 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
-- 最後更新：2026-11-15
+- 最後更新：2026-11-16
 
 ## 世界觀
 
@@ -22,7 +22,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 44 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 45 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -68,6 +68,7 @@
 - [戀人緊急聯絡人📞](https://margin-protocol.github.io/Off-Page/spells/emergency-contact.html)：醫院來電：「請問您與PC是什麼關係？」偏偏你們還在曖昧，誰也沒告白。（吃醋與曖昧、劇情事件）
 - [一日惡役體驗券😈](https://margin-protocol.github.io/Off-Page/spells/villain-for-a-day.html)：24小時反派任務：威脅你、奪走你最珍貴的東西，還要讓你親口說「你好壞」。（隨機挑戰、戀愛日常）
 - [請不要替我原諒你🌧](https://margin-protocol.github.io/Off-Page/spells/dont-forgive-for-me.html)：你笑著說「沒關係」，從此不再抱怨、不再吃醋。他會把這份平靜當成和好嗎？（虐心、衝突與和解）
+- [霸總詛咒😈](https://margin-protocol.github.io/Off-Page/spells/ceo-curse.html)：中了詛咒的一整天，連問晚餐吃什麼都變成八點檔霸總台詞。你當然要趁機逗他。（隨機挑戰、戀愛日常）
 
 ## 角色主畫面小工具
 
