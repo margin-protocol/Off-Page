@@ -162,7 +162,10 @@ main{min-height:60vh}
 .enter{font-family:var(--sans-tc);font-weight:500;font-size:14px;color:var(--berry);text-decoration:none;background-image:linear-gradient(var(--berry),var(--berry));background-size:0 1px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .3s;padding-bottom:2px}
 .enter:hover,.enter:focus-visible{background-size:100% 1px}
 .enter.off{color:var(--violet)}
-.links-w{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:flex-end}
+.links-w{display:flex;gap:8px 12px;align-items:center;justify-content:flex-end}
+.links-w:has(.play){flex:1 1 100%;justify-content:space-between}
+.links-w:has(.play) .enter{min-width:0;text-wrap:balance}
+.links-w .play{flex:none;white-space:nowrap}
 .play{font-family:var(--sans-tc);font-weight:700;font-size:14px;text-decoration:none;color:var(--paper);background:var(--berry);padding:5px 14px;border-radius:2px;transition:background .2s}
 .play:hover{background:var(--berry-deep)}
 .ext-note{font-size:12px;color:var(--violet);margin:18px 0 0}
