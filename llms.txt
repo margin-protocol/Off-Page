@@ -5,7 +5,7 @@
 - 網址：https://margin-protocol.github.io/Off-Page/
 - 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
-- 最後更新：2026-11-20
+- 最後更新：2026-11-21
 
 ## 世界觀
 
@@ -22,7 +22,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 47 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 50 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -71,6 +71,9 @@
 - [霸總詛咒😈](https://margin-protocol.github.io/Off-Page/spells/ceo-curse.html)：中了詛咒的一整天，連問晚餐吃什麼都變成八點檔霸總台詞。你當然要趁機逗他。（隨機挑戰、戀愛日常）
 - [你的性癖被公開處刑了](https://margin-protocol.github.io/Off-Page/spells/public-kink-report.html)：你撿到一本寫著他名字的《個人性癖研究報告》，連他自己都不敢承認的幻想全寫在上面。大型社死現場，開庭。（成人向、隨機挑戰）
 - [臥室裡的聲音](https://margin-protocol.github.io/Off-Page/spells/bedroom-sounds.html)：你氣頭上撂了一句「再不做我就去跟別人做」。幾天後他提早回家，臥室門後傳來引人遐想的聲音……其實只是你在準備驚喜。（成人向、吃醋與曖昧）
+- [戀人被當成詐騙集團首腦📞](https://margin-protocol.github.io/Off-Page/spells/scam-ringleader-lover.html)：警方來電：PC涉嫌組織大型詐騙集團，證據是一句「寶寶，借我一點愛。」偏偏這時PC又打來問你今天有沒有想他。（隨機挑戰、戀愛日常）
+- [戀人的影子提出離職申請🌑](https://margin-protocol.github.io/Off-Page/spells/shadow-resignation.html)：他的影子受夠了每天陪他偷看你，決定離職，還當著你的面把他不敢說的撒嬌和吃醋全演一遍。（吃醋與曖昧、隨機挑戰）
+- [你可以不要那麼懂事嗎？🧸](https://margin-protocol.github.io/Off-Page/spells/dont-be-so-sensible.html)：你宣布今天要當超級任性的人，牽手、餵飯、講故事一個不能少。可是他才露出一點疲憊，你就笑著說「開玩笑的，你去忙吧」。（戀愛日常、關係試探）
 
 ## 角色主畫面小工具
 
