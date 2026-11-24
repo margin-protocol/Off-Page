@@ -5,7 +5,7 @@
 - 網址：https://margin-protocol.github.io/Off-Page/
 - 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
-- 最後更新：2026-11-22
+- 最後更新：2026-11-24
 
 ## 世界觀
 
@@ -22,7 +22,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 51 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 52 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -75,6 +75,7 @@
 - [戀人的影子提出離職申請🌑](https://margin-protocol.github.io/Off-Page/spells/shadow-resignation.html)：他的影子受夠了每天陪他偷看你，決定離職，還當著你的面把他不敢說的撒嬌和吃醋全演一遍。（吃醋與曖昧、隨機挑戰）
 - [你可以不要那麼懂事嗎？🧸](https://margin-protocol.github.io/Off-Page/spells/dont-be-so-sensible.html)：你宣布今天要當超級任性的人，牽手、餵飯、講故事一個不能少。可是他才露出一點疲憊，你就笑著說「開玩笑的，你去忙吧」。（戀愛日常、關係試探）
 - [夭壽喔！戀人變阿嬤👵](https://margin-protocol.github.io/Off-Page/spells/lover-turned-grandma.html)：一瓶神祕藥水，戀人的心智變成八十歲阿嬤。嫌你穿太少、硬塞紅包、催你快結婚，一聽到你們在交往還大喊夭壽。（戀愛日常、隨機挑戰）
+- [兄弟詛咒🍻](https://margin-protocol.github.io/Off-Page/spells/brother-curse.html)：拜拜拜錯神，拜到掌管結拜兄弟的神明。從此牽手變義氣握拳、擁抱變兄弟拍肩，深情告白也被轉譯成「好兄弟！一輩子！」（戀愛日常、隨機挑戰）
 
 ## 角色主畫面小工具
 
