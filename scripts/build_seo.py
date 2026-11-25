@@ -16,6 +16,7 @@ index.html 仍是唯一的內容原稿（首頁＋所有資料）；樣式和程
      檔案一改，版本號就跟著變，瀏覽器才會抓新的（不用手動改）
   3. 從 index.html 複製出各分頁：worlds.html、spells.html、tools.html、order.html、about.html
   4. 每則公開的小咒語產生一頁：spells/<id>.html
+  4b. stories.html 補上結構化資料和 noscript 故事目錄（故事照舊直接改 stories.html）
   5. 產生 sitemap.xml 和 llms.txt
 
 改完之後，在 repo 根目錄執行：
@@ -312,6 +313,55 @@ if sdir.exists():
 sdir.mkdir()
 for s in spells:
     (sdir / ("%s.html" % s["id"])).write_text(derive(spell=s), encoding="utf-8")
+
+# ---------- stories.html：補結構化資料和 noscript 目錄（故事內容本身照舊改 stories.html） ----------
+def stories_seo():
+    p = ROOT / "stories.html"
+    page = p.read_text(encoding="utf-8")
+    dec = json.JSONDecoder()
+    chars = {}
+    for m in re.finditer(r'\{id:"(\w+)",name:"([^"]*)",desc:"([^"]*)"[^\n]*?stories:', page):
+        chars[m.group(1)] = (m.group(2), m.group(3), dec.raw_decode(page, m.end())[0])
+    vols = json.loads(re.sub(r'([{,])(\w+):', r'\1"\2":', re.search(r'const volumes=(\{.*?\});\n', page).group(1)))
+    url = BASE + "stories.html"
+    org = {"@id": BASE + "#margin-protocol"}
+    parts, lis = [], []
+    for vk, v in vols.items():
+        items = []
+        for cid in v["ids"]:
+            if cid not in chars:
+                continue
+            name, desc, sts = chars[cid]
+            for st in sts:
+                parts.append({"@type": "CreativeWork", "name": st["title"], "genre": "角色短篇",
+                              "abstract": st.get("prompt", ""), "character": {"@type": "Person", "name": name},
+                              "datePublished": st.get("date"), "inLanguage": "zh-Hant", "author": org})
+            titles = "、".join("《%s》" % esc(st["title"]) for st in sts)
+            items.append("<li>%s（%s）%s</li>" % (esc(name), esc(desc), "：" + titles if titles else ""))
+        lis.append("<h2>%s %s</h2><p>%s</p><ul>%s</ul>" % (esc(v["name"]), esc(v["en"]), esc(v["desc"]), "".join(items)))
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": url + "#page", "url": url, "name": "角色故事｜岔頁 OFF PAGE",
+         "description": "岔頁角色故事館：收錄原創世界觀《棲川市》與《NULL》的角色短篇。", "inLanguage": "zh-Hant",
+         "isPartOf": {"@id": BASE + "#website"}, "publisher": org, "hasPart": parts},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "岔頁 OFF PAGE", "item": BASE},
+            {"@type": "ListItem", "position": 2, "name": "角色故事", "item": url}]}]}
+    head = ('<!-- SEO:HEAD:START -->\n'
+            '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">\n'
+            '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            '<meta property="og:image:alt" content="岔頁 OFF PAGE">\n<meta name="theme-color" content="#F7F3EC">\n'
+            '<link rel="alternate" type="text/plain" href="%sllms.txt" title="llms.txt">\n'
+            '<script type="application/ld+json">%s</script>\n<!-- SEO:HEAD:END -->' % (BASE, json.dumps(ld, ensure_ascii=False)))
+    nos = ('<!-- SEO:NOSCRIPT:START --><noscript><div class="wrap"><h1>角色故事館</h1>%s</div></noscript><!-- SEO:NOSCRIPT:END -->'
+           % "".join(lis))
+    page = re.sub(r'\n?<!-- SEO:HEAD:START -->.*?<!-- SEO:HEAD:END -->', "", page, flags=re.S)
+    page = re.sub(r'<!-- SEO:NOSCRIPT:START -->.*?<!-- SEO:NOSCRIPT:END -->', "", page, flags=re.S)
+    page, k1 = re.subn(r'(<meta name="twitter:card" content="[^"]*">)', lambda m: m.group(1) + "\n" + head, page, count=1)
+    page, k2 = re.subn(r'(<main class="wrap" id="app"></main>)', lambda m: m.group(1) + nos, page, count=1)
+    assert k1 == 1 and k2 == 1, "stories.html 的 twitter:card 或 <main id=app> 找不到"
+    p.write_text(page, encoding="utf-8")
+
+stories_seo()
 
 # ---------- sitemap.xml ----------
 urls = [(BASE + PAGES[k][0], TODAY) for k in PAGES] + [(BASE + "stories.html", TODAY)] + \
