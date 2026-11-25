@@ -3744,10 +3744,12 @@ h1,h2,h3{letter-spacing:.03em}
       });
       const rights = f.querySelector('[data-for2="o-rights"]'); rights.hidden = v('o-imgs') !== '我自己準備';
     }
+    // 額外 Q 版表情的張數：價格和申請單都用同一個數字（1–20 張）
+    const extraN = () => Math.max(1, Math.min(20, parseInt(v('o-extra')) || 1));
     function price(){
       let lo = 300, hi = 300;
       addons.forEach(b=>{ if(!b.checked || b.dataset.rush) return; let p=+b.dataset.price, m=+(b.dataset.max||b.dataset.price);
-        if (b.value==='額外 Q 版表情'){ const n=Math.max(1,Math.min(20,parseInt(v('o-extra'))||1)); p*=n; m*=n; }
+        if (b.value==='額外 Q 版表情'){ const n=extraN(); p*=n; m*=n; }
         lo+=p; hi+=m; });
       if (v('o-imgs').includes('6 張')){ lo+=300; hi+=300; }
       if (v('o-imgs').includes('12 張')){ lo+=500; hi+=500; }
@@ -3756,7 +3758,7 @@ h1,h2,h3{letter-spacing:.03em}
     }
     function build(){
       const sec = (t, rows) => { rows = rows.filter(Boolean); return rows.length ? '■ '+t+'\n'+rows.join('\n') : ''; };
-      const picked = addons.filter(b=>b.checked).map(b=> b.value==='額外 Q 版表情' ? `☑ 額外 Q 版表情 × ${Math.max(1,parseInt(v('o-extra'))||1)}` : '☑ '+b.value);
+      const picked = addons.filter(b=>b.checked).map(b=> b.value==='額外 Q 版表情' ? `☑ 額外 Q 版表情 × ${extraN()}` : '☑ '+b.value);
       const own = v('o-imgs')==='我自己準備';
       return ['【戀人入住申請單】',
         sec('聯絡', [`稱呼：${v('o-name')||'（未填）'}`, `聯絡方式：${v('o-contact')||'（未填）'}`]),
