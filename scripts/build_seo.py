@@ -1,17 +1,28 @@
 #!/usr/bin/env python3
 """岔頁的 SEO／AEO 產生器。
 
-index.html 是唯一的原稿（首頁＋所有資料）。這支腳本會：
-  1. 更新 index.html 裡自動產生的區塊（結構化資料、常見問題、小咒語清單、noscript）
-  2. 從 index.html 複製出各分頁：worlds.html、spells.html、tools.html、order.html、about.html
-  3. 每則公開的小咒語產生一頁：spells/<id>.html
-  4. 產生 sitemap.xml 和 llms.txt
+要改什麼，就改哪個檔案：
+  改樣式（顏色、字體、版面）→ assets/site.css
+  改程式（按鈕、篩選、切換分頁、申請單計算）→ assets/site.js
+  改內容（咒語、作品、公告、頁面上的文字）→ index.html
+  改常見問題 → 這支腳本裡的 FAQ
 
-新增或修改咒語、作品、常見問題之後，在 repo 根目錄執行：
+index.html 仍是唯一的內容原稿（首頁＋所有資料）；樣式和程式抽成兩個共用檔，
+所有頁面都連到同一份，瀏覽器看過一次就會記住，不用每頁重新下載。
+
+這支腳本會：
+  1. 更新 index.html 裡自動產生的區塊（結構化資料、常見問題、小咒語清單、noscript）
+  2. 依 assets/site.css、assets/site.js 的內容算出版本號，寫進網址的 ?v=…，
+     檔案一改，版本號就跟著變，瀏覽器才會抓新的（不用手動改）
+  3. 從 index.html 複製出各分頁：worlds.html、spells.html、tools.html、order.html、about.html
+  4. 每則公開的小咒語產生一頁：spells/<id>.html
+  5. 產生 sitemap.xml 和 llms.txt
+
+改完之後，在 repo 根目錄執行：
     python3 scripts/build_seo.py
 （推到 GitHub 後，GitHub Actions 也會自動幫你跑。）
 """
-import json, re, html, datetime, pathlib, shutil
+import json, re, html, datetime, pathlib, shutil, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://margin-protocol.github.io/Off-Page/"
@@ -218,6 +229,14 @@ out = put(out, "FAQ-SITE", faq_section("site", "h-faq-site", "常見問題", "�
 out, n = re.subn(r'<div class="sgrid" id="sgrid">.*?</div><!-- /sgrid -->|<div class="sgrid" id="sgrid"></div>',
                  lambda m: '<div class="sgrid" id="sgrid">' + sgrid_html() + '\n      </div><!-- /sgrid -->', out, count=1, flags=re.S)
 assert n == 1, "sgrid"
+# ---------- 共用的樣式與程式：網址加上內容版本號 ?v=… ----------
+def asset_version(name):
+    return hashlib.sha256((ROOT / "assets" / name).read_bytes()).hexdigest()[:10]
+
+for name, attr in (("site.css", "href"), ("site.js", "src")):
+    out, n = re.subn(r'%s="assets/%s(?:\?v=[^"]*)?"' % (attr, re.escape(name)),
+                     lambda m, name=name, attr=attr: '%s="assets/%s?v=%s"' % (attr, name, asset_version(name)), out)
+    assert n == 1, "index.html 裡要有一個連到 assets/%s 的標籤" % name
 (ROOT / "index.html").write_text(out, encoding="utf-8")
 
 # ---------- 從 index.html 複製出各分頁 ----------
