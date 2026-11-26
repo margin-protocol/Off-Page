@@ -22,7 +22,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 56 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 58 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -80,6 +80,8 @@
 - [我的戀人正在特價中🏷️](https://margin-protocol.github.io/Off-Page/spells/lover-on-sale.html)：陪你逛街時撞見一間賣他等身複製人的店：高冷版、撒嬌版、百依百順版，還有不會吃醋的特別版。買二送一、原版可折抵購物金，他得努力推銷自己才不會被舊換新。（吃醋與曖昧、隨機挑戰）
 - [你的死對頭很會帶小孩🍼](https://margin-protocol.github.io/Off-Page/spells/rival-good-with-kids.html)：你們一起撿到一隻幼貓，牠偏偏最愛他的死對頭，對方還超會照顧、被你大力稱讚。他是偷偷練育兒，還是跟一隻幼貓認真計較？（吃醋與曖昧、戀愛日常）
 - [禁止使用形容詞💬](https://margin-protocol.github.io/Off-Page/spells/no-adjectives.html)：用十句話說有多喜歡你，但不准用形容詞，也不准說愛、喜歡、想念。每違規一次服務鈴就響一次，他會在第幾聲開始崩潰？（戀愛日常、隨機挑戰）
+- [我家寵物是雙面間諜🐾](https://margin-protocol.github.io/Off-Page/spells/pet-double-agent.html)：你養的寵物竟然會說人話，而且只有他聽得懂。牠收零食當保密費、賣你的獨家情報，轉頭又跑去跟你告狀。他要怎麼跟這位毫無職業道德的雙面間諜鬥智，最後又簽下什麼荒謬的家庭和平協議？（戀愛日常、隨機挑戰）
+- [今天的我，值得你喜歡嗎？🎞️](https://margin-protocol.github.io/Off-Page/spells/movie-of-your-past.html)：你們走進一間神祕電影院，銀幕上播的是他遇見你以前的人生：不堪的往事、犯過的錯，還有從沒對誰坦白的脆弱。燈亮之後，他遲遲不敢轉頭看你。（虐心、關係試探）
 
 ## 角色主畫面小工具
 
