@@ -5,7 +5,7 @@
 - 網址：https://margin-protocol.github.io/Off-Page/
 - 出品：[MARGIN PROTOCOL 頁邊協定](https://margin-protocol.github.io/studio/)（Threads：@xiaxia_7575，GitHub：margin-protocol）
 - 語言：繁體中文（台灣）
-- 最後更新：2026-11-25
+- 最後更新：2026-11-26
 
 ## 世界觀
 
@@ -22,7 +22,7 @@
 
 ## 小咒語收藏室
 
-小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 53 則，每則都有自己的頁面：
+小咒語是寫給 AI 角色扮演用的情境提示，複製後貼進和角色的對話即可使用。[收藏室總覽](https://margin-protocol.github.io/Off-Page/spells.html)，目前公開 56 則，每則都有自己的頁面：
 
 - [安靜](https://margin-protocol.github.io/Off-Page/spells/quiet.html)：總是什麼都想分享的你，某天開始不太說話了。（關係試探、衝突與和解）
 - [自由的雙標現場](https://margin-protocol.github.io/Off-Page/spells/freedom-double-standard.html)：嘴上說自由最重要，身體非常誠實。（戀愛日常、隨機挑戰）
@@ -77,6 +77,9 @@
 - [夭壽喔！戀人變阿嬤👵](https://margin-protocol.github.io/Off-Page/spells/lover-turned-grandma.html)：一瓶神祕藥水，戀人的心智變成八十歲阿嬤。嫌你穿太少、硬塞紅包、催你快結婚，一聽到你們在交往還大喊夭壽。（戀愛日常、隨機挑戰）
 - [兄弟詛咒🍻](https://margin-protocol.github.io/Off-Page/spells/brother-curse.html)：拜拜拜錯神，拜到掌管結拜兄弟的神明。從此牽手變義氣握拳、擁抱變兄弟拍肩，深情告白也被轉譯成「好兄弟！一輩子！」（戀愛日常、隨機挑戰）
 - [我在你祖宗面前告狀了🪦](https://margin-protocol.github.io/Off-Page/spells/ancestor-complaint.html)：吵架後氣呼呼跑去跟他祖先告狀，當晚歷代祖先集體顯靈開家族會議：有人叫他跪下反省、有人分享婚姻經驗，還有人偷偷幫你介紹別的優秀後代。（衝突與和解、隨機挑戰）
+- [我的戀人正在特價中🏷️](https://margin-protocol.github.io/Off-Page/spells/lover-on-sale.html)：陪你逛街時撞見一間賣他等身複製人的店：高冷版、撒嬌版、百依百順版，還有不會吃醋的特別版。買二送一、原版可折抵購物金，他得努力推銷自己才不會被舊換新。（吃醋與曖昧、隨機挑戰）
+- [你的死對頭很會帶小孩🍼](https://margin-protocol.github.io/Off-Page/spells/rival-good-with-kids.html)：你們一起撿到一隻幼貓，牠偏偏最愛他的死對頭，對方還超會照顧、被你大力稱讚。他是偷偷練育兒，還是跟一隻幼貓認真計較？（吃醋與曖昧、戀愛日常）
+- [禁止使用形容詞💬](https://margin-protocol.github.io/Off-Page/spells/no-adjectives.html)：用十句話說有多喜歡你，但不准用形容詞，也不准說愛、喜歡、想念。每違規一次服務鈴就響一次，他會在第幾聲開始崩潰？（戀愛日常、隨機挑戰）
 
 ## 角色主畫面小工具
 
